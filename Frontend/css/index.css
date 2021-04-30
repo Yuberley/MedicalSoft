@@ -15,11 +15,21 @@
 }
 
 .name-app{
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 17px;
 }
 
 .name-app b {
     color: #127b8e;
 }
+
+.name-app i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    padding-left: 900px;
+}
+ .name-app i:hover {
+     color: #127b8e;
+ }
 
