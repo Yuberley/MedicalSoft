@@ -46,4 +46,6 @@ _Herramientas que se utilizan en el proyecto_
 
 
 
-![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Estimaci%C3%B3n_de%20tienpo-costo-esfuerzo.pdf)
+## Estimación de tiempo, costo y esfuerzo (Modelo punto de función) 🚀
+
+* [Documento de estimación](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Estimaci%C3%B3n_de%20tienpo-costo-esfuerzo.pdf)
