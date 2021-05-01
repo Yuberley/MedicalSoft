@@ -15,11 +15,11 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 ### Diagrama de casos de uso ⌨️
 
-![()](https://github.com/Yuberley/MedicalSoft/blob/main/Model/Use_case_diagram%20.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Use_case_diagram%20.png)
 
 ### Muckup de una escala clínica 📄
 
-![()](https://github.com/Yuberley/MedicalSoft/blob/main/Model/Calculadora_medica2.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Calculadora_medica2.png)
 
 
 
@@ -43,3 +43,7 @@ _Herramientas que se utilizan en el proyecto_
 * [Spring Boot 2.4.5](https://spring.io/projects/spring-boot) - El framework web de java más usado
 * [MySQL](https://www.mysql.com/) - Base de datos relacional
 * [Bootstrap 5](https://getbootstrap.com/) - Desarrollo de Front-End responsive
+
+
+
+![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Estimaci%C3%B3n_de%20tienpo-costo-esfuerzo.pdf)
