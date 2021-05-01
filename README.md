@@ -15,20 +15,25 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 ### Diagrama de casos de uso ⌨️
 
-![()](https://gitlab.com/Yuberley/cine-net/-/raw/master/img/Model%20ER.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/main/Model/Use_case_diagram%20.png)
 
 ### Muckup de una escala clínica 📄
 
-![()](https://gitlab.com/Yuberley/cine-net/-/raw/master/img/Model%20ER.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/main/Model/Calculadora_medica2.png)
+
 
 
 ### Involucrados en el desarrollo 📋
 
-_JULIAN LEONARDO MORENO LESMES_
-_MARTIN SEBASTIAN PEREZ_
-_YEFERSON YUBERLEY GUERRERO CASTRO_
-_HERNAN DAVID QUIJANO GONZÁLEZ_
-_JULIAN MANUEL ESPITIA ANGEL_
+_JULIAN LEONARDO MORENO LESMES
+
+MARTIN SEBASTIAN PEREZ
+
+YEFERSON YUBERLEY GUERRERO CASTRO
+
+HERNAN DAVID QUIJANO GONZÁLEZ
+
+JULIAN MANUEL ESPITIA ANGEL_
 
 
 ## Construido con 🛠️
