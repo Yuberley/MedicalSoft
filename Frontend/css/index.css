@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 5px 0px;
     background:#23242b;
     color: #fff;
 }
@@ -23,13 +23,42 @@
     color: #127b8e;
 }
 
-.name-app i {
-    font-size: 30px;
-    cursor: pointer;
-    color: #fff;
-    padding-left: 900px;
+.header_menu {
+    margin-right: 20px;
 }
- .name-app i:hover {
-     color: #127b8e;
- }
 
+.header_menu:hover ul, ul:hover{
+    display: block;
+}
+
+.header_menu ul {
+    display: none;
+    list-style: none; /* Quitar puntos de lista */
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -54px;
+    color:black;
+}
+
+.header_menu li {
+    margin: 5px 0px;
+}
+
+.header_menu li a {
+    text-decoration: underline;
+}
+
+.header_menu li a:hover {
+    text-decoration: none;
+}
+
+.profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+
+.profile p {
+    display: flex;
+}
