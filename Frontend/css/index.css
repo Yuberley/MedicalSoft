@@ -31,8 +31,8 @@
     display: block;
 }
 
-.header_menu ul {  
-    display: none; 
+.header_menu ul {
+    display: none;
     list-style: none; /* Quitar puntos de lista */
     padding: 0px;
     position: absolute;

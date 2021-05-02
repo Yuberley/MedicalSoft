@@ -1,15 +1,7 @@
-.menu{
-  position: absolute;
-  top:70px;
-  left: 0;
-  background: #212121;
-  width: 100%;
-  list-style: none;
-  padding: 20px;
-  margin: 0;
-  z-index: 999;
+h2{
+  text-align: center;
 }
-/*-------------GALERIA----------*/
+
 .container.gallery-container {
     background-color: #fff;
     color: #35373a;
