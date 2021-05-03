@@ -31,9 +31,16 @@ h4{
 .tz-gallery {
     padding: 40px;
 }
+/*.header-gallery{
+  background: #000;
+  display: flex ;
+}
+.header-gallery h2{
+  text-align: center;
+}*/
 .tz-gallery .lightbox img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     margin-bottom: 30px;
     transition: 0.2s ease-in-out;
     box-shadow: 0 2px 3px rgba(0,0,0,0.2);
