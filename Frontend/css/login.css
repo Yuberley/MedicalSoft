@@ -86,3 +86,10 @@ body {
 .login-box a:hover {
   color: #fff;
 }
+
+.error { 
+  font-size: 20px;
+  border-radius: 5px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #e60000b2;
+}

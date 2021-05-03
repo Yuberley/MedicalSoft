@@ -14,16 +14,22 @@
     <div class="login-box">
       <img src="img/logoms.jpeg" class="avatar" alt="Avatar Image">
       <h1>Inicio de sesión</h1>
-      <form>
+      <form action="">
         <!-- USERNAME INPUT -->
         <label for="usuario">Usuario</label>
-        <input type="text" placeholder="Ingrese el nombre de usuario">
+        <input type="text" id="usuario" placeholder="Ingrese el nombre de usuario">
         <!-- PASSWORD INPUT -->
         <label for="contraseña">Contraseña</label>
-        <input type="password" placeholder="Ingrese la contraseña">
-        <input type="submit" value="Ingresar">
+        <input type="password" id="contraseña" placeholder="Ingrese la contraseña">
+        <input type="submit" onclick = 'return enviarFormulario()'  value="Ingresar">
         <a href="ayuda.html">Reportar un problema</a>
+        <br><br>
+        <div class="error" id="error"></div>
       </form>
     </div>
+
+
+    <script src="app.js"></script>
+    
   </body>
 </html>
