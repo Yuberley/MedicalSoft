@@ -1,6 +1,6 @@
 # MedicalSoft
 
-_MedicalSoft es un proyecto de software web para centros clinicos con la capacidad de gestionar bases de datos médicas y una función de calculadora médica basada en escalas clínicas._
+_MedicalSoft es un proyecto de software web para centros clínicos con la capacidad de gestionar bases de datos médicas y una función de calculadora médica basada en escalas clínicas._
 
 ## Comenzando 🚀
 
@@ -17,7 +17,7 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 ![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Use_case_diagram%20.png)
 
-### Muckup de una escala clínica 📄
+### Mockup de una escala clínica 📄
 
 ![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Calculadora_medica2.png)
 
