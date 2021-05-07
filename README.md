@@ -36,7 +36,7 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 * JULIAN MANUEL ESPITIA ANGEL
 
 
-## Construido con 🛠️
+## Desarrollado con las siguientes herramientas: 🛠️
 
 _Herramientas que se utilizan en el proyecto_
 
