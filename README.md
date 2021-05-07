@@ -17,6 +17,10 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 ![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Use_case_diagram%20.png)
 
+### Modelo entidad relación (MER) 🗄
+
+![()](https://github.com/Yuberley/MedicalSoft/blob/main/Model/MER.png)
+
 ### Mockup de una escala clínica 📄
 
 ![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Calculadora_medica2.png)
