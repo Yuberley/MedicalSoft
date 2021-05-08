@@ -13,6 +13,16 @@ public class Paciente {
     @Column(name = "cod_paciente")
     private Integer codPaciente;
 
+    // Foreign keys
+    @Column(name = "cod_eps")
+    private Integer codEPS;
+    @Column(name = "cod_st")
+    private Integer codST;
+    @Column(name = "cod_escolaridad")
+    private Integer codEscolaridad;
+    private Integer cc;
+
+    // Attributes
     private String ocupacion;
     private String religion;
     private String raza;
@@ -23,6 +33,7 @@ public class Paciente {
     private String confiabilidad;
     private String habitacion;
 
+    // LocalDateTime is type data for date and hours
     @Column(name = "fech_ingreso")
     private LocalDateTime fechIngreso;
 
@@ -32,6 +43,38 @@ public class Paciente {
 
     public void setCodPaciente(Integer codPaciente) {
         this.codPaciente = codPaciente;
+    }
+
+    public Integer getCodEPS() {
+        return codEPS;
+    }
+
+    public void setCodEPS(Integer codEPS) {
+        this.codEPS = codEPS;
+    }
+
+    public Integer getCodST() {
+        return codST;
+    }
+
+    public void setCodST(Integer codST) {
+        this.codST = codST;
+    }
+
+    public Integer getCodEscolaridad() {
+        return codEscolaridad;
+    }
+
+    public void setCodEscolaridad(Integer codEscolaridad) {
+        this.codEscolaridad = codEscolaridad;
+    }
+
+    public Integer getCc() {
+        return cc;
+    }
+
+    public void setCc(Integer cc) {
+        this.cc = cc;
     }
 
     public String getOcupacion() {
