@@ -2,7 +2,6 @@ package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 public class Evolucion {

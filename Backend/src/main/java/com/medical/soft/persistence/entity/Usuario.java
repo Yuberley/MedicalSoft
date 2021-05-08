@@ -14,12 +14,9 @@ public class Usuario {
     private Integer codUsuario;
 
     private String nombre;
-
     private String roll;
-
     @Column(name = "users")
     private String user;
-
     private String password;
 
     public Integer getCodUsuario() {
