@@ -2,7 +2,7 @@
 
 _MedicalSoft es un proyecto de software web para centros clínicos con la capacidad de gestionar bases de datos médicas y una función de calculadora médica basada en escalas clínicas._
 
-## Comenzando 🚀
+
 
 ### Sistema de gestión de base de datos médicos y escalas clínicas (MedicalSoft) 👨‍⚕️👩‍⚕️
 
@@ -50,6 +50,6 @@ _Herramientas que se utilizan en el proyecto_
 
 
 
-## Estimación de tiempo, costo y esfuerzo (Modelo punto de función) 🚀
+## Estimación de tiempo, costo y esfuerzo (Modelo punto de función)
 
 * [Documento de estimación](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Estimaci%C3%B3n_de%20tienpo-costo-esfuerzo.pdf)
