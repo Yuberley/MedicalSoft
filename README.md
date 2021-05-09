@@ -40,7 +40,7 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 * JULIAN MANUEL ESPITIA ANGEL
 
 
-## Desarrollado con el siguente stack de tecnologias: 🛠️
+## Desarrollado con el siguente stack de tecnologías: 🛠️
 
 _Herramientas que se utilizan en el proyecto_
 
