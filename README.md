@@ -40,13 +40,14 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 * JULIAN MANUEL ESPITIA ANGEL
 
 
-## Desarrollado con las siguientes herramientas: 🛠️
+## Desarrollado con el siguente stack de tecnologias: 🛠️
 
 _Herramientas que se utilizan en el proyecto_
 
 * [Spring Boot 2.4.5](https://spring.io/projects/spring-boot) - El framework web de java más usado
 * [MySQL](https://www.mysql.com/) - Base de datos relacional
-* [Bootstrap 5](https://getbootstrap.com/) - Desarrollo de Front-End responsive
+* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Estándar de la web
+* [Bootstrap 5](https://getbootstrap.com/) - Framework CSS // Front-End responsive
 
 
 
