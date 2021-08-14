@@ -8,28 +8,44 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "lugar")
 public class Lugar {
-
     @Id
-    @Column(name = "cod_lugar")
-    private Integer codLugar;
+    @Column(name = "cod_paciente")
+    private Integer codPaciente;
 
     // Attributes
-    @Column(name = "nomb_ciudad")
-    private String nombreCiudad;
+    private Integer nacimiento;
+    private Integer recidencia;
+    private Integer procedencia;
 
-    public Integer getCodLugar() {
-        return codLugar;
+    public Integer getCodPaciente() {
+        return codPaciente;
     }
 
-    public void setCodLugar(Integer codLugar) {
-        this.codLugar = codLugar;
+    public void setCodPaciente(Integer codPaciente) {
+        this.codPaciente = codPaciente;
     }
 
-    public String getNombreCiudad() {
-        return nombreCiudad;
+    public Integer getNacimiento() {
+        return nacimiento;
     }
 
-    public void setNombreCiudad(String nombreCiudad) {
-        this.nombreCiudad = nombreCiudad;
+    public void setNacimiento(Integer nacimiento) {
+        this.nacimiento = nacimiento;
+    }
+
+    public Integer getRecidencia() {
+        return recidencia;
+    }
+
+    public void setRecidencia(Integer recidencia) {
+        this.recidencia = recidencia;
+    }
+
+    public Integer getProcedencia() {
+        return procedencia;
+    }
+
+    public void setProcedencia(Integer procedencia) {
+        this.procedencia = procedencia;
     }
 }

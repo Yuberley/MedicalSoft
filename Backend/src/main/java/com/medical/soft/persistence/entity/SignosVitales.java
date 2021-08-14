@@ -2,6 +2,7 @@ package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "signos_vitales")
@@ -29,6 +30,7 @@ public class SignosVitales {
     @Column(name = "fech_sv")
     private LocalDateTime fechSV;
 
+    // Methods
     public Integer getCodSV() {
         return codSV;
     }

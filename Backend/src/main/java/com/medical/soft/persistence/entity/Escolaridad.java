@@ -1,6 +1,7 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name  = "escolaridad")
@@ -14,6 +15,11 @@ public class Escolaridad {
     @Column(name = "nomb_escolaridad")
     private String nombreEscolaridad;
 
+    // Relationships
+    @OneToMany(mappedBy = "escolaridad")
+    private List<Paciente> pacientes;
+
+    // Methods
     public Integer getCodEscolaridad() {
         return codEscolaridad;
     }

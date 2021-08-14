@@ -19,6 +19,10 @@ public class Usuario {
     private String user;
     private String password;
 
+    // Relationships
+
+
+    // Methods
     public Integer getCodUsuario() {
         return codUsuario;
     }

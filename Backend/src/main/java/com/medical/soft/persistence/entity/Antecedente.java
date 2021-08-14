@@ -1,10 +1,11 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "antecedentes")
-public class Antecedentes {
+public class Antecedente {
 
     @Id
     @Column(name ="cod_antecedente")
@@ -26,6 +27,11 @@ public class Antecedentes {
     private String inmunologicos;
     private String psiquiatricos;
 
+    // Relationships
+    @OneToMany(mappedBy = "antecedente")
+    private List<HistoriaClinica> historiasClinicas;
+
+    // Methods
     public Integer getCodAntecedente() {
         return codAntecedente;
     }

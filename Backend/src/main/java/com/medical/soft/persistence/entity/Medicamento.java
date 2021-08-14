@@ -19,6 +19,7 @@ public class Medicamento {
     @Column(name = "tiempo_administracion")
     private String tiempoAdministracion;
 
+    // Methods
     public Integer getCodMedicamento() {
         return codMedicamento;
     }

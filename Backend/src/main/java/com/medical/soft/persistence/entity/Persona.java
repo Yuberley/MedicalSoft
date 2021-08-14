@@ -1,10 +1,8 @@
 package com.medical.soft.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "personas")
@@ -20,6 +18,19 @@ public class Persona {
 
     @Column(name = "fech_nacimiento")
     private LocalDateTime fechNacimiento;
+
+    // Relationships
+    @OneToMany(mappedBy = "persona")
+    private List<Paciente> pacientes;
+
+    // Methods
+    public List<Paciente> getPacientes() {
+        return pacientes;
+    }
+
+    public void setPacientes(List<Paciente> pacientes) {
+        this.pacientes = pacientes;
+    }
 
     public Integer getCc() {
         return cc;

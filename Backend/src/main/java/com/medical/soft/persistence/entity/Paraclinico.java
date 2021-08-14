@@ -15,6 +15,7 @@ public class Paraclinico {
     @Column(name = "nomb_paraclinico")
     private String nomb_paraclinico;
 
+    // Methods
     public Integer getCodParaclinico() {
         return codParaclinico;
     }

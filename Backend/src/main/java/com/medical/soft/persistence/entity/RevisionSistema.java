@@ -1,6 +1,7 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "revision_sistema")
@@ -28,6 +29,19 @@ public class RevisionSistema {
     private String pielFaneras;
     private String endocrino;
     private String venereos;
+
+    // Relationships
+    @OneToMany(mappedBy = "revisionSistema")
+    private List<HistoriaClinica> historiasClinicas;
+
+    // Methods
+    public List<HistoriaClinica> getHistoriasClinicas() {
+        return historiasClinicas;
+    }
+
+    public void setHistoriasClinicas(List<HistoriaClinica> historiasClinicas) {
+        this.historiasClinicas = historiasClinicas;
+    }
 
     public Integer getCodRS() {
         return codRS;

@@ -1,6 +1,7 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "plan_manejo")
@@ -11,10 +12,23 @@ public class PlanManejo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codPM;
 
-    // Attibutes
+    // Attributes
     private String descripcion;
     @Column(name = "cod_evolucion")
     private Integer codEvolucion;
+
+    // Relationships
+    @OneToMany(mappedBy = "planManejo")
+    private List<HistoriaClinica> historiasClinicas;
+
+    // Methods
+    public List<HistoriaClinica> getHistoriasClinicas() {
+        return historiasClinicas;
+    }
+
+    public void setHistoriasClinicas(List<HistoriaClinica> historiasClinicas) {
+        this.historiasClinicas = historiasClinicas;
+    }
 
     public Integer getCodPM() {
         return codPM;

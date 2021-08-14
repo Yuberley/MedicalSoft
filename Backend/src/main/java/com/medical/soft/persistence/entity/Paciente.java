@@ -3,6 +3,7 @@ package com.medical.soft.persistence.entity;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "pacientes")
@@ -37,20 +38,81 @@ public class Paciente {
     @Column(name = "fech_ingreso")
     private LocalDateTime fechIngreso;
 
-    public Integer getCodPaciente() {
-        return codPaciente;
-    }
+    // Relationships
+    @ManyToOne
+    @JoinColumn(name = "cod_eps", insertable = true, updatable = true) // It means you can insert and update from this entity
+    private Eps eps;
 
-    public void setCodPaciente(Integer codPaciente) {
-        this.codPaciente = codPaciente;
-    }
+    @ManyToOne
+    @JoinColumn(name = "cod_escolaridad", insertable = true, updatable = true)
+    private Escolaridad escolaridad;
 
+    @ManyToOne
+    @JoinColumn(name = "cc", insertable = true, updatable = true)
+    private Persona persona;
+
+    @ManyToOne
+    @JoinColumn(name = "cod_st", insertable = true, updatable = true)
+    private EstadoCivil estadoCivil;
+
+    @OneToMany(mappedBy = "paciente")
+    private List<HistoriaClinica> historiasClinicas;
+
+    // Methods
     public Integer getCodEPS() {
         return codEPS;
     }
 
     public void setCodEPS(Integer codEPS) {
         this.codEPS = codEPS;
+    }
+
+    public Eps getEps() {
+        return eps;
+    }
+
+    public void setEps(Eps eps) {
+        this.eps = eps;
+    }
+
+    public Escolaridad getEscolaridad() {
+        return escolaridad;
+    }
+
+    public void setEscolaridad(Escolaridad escolaridad) {
+        this.escolaridad = escolaridad;
+    }
+
+    public Persona getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona persona) {
+        this.persona = persona;
+    }
+
+    public EstadoCivil getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(EstadoCivil estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public List<HistoriaClinica> getHistoriasClinicas() {
+        return historiasClinicas;
+    }
+
+    public void setHistoriasClinicas(List<HistoriaClinica> historiasClinicas) {
+        this.historiasClinicas = historiasClinicas;
+    }
+
+    public Integer getCodPaciente() {
+        return codPaciente;
+    }
+
+    public void setCodPaciente(Integer codPaciente) {
+        this.codPaciente = codPaciente;
     }
 
     public Integer getCodST() {
