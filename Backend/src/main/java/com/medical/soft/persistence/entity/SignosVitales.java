@@ -30,7 +30,20 @@ public class SignosVitales {
     @Column(name = "fech_sv")
     private LocalDateTime fechSV;
 
+    // Relationships
+    @ManyToOne
+    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
+    private Paciente paciente;
+
     // Methods
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
     public Integer getCodSV() {
         return codSV;
     }

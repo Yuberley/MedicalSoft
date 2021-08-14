@@ -26,7 +26,16 @@ public class ExamenFisico {
     @OneToMany(mappedBy = "examenFisico")
     private List<HistoriaClinica> historiasClinicas;
 
+
     // Methods
+    public List<HistoriaClinica> getHistoriasClinicas() {
+        return historiasClinicas;
+    }
+
+    public void setHistoriasClinicas(List<HistoriaClinica> historiasClinicas) {
+        this.historiasClinicas = historiasClinicas;
+    }
+
     public Integer getCodEF() {
         return codEF;
     }

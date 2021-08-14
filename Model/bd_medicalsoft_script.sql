@@ -71,6 +71,16 @@ CREATE TABLE PACIENTES
   FOREIGN KEY (cc) REFERENCES PERSONAS(cc)
 );
 
+CREATE TABLE EXAMEN_FISICO
+(
+  cod_ef INT NOT NULL auto_increment,
+  torax varchar(200),
+  abdomen varchar(200),
+  extremidades varchar(200),
+  columna varchar(200),
+  PRIMARY KEY (cod_ef)
+);
+
 CREATE TABLE SIGNOS_VITALES
 (
   cod_sv INT NOT NULL auto_increment,
@@ -81,20 +91,10 @@ CREATE TABLE SIGNOS_VITALES
   glucemia varchar(200),
   fech_sv TIMESTAMP,
   cod_paciente INT NOT NULL,
+  cod_ef INT NOT NULL,
   PRIMARY KEY (cod_sv),
-  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente)
-);
-
-CREATE TABLE EXAMEN_FISICO
-(
-  cod_ef INT NOT NULL auto_increment,
-  torax varchar(200),
-  abdomen varchar(200),
-  extremidades varchar(200),
-  columna varchar(200),
-  cod_sv INT NOT NULL,
-  PRIMARY KEY (cod_ef),
-  FOREIGN KEY (cod_sv) REFERENCES SIGNOS_VITALES(cod_sv)
+  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente),
+  FOREIGN KEY (cod_ef) REFERENCES EXAMEN_FISICO(cod_ef)
 );
 
 CREATE TABLE MEDICAMENTOS

@@ -58,7 +58,18 @@ public class Paciente {
     @OneToMany(mappedBy = "paciente")
     private List<HistoriaClinica> historiasClinicas;
 
+    @OneToMany(mappedBy = "paciente")
+    private List<SignosVitales> signosVitales;
+
     // Methods
+    public List<SignosVitales> getSignosVitales() {
+        return signosVitales;
+    }
+
+    public void setSignosVitales(List<SignosVitales> signosVitales) {
+        this.signosVitales = signosVitales;
+    }
+
     public Integer getCodEPS() {
         return codEPS;
     }
