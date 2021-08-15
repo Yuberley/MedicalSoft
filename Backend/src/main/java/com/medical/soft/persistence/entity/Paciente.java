@@ -40,19 +40,19 @@ public class Paciente {
 
     // Relationships
     @ManyToOne
-    @JoinColumn(name = "cod_eps", insertable = true, updatable = true) // It means you can insert and update from this entity
+    @JoinColumn(name = "cod_eps", insertable = false, updatable = false) // It means you can insert and update from this entity
     private Eps eps;
 
     @ManyToOne
-    @JoinColumn(name = "cod_escolaridad", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_escolaridad", insertable = false, updatable = false)
     private Escolaridad escolaridad;
 
     @ManyToOne
-    @JoinColumn(name = "cc", insertable = true, updatable = true)
+    @JoinColumn(name = "cc", insertable = false, updatable = false)
     private Persona persona;
 
     @ManyToOne
-    @JoinColumn(name = "cod_st", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_st", insertable = false, updatable = false)
     private EstadoCivil estadoCivil;
 
     @OneToMany(mappedBy = "paciente")
@@ -61,7 +61,29 @@ public class Paciente {
     @OneToMany(mappedBy = "paciente")
     private List<SignosVitales> signosVitales;
 
+    @OneToMany(mappedBy = "paciente")
+    private List<Evolucion> evoluciones;
+
+    @OneToMany(mappedBy = "paciente")
+    private List<Lugar> lugares;
+
     // Methods
+    public List<Lugar> getLugares() {
+        return lugares;
+    }
+
+    public void setLugares(List<Lugar> lugares) {
+        this.lugares = lugares;
+    }
+
+    public List<Evolucion> getEvoluciones() {
+        return evoluciones;
+    }
+
+    public void setEvoluciones(List<Evolucion> evoluciones) {
+        this.evoluciones = evoluciones;
+    }
+
     public List<SignosVitales> getSignosVitales() {
         return signosVitales;
     }

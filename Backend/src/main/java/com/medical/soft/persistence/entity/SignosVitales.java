@@ -16,6 +16,8 @@ public class SignosVitales {
     // Foreign keys
     @Column(name = "cod_paciente")
     private Integer codPaciente;
+    @Column(name = "cod_ef")
+    private Integer codEF;
 
     // Attributes
     @Column(name = "presion_arterial")
@@ -35,7 +37,23 @@ public class SignosVitales {
     @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
     private Paciente paciente;
 
+    @ManyToOne
+    @JoinColumn(name = "cod_ef", insertable = false, updatable = false)
+    private ExamenFisico examenFisico;
+
     // Methods
+    public ExamenFisico getExamenFisico() {
+        return examenFisico;
+    }
+
+    public void setExamenFisico(ExamenFisico examenFisico) {
+        this.examenFisico = examenFisico;
+    }
+
+    public Integer getCodEF() { return codEF; }
+
+    public void setCodEF(Integer codEF) { this.codEF = codEF; }
+
     public Paciente getPaciente() {
         return paciente;
     }

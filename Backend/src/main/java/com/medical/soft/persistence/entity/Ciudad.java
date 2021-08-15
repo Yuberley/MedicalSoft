@@ -13,6 +13,10 @@ public class Ciudad {
     @Column(name = "nomb_ciudad")
     private String nombreCiudad;
 
+    // Relationships
+
+
+    // Methods
     public Integer getCodLugar() {
         return codLugar;
     }

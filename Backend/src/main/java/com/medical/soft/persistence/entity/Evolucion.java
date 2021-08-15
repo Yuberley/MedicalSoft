@@ -26,6 +26,32 @@ public class Evolucion {
     @Column(name = "fech_evolucion")
     private LocalDate fechEvolucion;
 
+    // Relationships
+    @ManyToOne
+    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
+    private Paciente paciente;
+
+    @ManyToOne
+    @JoinColumn(name = "cod_pm", insertable = false, updatable = false)
+    private PlanManejo planManejo;
+
+    // Methods
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public PlanManejo getPlanManejo() {
+        return planManejo;
+    }
+
+    public void setPlanManejo(PlanManejo planManejo) {
+        this.planManejo = planManejo;
+    }
+
     public Integer getCodEvolucion() {
         return codEvolucion;
     }

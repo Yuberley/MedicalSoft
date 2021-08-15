@@ -21,7 +21,40 @@ public class PlanManejo {
     @OneToMany(mappedBy = "planManejo")
     private List<HistoriaClinica> historiasClinicas;
 
+    @OneToMany(mappedBy = "planManejo")
+    private List<Evolucion> evoluciones;
+
+    @OneToMany(mappedBy = "planManejo")
+    private List<Solicita> solicitudes;
+
+    @OneToMany(mappedBy = "planManejo")
+    private List<Receta> recetas;
+
     // Methods
+    public List<Receta> getRecetas() {
+        return recetas;
+    }
+
+    public void setRecetas(List<Receta> recetas) {
+        this.recetas = recetas;
+    }
+
+    public List<Solicita> getSolicitudes() {
+        return solicitudes;
+    }
+
+    public void setSolicitudes(List<Solicita> solicitudes) {
+        this.solicitudes = solicitudes;
+    }
+
+    public List<Evolucion> getEvoluciones() {
+        return evoluciones;
+    }
+
+    public void setEvoluciones(List<Evolucion> evoluciones) {
+        this.evoluciones = evoluciones;
+    }
+
     public List<HistoriaClinica> getHistoriasClinicas() {
         return historiasClinicas;
     }

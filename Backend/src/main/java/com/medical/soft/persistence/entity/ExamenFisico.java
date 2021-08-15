@@ -12,10 +12,6 @@ public class ExamenFisico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codEF;
 
-    // Foreign keys
-    @Column(name = "cod_sv")
-    private Integer codSV;
-
     // Attributes
     private String torax;
     private String abdomen;
@@ -26,8 +22,18 @@ public class ExamenFisico {
     @OneToMany(mappedBy = "examenFisico")
     private List<HistoriaClinica> historiasClinicas;
 
+    @OneToMany(mappedBy = "examenFisico")
+    private List<SignosVitales> signosVitales;
 
     // Methods
+    public List<SignosVitales> getSignosVitales() {
+        return signosVitales;
+    }
+
+    public void setSignosVitales(List<SignosVitales> signosVitales) {
+        this.signosVitales = signosVitales;
+    }
+
     public List<HistoriaClinica> getHistoriasClinicas() {
         return historiasClinicas;
     }
@@ -44,13 +50,6 @@ public class ExamenFisico {
         this.codEF = codEF;
     }
 
-    public Integer getCodSV() {
-        return codSV;
-    }
-
-    public void setCodSV(Integer codSV) {
-        this.codSV = codSV;
-    }
 
     public String getTorax() {
         return torax;

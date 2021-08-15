@@ -38,30 +38,78 @@ public class HistoriaClinica {
 
     // Relationships
     @ManyToOne
-    @JoinColumn(name = "cod_pm", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_pm", insertable = false, updatable = false)
     private PlanManejo planManejo;
 
     @ManyToOne
-    @JoinColumn(name = "cod_paciente", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
     private Paciente paciente;
 
     @ManyToOne
-    @JoinColumn(name = "cod_ef", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_ef", insertable = false, updatable = false)
     private ExamenFisico examenFisico;
 
     @ManyToOne
-    @JoinColumn(name = "cod_antecedente", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_antecedente", insertable = false, updatable = false)
     private Antecedente antecedente;
 
     @ManyToOne
-    @JoinColumn(name = "cod_rs", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_rs", insertable = false, updatable = false)
     private RevisionSistema revisionSistema;
 
     @ManyToOne
-    @JoinColumn(name = "cod_en", insertable = true, updatable = true)
+    @JoinColumn(name = "cod_en", insertable = false, updatable = false)
     private ExamenNeurologico examenNeurologico;
 
     // Methods
+    public PlanManejo getPlanManejo() {
+        return planManejo;
+    }
+
+    public void setPlanManejo(PlanManejo planManejo) {
+        this.planManejo = planManejo;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public ExamenFisico getExamenFisico() {
+        return examenFisico;
+    }
+
+    public void setExamenFisico(ExamenFisico examenFisico) {
+        this.examenFisico = examenFisico;
+    }
+
+    public Antecedente getAntecedente() {
+        return antecedente;
+    }
+
+    public void setAntecedente(Antecedente antecedente) {
+        this.antecedente = antecedente;
+    }
+
+    public RevisionSistema getRevisionSistema() {
+        return revisionSistema;
+    }
+
+    public void setRevisionSistema(RevisionSistema revisionSistema) {
+        this.revisionSistema = revisionSistema;
+    }
+
+    public ExamenNeurologico getExamenNeurologico() {
+        return examenNeurologico;
+    }
+
+    public void setExamenNeurologico(ExamenNeurologico examenNeurologico) {
+        this.examenNeurologico = examenNeurologico;
+    }
+
     public Integer getCodHC() {
         return codHC;
     }

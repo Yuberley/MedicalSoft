@@ -1,9 +1,6 @@
 package com.medical.soft.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "lugar")
@@ -16,6 +13,22 @@ public class Lugar {
     private Integer nacimiento;
     private Integer recidencia;
     private Integer procedencia;
+
+    // Relationships
+    @ManyToOne
+    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
+    private Paciente paciente;
+
+
+    // Methods
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 
     public Integer getCodPaciente() {
         return codPaciente;
