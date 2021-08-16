@@ -19,6 +19,9 @@ public class Lugar {
     @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
     private Paciente paciente;
 
+    @ManyToOne
+    @JoinColumn(name = "cod_lugar", insertable = false, updatable = false)
+    private Ciudad ciudad;
 
     // Methods
 

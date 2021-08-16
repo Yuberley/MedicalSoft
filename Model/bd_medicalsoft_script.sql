@@ -8,13 +8,6 @@ CREATE TABLE USUARIOS
   PRIMARY KEY (cod_usuario)
 );
 
-CREATE TABLE CIUDADES
-(
-  cod_lugar INT NOT NULL auto_increment,
-  nomb_ciudad varchar(50),
-  PRIMARY KEY (cod_lugar)
-);
-
 CREATE TABLE ESTADO_CIVIL
 (
   cod_st INT NOT NULL auto_increment,
@@ -136,17 +129,14 @@ CREATE TABLE EVOLUCION
   FOREIGN KEY (cod_pm) REFERENCES PLAN_MANEJO(cod_pm)
 );
 
-CREATE TABLE lugar
+CREATE TABLE LUGAR
 (
-  nacimiento INT NOT NULL,
-  recidencia INT NOT NULL,
-  procedencia INT NOT NULL,
+  nacimiento varchar(50),
+  recidencia varchar(50),
+  procedencia varchar(50),
   cod_paciente INT NOT NULL,
   PRIMARY KEY (cod_paciente),
-  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente),
-  FOREIGN KEY (nacimiento) REFERENCES CIUDADES(cod_lugar),
-  FOREIGN KEY (recidencia) REFERENCES CIUDADES(cod_lugar),
-  FOREIGN KEY (procedencia) REFERENCES CIUDADES(cod_lugar)
+  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente)
 );
 
 CREATE TABLE receta
