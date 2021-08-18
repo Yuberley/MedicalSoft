@@ -8,7 +8,7 @@ public class Person {
     private String lastName;
     private String age;
     private String sex;
-    private LocalDateTime date;
+    private LocalDateTime birthDate;
 
     public int getCc() {
         return cc;
@@ -50,11 +50,11 @@ public class Person {
         this.sex = sex;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    public LocalDateTime getBirthDate() {
+        return birthDate;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setBirthDate(LocalDateTime birthDate) {
+        this.birthDate = birthDate;
     }
 }
