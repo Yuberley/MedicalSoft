@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>MedicalSoft</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="img/icons/favicon.ico" />
+  </head>
+
+  <style></style>
+
+  <body>
+
+    <div class="login-box">
+      <img src="img/logoms.jpeg" class="avatar" alt="Avatar Image">
+      <h1>Inicio de sesión</h1>
+      <form action="">
+        <!-- USERNAME INPUT -->
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" placeholder="Ingrese el nombre de usuario">
+        <!-- PASSWORD INPUT -->
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" placeholder="Ingrese la contraseña">
+        <input type="submit" onclick = 'return enviarFormulario()'  value="Ingresar">
+        <a href="ayuda.html">Reportar un problema</a>
+        <br><br>
+        <div class="error" id="error"></div>
+      </form>
+    </div>
+
+
+    <script src="app.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    background:#23242b;
+    color: #fff;
+}
+
+.name-app{
+    font-size: 30px;
+    padding-left: 17px;
+}
+
+.name-app b {
+    color: #127b8e;
+}
+
+.header_menu {
+    margin-right: 20px;
+}
+
+.header_menu:hover ul, ul:hover{
+    display: block;
+}
+
+.header_menu ul {
+    display: none;
+    list-style: none; /* Quitar puntos de lista */
+    padding: 0px;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -54px;
+    color:black;
+}
+
+.header_menu li {
+    margin: 5px 0px;
+}
+
+.header_menu li a {
+    text-decoration: underline;
+}
+
+.header_menu li a:hover {
+    text-decoration: none;
+}
+
+.profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+
+.profile p {
+    display: flex;
+}
+
+.body-index{
+  margin-top:20px;
+  background:#f8f8f8
+}
