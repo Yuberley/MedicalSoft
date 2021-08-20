@@ -10,7 +10,7 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring", uses = {PersonMapper.class})
 public interface PatientMapper {
     @Mappings({
-            @Mapping(source = "codPaciente", target = "PatientId"),
+            @Mapping(source = "codPaciente", target = "patientId"),
             @Mapping(source = "ocupacion", target = "occupation"),
             @Mapping(source = "religion", target = "religion"),
             @Mapping(source = "raza", target = "race"),

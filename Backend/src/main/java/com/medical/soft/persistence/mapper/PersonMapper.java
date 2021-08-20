@@ -7,10 +7,13 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
+import java.util.List;
+import java.util.Optional;
+
 @Mapper(componentModel = "spring")
 public interface PersonMapper {
     @Mappings({
-            @Mapping(source = "cc", target = "cc"),
+            @Mapping(source = "cc", target = "personId"),
             @Mapping(source = "nombre", target = "firstName"),
             @Mapping(source = "apellidos", target = "lastName"),
             @Mapping(source = "edad", target = "age"),
@@ -18,8 +21,10 @@ public interface PersonMapper {
             @Mapping(source = "fechNacimiento", target = "birthDate")
     })
     Person toPerson(Persona persona);
+    List<Person> toPeople(List<Persona> personas);
 
     @InheritInverseConfiguration
     @Mapping(target = "pacientes", ignore = true)
     Persona toPersona(Person person);
+
 }

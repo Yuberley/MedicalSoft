@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface PersonRepository {
     List<Person> getAll();
-    Optional<Person> getPersonaById(int cc);
+    Optional<Person> getPerson(int personId);
     Person save(Person person);
-    void delete(int cc);
+    void delete(int personId);
 }

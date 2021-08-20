@@ -3,20 +3,16 @@ package com.medical.soft.domain;
 import java.time.LocalDateTime;
 
 public class Person {
-    private int cc;
+    private int personId;
     private String firstName;
     private String lastName;
     private String age;
     private String sex;
     private LocalDateTime birthDate;
 
-    public int getCc() {
-        return cc;
-    }
+    public int getPersonId() { return personId; }
 
-    public void setCc(int cc) {
-        this.cc = cc;
-    }
+    public void setPersonId(int personId) { this.personId = personId; }
 
     public String getFirstName() {
         return firstName;

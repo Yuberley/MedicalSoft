@@ -3,7 +3,7 @@ package com.medical.soft.domain;
 import java.time.LocalDateTime;
 
 public class Patient {
-    private int PatientId;
+    private int patientId;
     private String occupation;
     private String religion;
     private String race;
@@ -18,11 +18,11 @@ public class Patient {
 
 
     public int getPatientId() {
-        return PatientId;
+        return patientId;
     }
 
     public void setPatientId(int patientId) {
-        PatientId = patientId;
+        this.patientId = patientId;
     }
 
     public String getOccupation() {
