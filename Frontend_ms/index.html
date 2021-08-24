@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="/img/logo_ms.svg" />
 
-    <title>MedicalSoft</title>
+    <title>Pacientes - MedicalSoft</title>
   </head>
   <body>
     
@@ -46,7 +46,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Perfil</a></li>
-                  <li><a class="dropdown-item" href="./html/ayuda.html">Ayuda</a></li>
+                  <li><a class="dropdown-item" href="./medicalsoft/ayuda.html">Ayuda</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                 </ul>
@@ -92,6 +92,11 @@
             </thead>
             <tbody id="personas">
               <tr>
+                <th>${person.personId}</th>
+                  <td>${person.firstName}</td>
+                  <td>${person.lastName}</td>
+                  <td>${person.sex}</td>
+                  <td><a href="./medicalsoft/historia_clinica.html"><button type="button" class="btn btn-outline-info">Ver</button></a></td>
                 
               </tr>
             </tbody>
@@ -128,6 +133,16 @@
 
       </div>
     </div>
+
+    
+    <footer class="bg-light text-center text-lg-start fixed-bottom">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 MedicalSoft Copyright:
+        <a class="text-dark" href="https://yuberley.github.io/MedicalSoft/">@MedicalSoft.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 
 
     <!-- Bootstrap Bundle with Popper -->
