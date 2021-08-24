@@ -8,6 +8,7 @@ fetch(`${API}/people`)
     const template = people.map((person) => `<tr><th>${person.personId}</th>
                                                 <td>${person.firstName}</td>
                                                 <td>${person.lastName}</td>
-                                                <td>${person.sex}</td></tr>`);
-    HTMLResponse.innerHTML = template;;
+                                                <td>${person.sex}</td>
+                                                <td><button type="button" class="btn btn-outline-info">Ver</button></td></tr>`);
+    HTMLResponse.innerHTML = template;
   });

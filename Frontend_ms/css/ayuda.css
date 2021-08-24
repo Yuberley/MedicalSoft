@@ -1,6 +1,7 @@
 .btn-volver{
-  text-align: center;
+  text-align: left;
   padding: 15px;
+  margin-left: 12%;
 }
 .btn-volver a{
   color: #fff;
@@ -15,10 +16,7 @@ ul {
     list-style: none;
     padding: 0;
 }
-.logo {
-    text-align: center;
-    font-size: 3em;
-}
+
 .logo span {
     color: #FFFFFF;
 }

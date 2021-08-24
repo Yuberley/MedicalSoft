@@ -19,20 +19,19 @@
 
     <meta name="keywords" content="MedicalSoft, gestionar Pacientes, control de clínicas, escalas clínicas" />
 
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="shortcut icon" href="/img/logo_ms.svg" />
+    <link rel="stylesheet" href="/../css/index.css">
+    <link rel="shortcut icon" href="/../img/logo_ms.svg"/>
 
     <title>MedicalSoft</title>
   </head>
   <body>
     
     <!-- Header -->
-
     <header>
       <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="./img/logo_ms.svg" alt="logo">
+            <img src="../img/logo_ms.svg" alt="logo">
              <b>Medical</b><b class="text-success">Soft</b>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +45,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Perfil</a></li>
-                  <li><a class="dropdown-item" href="./html/ayuda.html">Ayuda</a></li>
+                  <li><a class="dropdown-item" href="#">Ayuda</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                 </ul>
@@ -67,66 +66,50 @@
     </header>
 
     <!-- Main content -->
-    <div class="container mt-4">
+    <div class="container-fluid mt-1" style="background-color: rgb(255, 255, 255);">
 
-      <!-- Add paciente -->
-      <div class="row mb-lg-3 ">
-        <div class="col offset-lg-10 offset-sm-9">
-          <button type="button" class="btn btn-outline-success">Añadir paciente</button>
-        </div>
-      </div>
-      <hr class="dropdown-divider">
-      <div class="row">
+        <!-- Navegación historia clinica -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Historia Clinica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Signos Vitales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Paraclinicos</a>
+            </li>
+          </ul>
 
-        <!-- tabla pacientes -->
-        <div class="col-lg-10 col-sm-12 order-sm-last order-lg-first mt-sm-3">
-          <table class="table table-hover">
-            <thead>
-              <tr class="table-success"> 
-                <th scope="col">N° Cedula</th>
-                <th scope="col">Nombres</th>
-                <th scope="col">Apellidos</th>
-                <th scope="col">Sexo</th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody id="personas">
-              <tr>
+        <!-- Header Historia Clinica-->
+        <div class="row ">
+            <div class="col-lg-4 border">
+
+                <div class="mb-1 row">
+                    <span class="badge bg-dark col-2">Nombre</span>
+                    <p class="col-1">sdsd</p>
+                </div>
+
+                <p class="mb-1 row">
+                    <span class="badge bg-dark col-2">Nombre</span>
+                    <p class="col-1">sdsd</p>
+                </p>
+                <p class="mb-1">
+                    <span class="badge bg-dark">Edad</span>
+                </p>
+                <p class="mb-1">
+                    <span class="badge bg-dark">Genero</span>
+                </p>
+                <p>
+                    <span class="badge bg-dark">EPS</span>
+                </p>
                 
-              </tr>
-            </tbody>
-          </table>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination float-end">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+            </div>
+            <div class="col-lg-8 border">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga explicabo, incidunt expedita culpa facilis libero architecto sint aspernatur officia dignissimos? Id rem beatae quidem eum, ipsam alias repellendus ducimus mollitia!
+            </div>
         </div>
 
-        <!-- Buscar pacientes -->
-        <div class="col-lg-2 col-sm-12 order-sm-first order-lg-last pt-2" style="background-color: rgb(255, 255, 255)">
-          <div class="mb-3">
-            <label for="buscarPacientes" class="form-label"><h5>Buscar paciente</h5></label>
-            <input type="text" class="form-control" id="buscarPacientes" placeholder="N° Cedula">
-          </div>
-          <div class="d-flex justify-content-center pb-sm-2">
-            <button type="button" class="btn btn-secondary">Buscar</button>
-          </div>
-        </div>
-
-      </div>
     </div>
 
 
@@ -138,6 +121,6 @@
     ></script>
 
     <!-- index page -->
-    <script src="index.js" type="module"></script>
+    <script src="" type="module"></script>
   </body>
 </html>
