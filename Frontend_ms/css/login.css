@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/fondo_login.jpg) no-repeat center top;
+  background-color: #76c8ce;
   background-size: cover;
   font-family: sans-serif;
   height: 100vh;

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+
+     <!-- SEO -->
+    <meta name="author" content="MedicalSoft" />
+    <meta
+       name="description"
+       content="MedicalSoft es un proyecto de software web para centros clínicos con la
+       capacidad de gestionar bases de datos médicas y una función de calculadora
+       médica basada en escalas clínicas."/>
+
+    <meta name="keywords" content="MedicalSoft, gestionar Pacientes, control de clínicas, escalas clínicas" />
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="/img/logo_ms.svg" />
+
+    <title>MedicalSoft</title>
+  </head>
+  <body>
+    
+    <!-- Header -->
+
+    <header>
+      <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo_ms.svg" alt="logo">
+             <b>Medical</b><b class="text-success">Soft</b>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ml-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sesión
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Calculadora MD</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="container mt-4">
+
+      <!-- Add paciente -->
+      <div class="row mb-lg-3 ">
+        <div class="col offset-lg-10 offset-sm-9">
+          <button type="button" class="btn btn-outline-success">Añadir paciente</button>
+        </div>
+      </div>
+      <hr class="dropdown-divider">
+      <div class="row">
+
+        <!-- tabla pacientes -->
+        <div class="col-lg-10 col-sm-12 order-sm-last order-lg-first mt-sm-3">
+          <table class="table table-hover">
+            <thead>
+              <tr class="table-success"> 
+                <th scope="col">Cedula</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Sexo</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="personas">
+              <tr>
+                
+                <td><button type="button" class="btn btn-outline-info">Info</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination float-end">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Buscar pacientes -->
+        <div class="col-lg-2 col-sm-12 order-sm-first order-lg-last" style="background-color: rgb(255, 255, 255)">
+          <div class="mb-3">
+            <label for="buscarPacientes" class="form-label"><h5>Buscar paciente</h5></label>
+            <input type="text" class="form-control" id="buscarPacientes" placeholder="N° Cedula">
+          </div>
+          <div class="d-flex justify-content-center pb-sm-2">
+            <button type="button" class="btn btn-secondary">Buscar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- index page -->
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
