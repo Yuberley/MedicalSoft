@@ -14,8 +14,12 @@ public class Patient {
     private String reliability;
     private String room;
     private LocalDateTime admissionDate;
-    private Person person;
 
+    private Person person;
+    private Place place;
+    private Scholarship scholarship;
+    private MaritalStatus maritalStatus;
+    private Hpe hpe;
 
     public int getPatientId() {
         return patientId;
@@ -111,5 +115,37 @@ public class Patient {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public Place getPlace() {
+        return place;
+    }
+
+    public void setPlace(Place place) {
+        this.place = place;
+    }
+
+    public Scholarship getScholarship() {
+        return scholarship;
+    }
+
+    public void setScholarship(Scholarship scholarship) {
+        this.scholarship = scholarship;
+    }
+
+    public MaritalStatus getMaritalStatus() {
+        return maritalStatus;
+    }
+
+    public void setMaritalStatus(MaritalStatus maritalStatus) {
+        this.maritalStatus = maritalStatus;
+    }
+
+    public Hpe getHpe() {
+        return hpe;
+    }
+
+    public void setHpe(Hpe hpe) {
+        this.hpe = hpe;
     }
 }
