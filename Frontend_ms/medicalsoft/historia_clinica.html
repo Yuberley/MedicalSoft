@@ -38,14 +38,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto ml-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto ml-auto mb-2 mb-lg-0 align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./../index.html"><button type="button" class="btn btn-outline-light">Pacientes</button></a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Sesión
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Perfil</a></li>
-                  <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                  <li><a class="dropdown-item" href="./ayuda.html">Ayuda</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                 </ul>
@@ -69,44 +72,47 @@
     <div class="container-fluid mt-1" style="background-color: rgb(255, 255, 255);">
 
         <!-- Navegación historia clinica -->
-        <ul class="nav nav-tabs ps-1">
-            <li class="nav-item">
-              <a class="nav-link active border border-dark fw-bold" aria-current="page" href="./historia_clinica.html">Historia Clínica</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./signos_vitales.html">Signos Vitales</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./examenes_antecedenstes.html">Examenes y antecedentes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./plan_manejo.html">Plan de manejo</a>
-            </li>
-          </ul>
+        <div class="row">
+            <ul class="nav nav-tabs ps-3 col">
+              <li class="nav-item">
+                <a class="nav-link active border border-dark fw-bold" aria-current="page" href="./historia_clinica.html">Historia Clínica</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./signos_vitales.html">Signos Vitales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./examenes_antecedenstes.html">Examenes y antecedentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./plan_manejo.html">Plan de manejo</a>
+              </li>
+            </ul>
+        </div>
+          
 
         <!-- Header Historia Clinica-->
         <div class="row ms-1 me-1">
             <div class="col-lg-4 border border-2 text-capitalize pt-1 bg-light">
 
                 <div class="row col">
-                  <li class="col-4">N° Cedula</li> 
-                  <p class="col-8">1006784985</p>
+                  <div class="col-4">• N° Cedula</div>
+                  <div class="col">1006784985</div>
                 </div>
                 <div class="row col">
-                  <li class="col">Nombre</li>
-                  <p class="col-8">Juan Andres Perez rojo</p>
+                  <div class="col-4">• Nombre</div>
+                  <div class="col">Juan Andres Perez rojo</div>
                 </div>
                 <div class="row col">
-                  <li class="col-4">Edad</li> 
-                  <p class="col-8">34</p>
+                  <div class="col-4">• Edad</div>
+                  <div class="col">34</div>
                 </div>
                 <div class="row col">
-                  <li class="col">Sexo</li>
-                  <p class="col-8">Hombre</p>
+                  <div class="col-4">• Sexo</div>
+                  <div class="col">Hombre</div>
                 </div>
                 <div class="row col">
-                  <li class="col">EPS</li>
-                  <p class="col-8">SevicioSalud</p>
+                  <div class="col-4">• EPS</div>
+                  <div class="col">SevicioSalud</div>
                 </div>
 
             </div>

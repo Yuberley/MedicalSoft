@@ -1,13 +1,14 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "lugar")
 public class Lugar {
     @Id
-    @Column(name = "cod_paciente")
-    private Integer codPaciente;
+    @Column(name = "cod_lugar")
+    private Integer codLugar;
 
     // Attributes
     private String nacimiento;
@@ -15,17 +16,16 @@ public class Lugar {
     private String procedencia;
 
     // Relationships
-    @ManyToOne
-    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
-    private Paciente paciente;
+    @OneToMany(mappedBy = "lugar")
+    private List<Paciente> pacientes;
 
     // Methods
-    public Integer getCodPaciente() {
-        return codPaciente;
+    public Integer getCodLugar() {
+        return codLugar;
     }
 
-    public void setCodPaciente(Integer codPaciente) {
-        this.codPaciente = codPaciente;
+    public void setCodLugar(Integer codLugar) {
+        this.codLugar = codLugar;
     }
 
     public String getNacimiento() {
@@ -52,11 +52,11 @@ public class Lugar {
         this.procedencia = procedencia;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public List<Paciente> getPacientes() {
+        return pacientes;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPacientes(List<Paciente> pacientes) {
+        this.pacientes = pacientes;
     }
 }

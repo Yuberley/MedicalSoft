@@ -22,6 +22,8 @@ public class Paciente {
     @Column(name = "cod_escolaridad")
     private Integer codEscolaridad;
     private Integer cc;
+    @Column(name = "cod_lugar")
+    private Integer codLugar;
 
     // Attributes
     private String ocupacion;
@@ -55,6 +57,10 @@ public class Paciente {
     @JoinColumn(name = "cod_st", insertable = false, updatable = false)
     private EstadoCivil estadoCivil;
 
+    @ManyToOne
+    @JoinColumn(name = "cod_lugar", insertable = false, updatable = false)
+    private Lugar lugar;
+
     @OneToMany(mappedBy = "paciente")
     private List<HistoriaClinica> historiasClinicas;
 
@@ -64,17 +70,8 @@ public class Paciente {
     @OneToMany(mappedBy = "paciente")
     private List<Evolucion> evoluciones;
 
-    @OneToMany(mappedBy = "paciente")
-    private List<Lugar> lugares;
-
     // Methods
-    public List<Lugar> getLugares() {
-        return lugares;
-    }
 
-    public void setLugares(List<Lugar> lugares) {
-        this.lugares = lugares;
-    }
 
     public List<Evolucion> getEvoluciones() {
         return evoluciones;

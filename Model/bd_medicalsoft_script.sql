@@ -40,6 +40,15 @@ CREATE TABLE PERSONAS
   PRIMARY KEY (cc)
 );
 
+CREATE TABLE LUGAR
+(
+  cod_lugar INT NOT NULL auto_increment,
+  nacimiento varchar(50),
+  recidencia varchar(50),
+  procedencia varchar(50),
+  PRIMARY KEY (cod_lugar)
+);
+
 CREATE TABLE PACIENTES
 (
   cod_paciente INT NOT NULL auto_increment,
@@ -57,11 +66,13 @@ CREATE TABLE PACIENTES
   cod_st INT NOT NULL,
   cod_escolaridad INT NOT NULL,
   cc INT NOT NULL,
+  cod_lugar INT NOT NULL,
   PRIMARY KEY (cod_paciente),
   FOREIGN KEY (cod_eps) REFERENCES EPS(cod_eps),
   FOREIGN KEY (cod_st) REFERENCES ESTADO_CIVIL(cod_st),
   FOREIGN KEY (cod_escolaridad) REFERENCES ESCOLARIDAD(cod_escolaridad),
-  FOREIGN KEY (cc) REFERENCES PERSONAS(cc)
+  FOREIGN KEY (cc) REFERENCES PERSONAS(cc),
+  FOREIGN KEY (cod_lugar) REFERENCES LUGAR(cod_lugar)
 );
 
 CREATE TABLE EXAMEN_FISICO
@@ -127,16 +138,6 @@ CREATE TABLE EVOLUCION
   PRIMARY KEY (cod_evolucion),
   FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente),
   FOREIGN KEY (cod_pm) REFERENCES PLAN_MANEJO(cod_pm)
-);
-
-CREATE TABLE LUGAR
-(
-  nacimiento varchar(50),
-  recidencia varchar(50),
-  procedencia varchar(50),
-  cod_paciente INT NOT NULL,
-  PRIMARY KEY (cod_paciente),
-  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente)
 );
 
 CREATE TABLE receta
