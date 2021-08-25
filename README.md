@@ -15,15 +15,15 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 ### Diagrama de casos de uso ⌨️
 
-![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Use_case_diagram%20.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/master/Documents/Use_case_diagram%20.png)
 
 ### Modelo entidad relación (MER) 🗄
 
-![()](https://github.com/Yuberley/MedicalSoft/blob/main/Model/MER.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/master/Model/MER.png)
 
 ### Mockup de una escala clínica 📄
 
-![()](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Calculadora_medica2.png)
+![()](https://github.com/Yuberley/MedicalSoft/blob/master/Documents/Calculadora_medica2.png)
 
 
 
@@ -53,4 +53,4 @@ _Herramientas que se utilizan en el proyecto_
 
 ## Estimación de tiempo, costo y esfuerzo (Modelo punto de función)
 
-* [Documento de estimación](https://github.com/Yuberley/MedicalSoft/blob/main/Documents/Estimaci%C3%B3n_de%20tienpo-costo-esfuerzo.pdf)
+* [Documento de estimación](https://github.com/Yuberley/MedicalSoft/blob/master/Documents/Estimaci%C3%B3n_de%20tienpo-costo-esfuerzo.pdf)
