@@ -11,11 +11,15 @@ public class HistoriaClinicaRepository {
 
     HistoriaClinicaCrudRespository historiaClinicaCrudRespository;
 
-    public Optional<HistoriaClinica> getHistoriaClinica(int IdHistoriaClinica) {
+    public Optional<HistoriaClinica> getClinicHistoryId(int IdHistoriaClinica) {
         return historiaClinicaCrudRespository.findById(IdHistoriaClinica);
     }
 
     public HistoriaClinica save(HistoriaClinica historiaClinica) {
         return historiaClinicaCrudRespository.save(historiaClinica);
+    }
+
+    public void delete(int codHC) {
+        historiaClinicaCrudRespository.deleteById(codHC);
     }
 }

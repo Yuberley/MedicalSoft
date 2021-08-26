@@ -71,7 +71,21 @@ public class Paciente {
     private List<Evolucion> evoluciones;
 
     // Methods
+    public Integer getCodLugar() {
+        return codLugar;
+    }
 
+    public void setCodLugar(Integer codLugar) {
+        this.codLugar = codLugar;
+    }
+
+    public Lugar getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(Lugar lugar) {
+        this.lugar = lugar;
+    }
 
     public List<Evolucion> getEvoluciones() {
         return evoluciones;

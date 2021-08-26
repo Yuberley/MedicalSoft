@@ -1,7 +1,7 @@
 package com.medical.soft.domain;
 
 public class NeurologicalExam {
-    private int neId;
+    private int neurologicalExamId;
     private String mental;
     private String cranialNerves;
     private String spinalMotor;
@@ -10,12 +10,12 @@ public class NeurologicalExam {
     private String coordination;
     private String march;
 
-    public int getNeId() {
-        return neId;
+    public int getNeurologicalExamId() {
+        return neurologicalExamId;
     }
 
-    public void setNeId(int neId) {
-        this.neId = neId;
+    public void setNeurologicalExamId(int neurologicalExamId) {
+        this.neurologicalExamId = neurologicalExamId;
     }
 
     public String getMental() {

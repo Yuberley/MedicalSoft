@@ -21,10 +21,20 @@ public interface PatientMapper {
             @Mapping(source = "confiabilidad", target = "reliability"),
             @Mapping(source = "habitacion", target = "room"),
             @Mapping(source = "fechIngreso", target = "admissionDate"),
-            @Mapping(source = "persona", target = "person")
+            @Mapping(source = "persona", target = "person"),
+            @Mapping(source = "codEPS", target = "hpeId"),
+            @Mapping(source = "codST", target = "maritalStatusId"),
+            @Mapping(source = "codEscolaridad", target = "scholarshipId"),
+            @Mapping(source = "cc", target = "personId"),
+            @Mapping(source = "codLugar", target = "placeId")
     })
     Patient toPatient(Paciente paciente);
 
     @InheritInverseConfiguration
+    @Mappings({
+            @Mapping(target = "", ignore = true),
+            @Mapping(target = "", ignore = true),
+            @Mapping(target = "", ignore = true)
+    })
     Paciente toPaciente(Patient patient);
 }

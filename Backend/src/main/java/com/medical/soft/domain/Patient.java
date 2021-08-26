@@ -15,6 +15,12 @@ public class Patient {
     private String room;
     private LocalDateTime admissionDate;
 
+    private int hpeId;
+    private int maritalStatusId;
+    private int scholarshipId;
+    private int personId;
+    private int placeId;
+
     private Person person;
     private Place place;
     private Scholarship scholarship;
@@ -107,6 +113,46 @@ public class Patient {
 
     public void setAdmissionDate(LocalDateTime admissionDate) {
         this.admissionDate = admissionDate;
+    }
+
+    public int getHpeId() {
+        return hpeId;
+    }
+
+    public void setHpeId(int hpeId) {
+        this.hpeId = hpeId;
+    }
+
+    public int getMaritalStatusId() {
+        return maritalStatusId;
+    }
+
+    public void setMaritalStatusId(int maritalStatusId) {
+        this.maritalStatusId = maritalStatusId;
+    }
+
+    public int getScholarshipId() {
+        return scholarshipId;
+    }
+
+    public void setScholarshipId(int scholarshipId) {
+        this.scholarshipId = scholarshipId;
+    }
+
+    public int getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(int personId) {
+        this.personId = personId;
+    }
+
+    public int getPlaceId() {
+        return placeId;
+    }
+
+    public void setPlaceId(int placeId) {
+        this.placeId = placeId;
     }
 
     public Person getPerson() {

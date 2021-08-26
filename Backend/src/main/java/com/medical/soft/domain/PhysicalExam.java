@@ -1,18 +1,18 @@
 package com.medical.soft.domain;
 
 public class PhysicalExam {
-    private int peId;
+    private int physicalExamId;
     private String chest;
     private String abdomen;
     private String extremities;
     private String column;
 
-    public int getPeId() {
-        return peId;
+    public int getPhysicalExamId() {
+        return physicalExamId;
     }
 
-    public void setPeId(int peId) {
-        this.peId = peId;
+    public void setPhysicalExamId(int physicalExamId) {
+        this.physicalExamId = physicalExamId;
     }
 
     public String getChest() {

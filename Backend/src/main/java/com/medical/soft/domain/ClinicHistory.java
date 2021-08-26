@@ -10,6 +10,13 @@ public class ClinicHistory {
     private String diagnostics;
     private LocalDateTime clinicalHistoryDate;
 
+    private int physicalExamId;
+    private int managementPlanId;
+    private int patientId;
+    private int neurologicalExamId;
+    private int systemReviewId;
+    private int backgroundId;
+
     private ManagementPlan managementPlan;
     private NeurologicalExam neurologicalExam;
     private SystemReview systemReview;
@@ -62,6 +69,54 @@ public class ClinicHistory {
 
     public void setClinicalHistoryDate(LocalDateTime clinicalHistoryDate) {
         this.clinicalHistoryDate = clinicalHistoryDate;
+    }
+
+    public int getPhysicalExamId() {
+        return physicalExamId;
+    }
+
+    public void setPhysicalExamId(int physicalExamId) {
+        this.physicalExamId = physicalExamId;
+    }
+
+    public int getManagementPlanId() {
+        return managementPlanId;
+    }
+
+    public void setManagementPlanId(int managementPlanId) {
+        this.managementPlanId = managementPlanId;
+    }
+
+    public int getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
+
+    public int getNeurologicalExamId() {
+        return neurologicalExamId;
+    }
+
+    public void setNeurologicalExamId(int neurologicalExamId) {
+        this.neurologicalExamId = neurologicalExamId;
+    }
+
+    public int getSystemReviewId() {
+        return systemReviewId;
+    }
+
+    public void setSystemReviewId(int systemReviewId) {
+        this.systemReviewId = systemReviewId;
+    }
+
+    public int getBackgroundId() {
+        return backgroundId;
+    }
+
+    public void setBackgroundId(int backgroundId) {
+        this.backgroundId = backgroundId;
     }
 
     public ManagementPlan getManagementPlan() {

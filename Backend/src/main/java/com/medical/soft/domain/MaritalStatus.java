@@ -1,22 +1,22 @@
 package com.medical.soft.domain;
 
 public class MaritalStatus {
-    private int msId;
-    private String msName;
+    private int maritalStatusId;
+    private String maritalStatusName;
 
-    public int getMsId() {
-        return msId;
+    public int getMaritalStatusId() {
+        return maritalStatusId;
     }
 
-    public void setMsId(int msId) {
-        this.msId = msId;
+    public void setMaritalStatusId(int maritalStatusId) {
+        this.maritalStatusId = maritalStatusId;
     }
 
-    public String getMsName() {
-        return msName;
+    public String getMaritalStatusName() {
+        return maritalStatusName;
     }
 
-    public void setMsName(String msName) {
-        this.msName = msName;
+    public void setMaritalStatusName(String maritalStatusName) {
+        this.maritalStatusName = maritalStatusName;
     }
 }
