@@ -11,7 +11,7 @@ import org.mapstruct.Mappings;
 public interface ScholarshipMapper {
     @Mappings({
             @Mapping(source = "codEscolaridad", target = "scholarshipId"),
-            @Mapping(source = "nombreEscolaridad", target = "ScholarshipName")
+            @Mapping(source = "nombreEscolaridad", target = "scholarshipName")
     })
     Scholarship toScholarship(Escolaridad escolaridad);
 

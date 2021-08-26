@@ -7,7 +7,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-@Mapper(componentModel = "spring", uses = {PersonMapper.class})
+@Mapper(componentModel = "spring", uses = {PersonMapper.class,
+        PlaceMapper.class,
+        ScholarshipMapper.class,
+        MaritalStatusMapper.class,
+        HpeMapper.class})
 public interface PatientMapper {
     @Mappings({
             @Mapping(source = "codPaciente", target = "patientId"),
@@ -26,15 +30,18 @@ public interface PatientMapper {
             @Mapping(source = "codST", target = "maritalStatusId"),
             @Mapping(source = "codEscolaridad", target = "scholarshipId"),
             @Mapping(source = "cc", target = "personId"),
-            @Mapping(source = "codLugar", target = "placeId")
+            @Mapping(source = "lugar", target = "place"),
+            @Mapping(source = "escolaridad", target = "scholarship"),
+            @Mapping(source = "estadoCivil", target = "maritalStatus"),
+            @Mapping(source = "eps", target = "hpe")
     })
     Patient toPatient(Paciente paciente);
 
     @InheritInverseConfiguration
     @Mappings({
-            @Mapping(target = "", ignore = true),
-            @Mapping(target = "", ignore = true),
-            @Mapping(target = "", ignore = true)
+            @Mapping(target = "historiasClinicas", ignore = true),
+            @Mapping(target = "signosVitales", ignore = true),
+            @Mapping(target = "evoluciones", ignore = true)
     })
     Paciente toPaciente(Patient patient);
 }

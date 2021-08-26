@@ -20,6 +20,14 @@ public class Eps {
     private List<Paciente> pacientes;
 
     // Methods
+    public List<Paciente> getPacientes() {
+        return pacientes;
+    }
+
+    public void setPacientes(List<Paciente> pacientes) {
+        this.pacientes = pacientes;
+    }
+
     public Integer getCodEPS() {
         return codEPS;
     }

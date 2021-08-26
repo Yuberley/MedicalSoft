@@ -22,6 +22,16 @@ public class ClinicHistory {
     private SystemReview systemReview;
     private Background background;
     private Patient patient;
+    private PhysicalExam physicalExam;
+
+
+    public PhysicalExam getPhysicalExam() {
+        return physicalExam;
+    }
+
+    public void setPhysicalExam(PhysicalExam physicalExam) {
+        this.physicalExam = physicalExam;
+    }
 
     public int getClinicalHistoryId() {
         return clinicalHistoryId;

@@ -2,7 +2,7 @@ package com.medical.soft.domain;
 
 public class Scholarship {
     private int scholarshipId;
-    private String ScholarshipName;
+    private String scholarshipName;
 
     public int getScholarshipId() {
         return scholarshipId;
@@ -13,10 +13,10 @@ public class Scholarship {
     }
 
     public String getScholarshipName() {
-        return ScholarshipName;
+        return scholarshipName;
     }
 
     public void setScholarshipName(String scholarshipName) {
-        ScholarshipName = scholarshipName;
+        this.scholarshipName = scholarshipName;
     }
 }

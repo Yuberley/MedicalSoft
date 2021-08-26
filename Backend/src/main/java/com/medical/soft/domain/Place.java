@@ -2,9 +2,9 @@ package com.medical.soft.domain;
 
 public class Place {
     private int placeId;
-    private String PlaceBirth;
-    private String PlaceResidence;
-    private String PlaceOrigin;
+    private String placeBirth;
+    private String placeResidence;
+    private String placeOrigin;
 
     public int getPlaceId() {
         return placeId;
@@ -15,27 +15,27 @@ public class Place {
     }
 
     public String getPlaceBirth() {
-        return PlaceBirth;
+        return placeBirth;
     }
 
     public void setPlaceBirth(String placeBirth) {
-        PlaceBirth = placeBirth;
+        this.placeBirth = placeBirth;
     }
 
     public String getPlaceResidence() {
-        return PlaceResidence;
+        return placeResidence;
     }
 
     public void setPlaceResidence(String placeResidence) {
-        PlaceResidence = placeResidence;
+        this.placeResidence = placeResidence;
     }
 
     public String getPlaceOrigin() {
-        return PlaceOrigin;
+        return placeOrigin;
     }
 
     public void setPlaceOrigin(String placeOrigin) {
-        PlaceOrigin = placeOrigin;
+        this.placeOrigin = placeOrigin;
     }
 }
 

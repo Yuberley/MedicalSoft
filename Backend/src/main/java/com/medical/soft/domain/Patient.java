@@ -27,6 +27,7 @@ public class Patient {
     private MaritalStatus maritalStatus;
     private Hpe hpe;
 
+
     public int getPatientId() {
         return patientId;
     }
