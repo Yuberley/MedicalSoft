@@ -10,7 +10,7 @@ import java.util.Optional;
 public class PacienteRepository {
     PacienteCrudRepository pacienteCrudRepository;
 
-    public Optional<Paciente> getPaciente(int codPaciente) {
+    public Optional<Paciente> getPatient(int codPaciente) {
         return pacienteCrudRepository.findById(codPaciente);
     }
 
