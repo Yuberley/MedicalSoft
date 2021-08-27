@@ -2,14 +2,16 @@ package com.medical.soft.persistence;
 
 import com.medical.soft.persistence.crud.SignosVitalesCrudRepository;
 import com.medical.soft.persistence.entity.SignosVitales;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
+@Repository
 public class SignosVitalesRepository {
     private SignosVitalesCrudRepository signosVitalesCrudRepository;
 
-    public Optional<SignosVitales> getSignosVitales(int codSV) {
-        return signosVitalesCrudRepository.findById(codSV);
+    public List<SignosVitales> getSignosVitales(int codPaciente) {
+        return signosVitalesCrudRepository.findByCodPacienteOrderByFechSVDesc(codPaciente);
     }
 
     public SignosVitales save(SignosVitales signosVitales) {
