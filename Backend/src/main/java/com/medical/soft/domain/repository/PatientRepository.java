@@ -6,6 +6,6 @@ import com.medical.soft.persistence.entity.Paciente;
 import java.util.Optional;
 
 public interface PatientRepository {
-    Optional<Paciente> getPatient(int patientId);
+    Optional<Patient> getPatient(int patientId);
     Patient save(Patient patient);
 }
