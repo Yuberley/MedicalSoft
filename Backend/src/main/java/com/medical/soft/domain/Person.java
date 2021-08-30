@@ -1,6 +1,6 @@
 package com.medical.soft.domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Person {
     private int personId;
@@ -8,7 +8,7 @@ public class Person {
     private String lastName;
     private String age;
     private String sex;
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
 
     public int getPersonId() { return personId; }
 
@@ -46,11 +46,11 @@ public class Person {
         this.sex = sex;
     }
 
-    public LocalDateTime getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDateTime birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 }

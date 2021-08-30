@@ -1,7 +1,7 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -16,7 +16,7 @@ public class Persona {
     private String sexo;
 
     @Column(name = "fech_nacimiento")
-    private LocalDateTime fechNacimiento;
+    private LocalDate fechNacimiento;
 
     // Relationships
     @OneToMany(mappedBy = "persona")
@@ -71,11 +71,11 @@ public class Persona {
         this.sexo = sexo;
     }
 
-    public LocalDateTime getFechNacimiento() {
+    public LocalDate getFechNacimiento() {
         return fechNacimiento;
     }
 
-    public void setFechNacimiento(LocalDateTime fechNacimiento) {
+    public void setFechNacimiento(LocalDate fechNacimiento) {
         this.fechNacimiento = fechNacimiento;
     }
 }

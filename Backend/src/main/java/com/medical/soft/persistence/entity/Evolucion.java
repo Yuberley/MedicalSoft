@@ -2,6 +2,7 @@ package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 public class Evolucion {
@@ -24,7 +25,7 @@ public class Evolucion {
 
     // LocalDate is data type for date, not time
     @Column(name = "fech_evolucion")
-    private LocalDate fechEvolucion;
+    private LocalDateTime fechEvolucion;
 
     // Relationships
     @ManyToOne
@@ -100,11 +101,11 @@ public class Evolucion {
         this.analisis = analisis;
     }
 
-    public LocalDate getFechEvolucion() {
+    public LocalDateTime getFechEvolucion() {
         return fechEvolucion;
     }
 
-    public void setFechEvolucion(LocalDate fechEvolucion) {
+    public void setFechEvolucion(LocalDateTime fechEvolucion) {
         this.fechEvolucion = fechEvolucion;
     }
 }
