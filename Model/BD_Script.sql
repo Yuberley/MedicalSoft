@@ -38,17 +38,17 @@ INSERT INTO LUGAR (cod_lugar,nacimiento,recidencia,procedencia) VALUES (4,'Restr
 INSERT INTO LUGAR (cod_lugar,nacimiento,recidencia,procedencia) VALUES (5,'La ceja','Villavicencio','Cali');
 
 #PACIENTES
-INSERT INTO PACIENTES (cod_paciente,ocupacion,religion,raza,lateralidad,informante,parentesco,rh,confiabilidad,habitacion, 
-   cod_eps,cod_st,cod_escolaridad,cc,cod_lugar) VALUES (1, 'celador', 'católico', 'no aplica', 'diestro', 'Diana', 
-  'esposa', 'A+', 'alta', '20', 3, 2, 3, 21190080, 3 
+INSERT INTO PACIENTES (cc,ocupacion,religion,raza,lateralidad,informante,parentesco,rh,confiabilidad, 
+   cod_eps,cod_st,cod_escolaridad,cod_lugar) VALUES (21190080, 'celador', 'católico', 'no aplica', 'diestro', 'Diana', 
+  'esposa', 'A+', 'alta', 3, 2, 3, 3 
 );
-INSERT INTO PACIENTES (cod_paciente,ocupacion,religion,raza,lateralidad,informante,parentesco,rh,confiabilidad,habitacion, 
-  cod_eps,cod_st,cod_escolaridad,cc,cod_lugar) VALUES (2, 'docente', 'catolico', 'indigena', 'diestro', 'Juan', 
-  'hermano', 'O+', 'alta', '27', 1, 2, 2, 4798888, 1
+INSERT INTO PACIENTES (cc,ocupacion,religion,raza,lateralidad,informante,parentesco,rh,confiabilidad, 
+  cod_eps,cod_st,cod_escolaridad,cod_lugar) VALUES (4798888, 'docente', 'catolico', 'indigena', 'diestro', 'Juan', 
+  'hermano', 'O+', 'alta', 1, 2, 2, 1
 );
-INSERT INTO PACIENTES (cod_paciente,ocupacion,religion,raza,lateralidad,informante,parentesco,rh,confiabilidad,habitacion, 
-  cod_eps,cod_st,cod_escolaridad,cc,cod_lugar) VALUES (3, 'electricista', 'agnostico', 'afroamericano', 'zurdo', 
-  'Rosa', 'madre', 'A+', 'media', '103', 5, 3, 4, 1122546763, 4 
+INSERT INTO PACIENTES (cc,ocupacion,religion,raza,lateralidad,informante,parentesco,rh,confiabilidad, 
+  cod_eps,cod_st,cod_escolaridad,cod_lugar) VALUES (1122546763, 'electricista', 'agnostico', 'afroamericano', 'zurdo', 
+  'Rosa', 'madre', 'A+', 'media', 5, 3, 4, 4 
 );
 
 #EXAMEN FISICO
@@ -61,11 +61,11 @@ INSERT INTO EXAMEN_FISICO (cod_ef,torax,abdomen,extremidades,columna) VALUES (3,
 
 #SIGNOS VITALES
 INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
-cod_paciente,cod_ef) VALUES (1,'91 a 119','70 latidos por minuto','14 respiraciones por minuto','95%','133mg/dl',1,1);
+cc,cod_ef) VALUES (1,'91 a 119','70 latidos por minuto','14 respiraciones por minuto','95%','133mg/dl',21190080,1);
 INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
-cod_paciente,cod_ef) VALUES (2,'entre 120 y 129','100 latidos por minuto','11 respiraciones por minuto','87%','160mg/dl',2,2);
+cc,cod_ef) VALUES (2,'entre 120 y 129','100 latidos por minuto','11 respiraciones por minuto','87%','160mg/dl',4798888,2);
 INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
-cod_paciente,cod_ef) VALUES (3,'menor a 90','63 latidos por minuto','19 respiraciones por minuto','70%','90mg/dl',3,3);
+cc,cod_ef) VALUES (3,'menor a 90','63 latidos por minuto','19 respiraciones por minuto','70%','90mg/dl',1122546763,3);
 
 #MEDICAMENTOS
 INSERT INTO MEDICAMENTOS (cod_medicamentos,nomb_medicamento,dosis,concentracion,tiempo_administracion) VALUES (1,'paracetamol',
@@ -95,15 +95,15 @@ INSERT INTO PLAN_MANEJO (cod_pm,descripcion,cod_evolucion) VALUES (3,'El pacient
   respiratorios, por otro lado, la frecuencia respiratoria es muy elevada, hay que revisar ',3);
 
 #EVOLUCIÓN
-INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cod_paciente,cod_pm) VALUES (2,
+INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm) VALUES (2,
 'El paciente ha tenido una mejora continua, esperemos que así continúe','El paciente aunque ha mejorado sigue presentando unos 
-resultados preocupantes','Hay que seguir tomando el medicamento','2021/08/28',1,2);
-INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cod_paciente,cod_pm ) VALUES (3,
+resultados preocupantes','Hay que seguir tomando el medicamento','2021/08/28',21190080,2);
+INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm ) VALUES (3,
 'El paciente ha estado empeorando, no se tienen muy buenas expectativas pero se hará el máximo esfuerzo','No hay ninguna mejora, 
-hay que estudiar todas las posibilidades','Hay que mantener en UCI','2021/08/29',2,3);
-INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cod_paciente,cod_pm) VALUES (1,
+hay que estudiar todas las posibilidades','Hay que mantener en UCI','2021/08/29',4798888,3);
+INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm) VALUES (1,
 'El paciente muestra una mejora progresiva','El paciente ya casi está carente de sintomas','Se le dará de alta al paciente pronto',
-'2021/08/18',3,1);
+'2021/08/18',1122546763,1);
 
 #RECETA
 INSERT INTO receta (cod_medicamentos,cod_pm) VALUES (1,1);
@@ -149,10 +149,10 @@ toxico_alergicos,traumaticos,gineco_obstetrico,inmunologicos,psiquiatricos) VALU
 calculos renales','2 cirugías','no','ninguno','a las nueces','no','rinitis','ninguno','ninguno');
 
 #HISTORIA CLINICA
-INSERT INTO HISTORIA_CLINICA (cod_hc,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cod_paciente,
-cod_en,cod_rs,cod_antecedente) VALUES (1,'dolor','migraña','migraña que puede ser tratada facilmente','no es grave',1,1,1,1,1,1);
-INSERT INTO HISTORIA_CLINICA (cod_hc,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cod_paciente,
-cod_en,cod_rs,cod_antecedente) VALUES (2,'malestar','infeccion','infeccion no maligna','esta bien',2,2,2,2,2,2);
-INSERT INTO HISTORIA_CLINICA (cod_hc,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cod_paciente,
-cod_en,cod_rs,cod_antecedente) VALUES (3,'dolor','vejez','estomago con problemas en las tripas','se va a morir',3,3,3,3,3,3);
+INSERT INTO HISTORIA_CLINICA (cod_hc,habitacion,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cc,
+cod_en,cod_rs,cod_antecedente) VALUES (1, '20','dolor','migraña','migraña que puede ser tratada facilmente','no es grave',1,1,21190080,1,1,1);
+INSERT INTO HISTORIA_CLINICA (cod_hc,habitacion,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cc,
+cod_en,cod_rs,cod_antecedente) VALUES (2, '27', 'malestar','infeccion','infeccion no maligna','esta bien',2,2,4798888,2,2,2);
+INSERT INTO HISTORIA_CLINICA (cod_hc,habitacion,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cc,
+cod_en,cod_rs,cod_antecedente) VALUES (3, '103','dolor','vejez','estomago con problemas en las tripas','se va a morir',3,3,1122546763,3,3,3);
 

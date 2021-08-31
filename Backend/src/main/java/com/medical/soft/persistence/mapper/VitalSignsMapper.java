@@ -21,7 +21,7 @@ public interface VitalSignsMapper {
             @Mapping(source = "saturacionOxigeno", target = "oxygenSaturation"),
             @Mapping(source = "glusemia", target = "bloodGlucose"),
             @Mapping(source = "fechSV", target = "vitalSignsDate"),
-            @Mapping(source = "codPaciente", target = "patientId"),
+            @Mapping(source = "cc", target = "patientId"),
             @Mapping(source = "codEF", target = "physicalExamId"),
             @Mapping(source = "paciente", target = "patient"),
             @Mapping(source = "examenFisico", target = "physicalExam")

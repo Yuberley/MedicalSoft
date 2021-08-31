@@ -18,6 +18,7 @@ import org.mapstruct.Mappings;
 public interface ClinicHistoryMapper {
     @Mappings({
             @Mapping(source = "codHC", target = "clinicalHistoryId"),
+            @Mapping(source = "habitacion", target = "room"),
             @Mapping(source = "motivoConsulta", target = "reasonConsultation"),
             @Mapping(source = "enfermedadActual", target = "currentIllness"),
             @Mapping(source = "analisis", target = "analysis"),
@@ -25,7 +26,7 @@ public interface ClinicHistoryMapper {
             @Mapping(source = "fechHC", target = "clinicalHistoryDate"),
             @Mapping(source = "codEF", target = "physicalExamId"),
             @Mapping(source = "codPM", target = "managementPlanId"),
-            @Mapping(source = "codPaciente", target = "patientId"),
+            @Mapping(source = "cc", target = "patientId"),
             @Mapping(source = "codEN", target = "neurologicalExamId"),
             @Mapping(source = "codRS", target = "systemReviewId"),
             @Mapping(source = "codAntecedente", target = "backgroundId"),

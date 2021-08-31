@@ -17,8 +17,7 @@ public class HistoriaClinica {
     private Integer codEF;
     @Column(name = "cod_pm")
     private Integer codPM;
-    @Column(name = "cod_paciente")
-    private Integer codPaciente;
+    private Integer cc;
     @Column(name = "cod_en")
     private Integer codEN;
     @Column(name = "cod_rs")
@@ -27,6 +26,7 @@ public class HistoriaClinica {
     private Integer codAntecedente;
 
     // Attributes
+    private String habitacion;
     @Column(name = "motivo_consulta")
     private String motivoConsulta;
     @Column(name = "enfermedad_actual")
@@ -42,7 +42,7 @@ public class HistoriaClinica {
     private PlanManejo planManejo;
 
     @ManyToOne
-    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
+    @JoinColumn(name = "cc", insertable = false, updatable = false)
     private Paciente paciente;
 
     @ManyToOne
@@ -62,6 +62,22 @@ public class HistoriaClinica {
     private ExamenNeurologico examenNeurologico;
 
     // Methods
+    public Integer getCc() {
+        return cc;
+    }
+
+    public void setCc(Integer cc) {
+        this.cc = cc;
+    }
+
+    public String getHabitacion() {
+        return habitacion;
+    }
+
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
+    }
+
     public PlanManejo getPlanManejo() {
         return planManejo;
     }
@@ -132,14 +148,6 @@ public class HistoriaClinica {
 
     public void setCodPM(Integer codPM) {
         this.codPM = codPM;
-    }
-
-    public Integer getCodPaciente() {
-        return codPaciente;
-    }
-
-    public void setCodPaciente(Integer codPaciente) {
-        this.codPaciente = codPaciente;
     }
 
     public Integer getCodEN() {

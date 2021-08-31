@@ -14,7 +14,7 @@ import org.mapstruct.Mappings;
         HpeMapper.class})
 public interface PatientMapper {
     @Mappings({
-            @Mapping(source = "codPaciente", target = "patientId"),
+            @Mapping(source = "cc", target = "patientId"),
             @Mapping(source = "ocupacion", target = "occupation"),
             @Mapping(source = "religion", target = "religion"),
             @Mapping(source = "raza", target = "race"),
@@ -23,7 +23,6 @@ public interface PatientMapper {
             @Mapping(source = "parentesco", target = "relationship"),
             @Mapping(source = "rh", target = "rh"),
             @Mapping(source = "confiabilidad", target = "reliability"),
-            @Mapping(source = "habitacion", target = "room"),
             @Mapping(source = "fechIngreso", target = "admissionDate"),
             @Mapping(source = "persona", target = "person"),
             @Mapping(source = "codEPS", target = "hpeId"),

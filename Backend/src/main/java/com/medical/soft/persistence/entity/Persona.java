@@ -19,15 +19,17 @@ public class Persona {
     private LocalDate fechNacimiento;
 
     // Relationships
-    @OneToMany(mappedBy = "persona")
-    private List<Paciente> pacientes;
+    @OneToOne(mappedBy = "persona")
+    private Paciente pacientes;
 
     // Methods
-    public List<Paciente> getPacientes() {
+
+
+    public Paciente getPacientes() {
         return pacientes;
     }
 
-    public void setPacientes(List<Paciente> pacientes) {
+    public void setPacientes(Paciente pacientes) {
         this.pacientes = pacientes;
     }
 

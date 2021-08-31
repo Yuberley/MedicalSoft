@@ -12,7 +12,6 @@ public class Patient {
     private String relationship;
     private String rh;
     private String reliability;
-    private String room;
     private LocalDateTime admissionDate;
 
     private int hpeId;
@@ -98,14 +97,6 @@ public class Patient {
 
     public void setReliability(String reliability) {
         this.reliability = reliability;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
     }
 
     public LocalDateTime getAdmissionDate() {

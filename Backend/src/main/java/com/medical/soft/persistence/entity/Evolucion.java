@@ -13,8 +13,7 @@ public class Evolucion {
     private Integer codEvolucion;
 
     // Foraign keys
-    @Column(name = "cod_paciente")
-    private Integer codPaciente;
+    private Integer cc;
     @Column(name = "cod_pm")
     private Integer codPM;
 
@@ -29,7 +28,7 @@ public class Evolucion {
 
     // Relationships
     @ManyToOne
-    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
+    @JoinColumn(name = "cc", insertable = false, updatable = false)
     private Paciente paciente;
 
     @ManyToOne
@@ -37,6 +36,14 @@ public class Evolucion {
     private PlanManejo planManejo;
 
     // Methods
+    public Integer getCc() {
+        return cc;
+    }
+
+    public void setCc(Integer cc) {
+        this.cc = cc;
+    }
+
     public Paciente getPaciente() {
         return paciente;
     }
@@ -59,14 +66,6 @@ public class Evolucion {
 
     public void setCodEvolucion(Integer codEvolucion) {
         this.codEvolucion = codEvolucion;
-    }
-
-    public Integer getCodPaciente() {
-        return codPaciente;
-    }
-
-    public void setCodPaciente(Integer codPaciente) {
-        this.codPaciente = codPaciente;
     }
 
     public Integer getCodPM() {

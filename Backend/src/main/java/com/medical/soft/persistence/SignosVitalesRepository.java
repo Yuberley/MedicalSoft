@@ -20,7 +20,7 @@ public class SignosVitalesRepository implements VitalSignsRepository {
 
     @Override
     public List<VitalSigns> getVitalSigns(int patientId) {
-        List<SignosVitales> signosVitales = signosVitalesCrudRepository.findByCodPacienteOrderByFechSVDesc(patientId);
+        List<SignosVitales> signosVitales = signosVitalesCrudRepository.findByCcOrderByFechSVDesc(patientId);
         return mapper.toVitalSigns(signosVitales);
     }
 

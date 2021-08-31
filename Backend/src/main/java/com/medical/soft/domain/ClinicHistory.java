@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 public class ClinicHistory {
     private int clinicalHistoryId;
+    private String room;
     private String reasonConsultation;
     private String currentIllness;
     private String analysis;
@@ -24,6 +25,13 @@ public class ClinicHistory {
     private Patient patient;
     private PhysicalExam physicalExam;
 
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
 
     public PhysicalExam getPhysicalExam() {
         return physicalExam;

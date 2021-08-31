@@ -10,9 +10,7 @@ import java.util.List;
 public class Paciente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cod_paciente")
-    private Integer codPaciente;
+    private Integer cc;
 
     // Foreign keys
     @Column(name = "cod_eps")
@@ -21,7 +19,6 @@ public class Paciente {
     private Integer codST;
     @Column(name = "cod_escolaridad")
     private Integer codEscolaridad;
-    private Integer cc;
     @Column(name = "cod_lugar")
     private Integer codLugar;
 
@@ -34,7 +31,6 @@ public class Paciente {
     private String parentesco;
     private String rh;
     private String confiabilidad;
-    private String habitacion;
 
     // LocalDateTime is type data for date and hours
     @Column(name = "fech_ingreso")
@@ -49,7 +45,7 @@ public class Paciente {
     @JoinColumn(name = "cod_escolaridad", insertable = false, updatable = false)
     private Escolaridad escolaridad;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "cc", insertable = false, updatable = false)
     private Persona persona;
 
@@ -151,14 +147,6 @@ public class Paciente {
         this.historiasClinicas = historiasClinicas;
     }
 
-    public Integer getCodPaciente() {
-        return codPaciente;
-    }
-
-    public void setCodPaciente(Integer codPaciente) {
-        this.codPaciente = codPaciente;
-    }
-
     public Integer getCodST() {
         return codST;
     }
@@ -247,13 +235,6 @@ public class Paciente {
         this.confiabilidad = confiabilidad;
     }
 
-    public String getHabitacion() {
-        return habitacion;
-    }
-
-    public void setHabitacion(String habitacion) {
-        this.habitacion = habitacion;
-    }
 
     public LocalDateTime getFechIngreso() {
         return fechIngreso;

@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface SignosVitalesCrudRepository extends CrudRepository<SignosVitales, Integer> {
-    List<SignosVitales> findByCodPacienteOrderByFechSVDesc(int codPaciente);
+    List<SignosVitales> findByCcOrderByFechSVDesc(int cc);
 }

@@ -51,7 +51,7 @@ CREATE TABLE LUGAR
 
 CREATE TABLE PACIENTES
 (
-  cod_paciente INT NOT NULL auto_increment,
+  cc INT NOT NULL,
   ocupacion varchar(100),
   religion varchar(100),
   raza varchar(100),
@@ -60,14 +60,12 @@ CREATE TABLE PACIENTES
   parentesco varchar(100),
   rh varchar(4),
   confiabilidad varchar(100),
-  habitacion varchar(5),
   fech_ingreso TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   cod_eps INT NOT NULL,
   cod_st INT NOT NULL,
   cod_escolaridad INT NOT NULL,
-  cc INT NOT NULL,
   cod_lugar INT NOT NULL,
-  PRIMARY KEY (cod_paciente),
+  PRIMARY KEY (cc),
   FOREIGN KEY (cod_eps) REFERENCES EPS(cod_eps),
   FOREIGN KEY (cod_st) REFERENCES ESTADO_CIVIL(cod_st),
   FOREIGN KEY (cod_escolaridad) REFERENCES ESCOLARIDAD(cod_escolaridad),
@@ -94,10 +92,10 @@ CREATE TABLE SIGNOS_VITALES
   saturacion_oxigeno varchar(200),
   glucemia varchar(200),
   fech_sv TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  cod_paciente INT NOT NULL,
+  cc INT NOT NULL,
   cod_ef INT NOT NULL,
   PRIMARY KEY (cod_sv),
-  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente),
+  FOREIGN KEY (cc) REFERENCES PACIENTES(cc),
   FOREIGN KEY (cod_ef) REFERENCES EXAMEN_FISICO(cod_ef)
 );
 
@@ -133,10 +131,10 @@ CREATE TABLE EVOLUCION
   objetivo varchar(200),
   analisis varchar(200),
   fech_evolucion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  cod_paciente INT NOT NULL,
+  cc INT NOT NULL,
   cod_pm INT NOT NULL,
   PRIMARY KEY (cod_evolucion),
-  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente),
+  FOREIGN KEY (cc) REFERENCES PACIENTES(cc),
   FOREIGN KEY (cod_pm) REFERENCES PLAN_MANEJO(cod_pm)
 );
 
@@ -210,6 +208,7 @@ CREATE TABLE ANTECEDENTES
 CREATE TABLE HISTORIA_CLINICA
 (
   cod_hc INT NOT NULL auto_increment,
+  habitacion varchar(5),
   motivo_consulta varchar(200),
   enfermedad_actual varchar(200),
   analisis varchar(200),
@@ -217,14 +216,14 @@ CREATE TABLE HISTORIA_CLINICA
   fech_hc TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   cod_ef INT NOT NULL,
   cod_pm INT NOT NULL,
-  cod_paciente INT NOT NULL,
+  cc INT NOT NULL,
   cod_en INT NOT NULL,
   cod_rs INT NOT NULL,
   cod_antecedente INT NOT NULL,
   PRIMARY KEY (cod_hc),
   FOREIGN KEY (cod_ef) REFERENCES EXAMEN_FISICO(cod_ef),
   FOREIGN KEY (cod_pm) REFERENCES PLAN_MANEJO(cod_pm),
-  FOREIGN KEY (cod_paciente) REFERENCES PACIENTES(cod_paciente),
+  FOREIGN KEY (cc) REFERENCES PACIENTES(cc),
   FOREIGN KEY (cod_en) REFERENCES EXAMEN_NEUROLOGICO(cod_en),
   FOREIGN KEY (cod_rs) REFERENCES REVISION_SISTEMA(cod_rs),
   FOREIGN KEY (cod_antecedente) REFERENCES ANTECEDENTES(cod_antecedente)

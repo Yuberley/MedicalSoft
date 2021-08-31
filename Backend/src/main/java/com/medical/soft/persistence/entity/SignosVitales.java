@@ -14,8 +14,7 @@ public class SignosVitales {
     private Integer codSV;
 
     // Foreign keys
-    @Column(name = "cod_paciente")
-    private Integer codPaciente;
+    private Integer cc;
     @Column(name = "cod_ef")
     private Integer codEF;
 
@@ -34,7 +33,7 @@ public class SignosVitales {
 
     // Relationships
     @ManyToOne
-    @JoinColumn(name = "cod_paciente", insertable = false, updatable = false)
+    @JoinColumn(name = "cc", insertable = false, updatable = false)
     private Paciente paciente;
 
     @ManyToOne
@@ -42,6 +41,14 @@ public class SignosVitales {
     private ExamenFisico examenFisico;
 
     // Methods
+    public Integer getCc() {
+        return cc;
+    }
+
+    public void setCc(Integer cc) {
+        this.cc = cc;
+    }
+
     public ExamenFisico getExamenFisico() {
         return examenFisico;
     }
@@ -68,14 +75,6 @@ public class SignosVitales {
 
     public void setCodSV(Integer codSV) {
         this.codSV = codSV;
-    }
-
-    public Integer getCodPaciente() {
-        return codPaciente;
-    }
-
-    public void setCodPaciente(Integer codPaciente) {
-        this.codPaciente = codPaciente;
     }
 
     public String getPresionArterial() {
