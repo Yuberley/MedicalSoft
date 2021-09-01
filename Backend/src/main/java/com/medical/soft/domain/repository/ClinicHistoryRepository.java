@@ -6,6 +6,6 @@ import com.medical.soft.persistence.entity.HistoriaClinica;
 import java.util.Optional;
 
 public interface ClinicHistoryRepository {
-    Optional<ClinicHistory> getClinicalHistoryId(int clinicalHistoryId);
+    Optional<ClinicHistory> getClinicalHistoryPatientId(int patientId);
     ClinicHistory save(ClinicHistory clinicHistory);
 }

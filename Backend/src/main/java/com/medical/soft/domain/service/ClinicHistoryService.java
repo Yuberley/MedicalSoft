@@ -12,8 +12,8 @@ public class ClinicHistoryService {
     @Autowired
     private ClinicHistoryRepository clinicHistoryRepository;
 
-    public Optional<ClinicHistory> getClinicalHistoryId(int clinicalHistoryId) {
-        return clinicHistoryRepository.getClinicalHistoryId(clinicalHistoryId);
+    public Optional<ClinicHistory> getClinicalHistoryPatientId(int patientId) {
+        return clinicHistoryRepository.getClinicalHistoryPatientId(patientId);
     }
 
     public ClinicHistory save(ClinicHistory clinicHistory) {

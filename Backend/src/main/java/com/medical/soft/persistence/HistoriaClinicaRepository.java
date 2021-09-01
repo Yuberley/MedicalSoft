@@ -20,8 +20,8 @@ public class HistoriaClinicaRepository implements ClinicHistoryRepository {
 
 
     @Override
-    public Optional<ClinicHistory> getClinicalHistoryId(int clinicalHistoryId) {
-        return historiaClinicaCrudRespository.findById(clinicalHistoryId)
+    public Optional<ClinicHistory> getClinicalHistoryPatientId(int patientId) {
+        return historiaClinicaCrudRespository.findByCc(patientId)
                 .map(historiaClinica -> mapper.toClinicHistory(historiaClinica));
     }
 

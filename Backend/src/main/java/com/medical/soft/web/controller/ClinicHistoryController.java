@@ -14,9 +14,9 @@ public class ClinicHistoryController {
     @Autowired
     private ClinicHistoryService clinicHistoryService;
 
-    @GetMapping("/{clinicalHistoryId}")
-    public Optional<ClinicHistory> getClinicalHistoryId(@PathVariable("clinicalHistoryId") int clinicalHistoryId) {
-        return clinicHistoryService.getClinicalHistoryId(clinicalHistoryId);
+    @GetMapping("/{patientId}")
+    public Optional<ClinicHistory> getClinicalHistoryId(@PathVariable("patientId") int patientId) {
+        return clinicHistoryService.getClinicalHistoryPatientId(patientId);
     }
 
     @PostMapping("/save")
