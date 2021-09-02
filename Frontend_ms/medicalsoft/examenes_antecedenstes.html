@@ -54,7 +54,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Calculadora MD</a>
+                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#calculator" href="">Calculadora MD</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
@@ -87,6 +87,43 @@
             </li>
           </ul>
 
+    </div>
+
+
+     <!-- Modal Calculadora -->
+     <div class="modal fade" id="calculator" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Calculadora</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-8 offset-2 pt-3 pb-3 mt-3 mb-3 border border-secondary bg-success d-grid gap-2 rounded hoverable" style="--bs-bg-opacity: .2;">
+                  <a class="btn" href="/Calculator/PERC.html" role="button" target="_blank">PERC Rule for Pulmonary Embolism</a>
+                </div>
+                <div class="col-8 offset-2 pt-3 pb-3 mt-3 mb-3 border border-secondary bg-success d-grid gap-2 rounded" style="--bs-bg-opacity: .2;">
+                  <a class="btn" href="/Calculator/CURB.html" role="button" target="_blank">CURB-65 Score for Pneumonia Severity</a>
+                </div>
+                <div class="col-8 offset-2 pt-3 pb-3 mt-3 mb-3 border border-secondary bg-success d-grid gap-2 rounded" style="--bs-bg-opacity: .2;">
+                  <a class="btn" href="/Calculator/Revised.html" role="button" target="_blank">Revised Cardiac Risk Index for Pre-Operative Risk</a>
+                </div>
+                <div class="col-8 offset-2 pt-3 pb-3 mt-3 mb-3 border border-secondary bg-success d-grid gap-2 rounded" style="--bs-bg-opacity: .2;">
+                  <a class="btn" href="/Calculator/CHA.html" role="button" target="_blank">CHA₂DS₂-VASc Score for Atrial Fibrillation Stroke Risk</a>
+                </div>
+                <div class="col-8 offset-2 pt-3 pb-3 mt-3 mb-3 border border-secondary bg-success d-grid gap-2 rounded" style="--bs-bg-opacity: .2;">
+                  <a class="btn" href="/Calculator/HEART.html" role="button" target="_blank">HEART Score for Major Cardiac Events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
 
