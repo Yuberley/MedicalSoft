@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cfca5aa225.js" crossorigin="anonymous"></script>
+
      <!-- SEO -->
     <meta name="author" content="MedicalSoft" />
     <meta
@@ -54,7 +57,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#calculator" href="">Calculadora MD</a>
+                <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#calculator" href="">Calculadora <i class="fas fa-calculator"></i></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
@@ -89,6 +92,367 @@
 
     </div>
 
+    <!-- Main -->
+    <div class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-12 col-xl mt-2 mb-2 mx-3 px-3 border border-secondary">
+          <div class="row mt-1 bg-danger" style="--bs-bg-opacity: .2;">
+            <div class="col pt-2">
+              <p class="text-start text-primary fs-4">Revision de Sistema</p>
+            </div>
+            <div class="col-3 pt-2 pb-3 d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-success me-md-2" type="button"  data-bs-toggle="modal" data-bs-target="#AbrirRevision">Abrir</button>
+            </div>
+          </div>          
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Neuropsiquiatrico:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Mama:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Sintomas Generales:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Cabeza y Sentidos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Linforreticular:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Cardio Pulmonar:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Gastro Intestinal:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Psicogenicos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Genitourinario:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Musculo Esqueletico:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Piel Fanereas:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Endocrino:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Venereos:</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-xl mt-2 mb-2 mx-3 px-3 border border-secondary">
+          <div class="row mt-1 bg-danger" style="--bs-bg-opacity: .2;">
+            <div class="col pt-2">
+              <p class="text-start text-primary fs-4">Examen Neurologico</p>
+            </div>
+            <div class="col-3 pt-2 pb-3 d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#AbrirNeurologico">Abrir</button>
+            </div>
+          </div>   
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Mental:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Pares Craneales:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Motor Raquideo:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Sensitivo Raquideo:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Reflejos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Coordinacion:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Marcha:</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-12 col-xl mt-2 mb-2 mx-3 px-3 border border-secondary">
+          <div class="row mt-1 bg-danger" style="--bs-bg-opacity: .2;">
+            <div class="col pt-2">
+              <p class="text-start text-primary fs-4">Antecedentes</p>
+            </div>
+            <div class="col-3 pt-2 pb-3 d-grid gap-2 d-md-flex justify-content-md-end">
+              <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#AbrirAntecedentes">Abrir</button>
+            </div>
+          </div>   
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Psicosociales:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Familiares:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Quirurgicos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Hospitalarios:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Patologicos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Farmacologicos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Toxico Alergicos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Traumaticos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Gineco Obstetrico:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Inmunologicos:</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Psiquiatricos:</th>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal AbrirRevision -->
+    <div class="modal fade" id="AbrirRevision" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalLabelRevision" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabelRevision">Revision de Sistema</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Neuropsiquiatrico:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Mama:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Sintomas Generales:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Cabeza y Sentidos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Linforreticular:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Cardio Pulmonar:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Gastro Intestinal:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Psicogenicos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Genitourinario:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Musculo Esqueletico:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Piel Fanereas:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Endocrino:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Venereos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal AbrirNeurologico -->
+    <div class="modal fade" id="AbrirNeurologico" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalLabelNeurologico" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabelNeurologico">Examen Neurologico</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Mental:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Pares Craneales:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Motor Raquideo:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Sensitivo Raquideo:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Reflejos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Coordinacion:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Marcha:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal AbrirAntecedentes -->
+    <div class="modal fade" id="AbrirAntecedentes" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ModalLabelAntecedentes" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabelAntecedentes">Antecedentes</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <th>Psicosociales:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Familiares:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Quirurgicos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Hospitalarios:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Patologicos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Farmacologicos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Toxico Alergicos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Traumaticos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Gineco Obstetrico:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Inmunologicos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                  <th>Psiquiatricos:</th>
+                  <td><textarea class="form-control" rows="3"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
      <!-- Modal Calculadora -->
      <div class="modal fade" id="calculator" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">

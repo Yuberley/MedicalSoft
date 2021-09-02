@@ -21,9 +21,6 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 ![()](https://github.com/Yuberley/MedicalSoft/blob/master/Model/MER.png)
 
-### Mockup de una escala clínica 📄
-
-![()](https://github.com/Yuberley/MedicalSoft/blob/master/Documents/Calculadora_medica2.png)
 
 
 
