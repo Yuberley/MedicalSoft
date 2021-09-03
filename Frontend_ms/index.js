@@ -9,6 +9,6 @@ fetch(`${API}/people`)
                                                 <td>${person.firstName}</td>
                                                 <td>${person.lastName}</td>
                                                 <td>${person.sex}</td>
-                                                <td><button type="button" class="btn btn-outline-info">Ver</button></td></tr>`);
+                                                <td><a href="http://localhost:8060/medicalsoft/api/clinic_history/${person.personId}"><button type="button" class="btn btn-outline-info">Ver</button></a></td></tr>`);
     HTMLResponse.innerHTML = template;
   });
