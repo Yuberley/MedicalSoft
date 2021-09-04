@@ -50,7 +50,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Perfil</a></li>
-                  <li><a class="dropdown-item" href="./ayuda.html">Ayuda</a></li>
+                  <li><a class="dropdown-item" href="../medicalsoft/ayuda/">Ayuda</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                 </ul>
@@ -94,28 +94,9 @@
 
         <!-- Header Historia Clinica-->
         <div class="row ms-1 me-1">
-            <div class="col-lg-4 border border-2 text-capitalize pt-1 bg-light">
+            <div id="datosPrincipalesPaciente" class="col-lg-4 border border-2 text-capitalize pt-1 bg-light">
 
-                <div class="row col">
-                  <div class="col-4">• N° Cedula</div>
-                  <div class="col">1006784985</div>
-                </div>
-                <div class="row col">
-                  <div class="col-4">• Nombre</div>
-                  <div class="col">Juan Andres Perez rojo</div>
-                </div>
-                <div class="row col">
-                  <div class="col-4">• Edad</div>
-                  <div class="col">34</div>
-                </div>
-                <div class="row col">
-                  <div class="col-4">• Sexo</div>
-                  <div class="col">Hombre</div>
-                </div>
-                <div class="row col">
-                  <div class="col-4">• EPS</div>
-                  <div class="col">SevicioSalud</div>
-                </div>
+              <!-- Datos basicos del paciente -->
 
             </div>
             <div class="col-lg-8 border border-2 bg-light">
@@ -131,81 +112,8 @@
             <div class=" col-lg-3">
               <div class="col col-sm-12 h-100 d-inline-block pb-2 pt-2 p-3 border-start border-3 border-light text-black" style="background-color: rgb(243, 183, 127)">
                 <h5>Datos del paciente</h5>
-                <small>
-                  <div class="row col">
-                    <div class="col-5">• Ingreso</div>
-                    <div class="col">10/06/2021</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• EPS</div>
-                    <div class="col">Salud Total</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• RH</div>
-                    <div class="col">O+</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Ocupación</div>
-                    <div class="col">Ingeniero de sistemas</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Nacimiento</div>
-                    <div class="col">Sogamoso</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Residencia</div>
-                    <div class="col">Villavicencio</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Precedencia</div>
-                    <div class="col">Villavicencio</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Escolaridad</div>
-                    <div class="col">Universitario</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Estado civil</div>
-                    <div class="col">Soltero</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Religión</div>
-                    <div class="col"> N/A</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Raza</div>
-                    <div class="col">N/A</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Lateralidad</div>
-                    <div class="col">Derecho</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Informante</div>
-                    <div class="col">Prueba</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Parentesto</div>
-                    <div class="col">Texto aquí</div>
-                  </div>
-                  <hr class="dropdown-divider">
-                  <div class="row col">
-                    <div class="col-5">• Confiabilidad</div>
-                    <div class="col">Confiado</div>
-                  </div>
+                <small id="datosDelPaciente">
+                  
                 </small>
               </div>
 
@@ -373,6 +281,6 @@
     ></script>
 
     <!-- index page -->
-    <script src="../js/historia_clinica.js" type="module"></script>
+    <script src="/../js/historia_clinica.js" type="module"></script>
   </body>
 </html>
