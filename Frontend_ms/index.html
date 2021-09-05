@@ -74,7 +74,7 @@
       <!-- Add paciente -->
       <div class="row mb-lg-3 ">
         <div class="col offset-lg-10 offset-sm-9">
-          <button type="button" class="btn btn-outline-success">Añadir paciente</button>
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#añadirPaciente">Añadir paciente</button>
         </div>
       </div>
       <hr class="dropdown-divider">
@@ -129,12 +129,58 @@
             <input type="number" class="form-control" id="buscarPacientes" placeholder="N° identificación">
           </div>
           <div class="d-flex justify-content-center pb-sm-2">
-            <button type="button" class="btn btn-secondary">Buscar</button>
+            <button type="button" class="btn btn-secondary" onclick="prueba()">Buscar</button>
           </div>
         </div>
 
       </div>
     </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="añadirPaciente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <form id="formularioPersona">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Identificación</span>
+                    <input type="number"  id="identificacion" name="personId" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Nombres</span>
+                    <input type="text" id="nombres" name="firstName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Apellidos</span>
+                    <input type="text" id="apellidos" name="lastName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Sexo</span>
+                    <input type="text" id="sexo" name="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Edad</span>
+                    <input type="number" id="edad" name="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Fecha de nacimiento</span>
+                    <input type="date" id="fecha_de_nacimiento" name="birthDate" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a href="./"><button type="button" class="btn btn-primary" onclick="savePerson()">Save changes</button></a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
 
     <!-- Modal Calculadora -->
     <div class="modal fade" id="calculator" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
@@ -190,6 +236,6 @@
     ></script>
 
     <!-- index page -->
-    <script src="index.js" type="module"></script>
+    <script src="index.js" ></script>
   </body>
 </html>
