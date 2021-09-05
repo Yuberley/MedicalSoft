@@ -1,0 +1,59 @@
+// getters Ids by url
+const locationIds = location.href.split('?')[1];
+const patientId = locationIds.split('&')[0].split('=')[1];
+const systemReviewId = locationIds.split('&')[1].split('=')[1];
+const backgroundId = locationIds.split('&')[2].split('=')[1];
+const neurologicalExamId = locationIds.split('&')[3].split('=')[1];
+
+console.log(patientId)
+console.log(systemReviewId)
+console.log(backgroundId)
+console.log(neurologicalExamId)
+
+
+const navClinicHistory = document.querySelector("#navegacionSignosVitales");
+
+function NavigatorClinicHistory() {
+    const contentNavHistory = `<li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../historia_clinica/?patientId=${patientId}">Historia Clínica</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active border border-dark fw-bold" href="../signos_vitales/?patientId=${patientId}&systemReviewId=${systemReviewId}&backgroundId=${backgroundId}&neurologicalExamId=${neurologicalExamId}">Signos Vitales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../examenes_antecedenstes/?patientId=${patientId}&systemReviewId=${systemReviewId}&backgroundId=${backgroundId}&neurologicalExamId=${neurologicalExamId}">Examenes y antecentes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../plan_manejo/?patientId=${patientId}&systemReviewId=${systemReviewId}&backgroundId=${backgroundId}&neurologicalExamId=${neurologicalExamId}">Plan de Manejo</a>
+                                </li>`;
+                              
+                    navClinicHistory.innerHTML = contentNavHistory;
+}
+
+NavigatorClinicHistory();
+
+const URLVitalSigns = "http://localhost:8060/medicalsoft/api/vital_signs";
+
+const vitalSignsSelector = document.querySelector("#signosVitales");
+
+async function getVitalSigns(){
+   await fetch(`${URLVitalSigns}/${patientId}`)
+                .then(response => response.json())
+                .then(vitalSigns => {
+                  var template = vitalSigns.map((dataVitalSigns) => `<tr>
+                                                            <th>${dataVitalSigns.vitalSignsDate}</th>
+                                                            <td>${dataVitalSigns.bloodPressure}</td>
+                                                            <td>${dataVitalSigns.heartRate}</td>
+                                                            <td>${dataVitalSigns.breathingFrequency}</td>
+                                                            <td>${dataVitalSigns.oxygenSaturation}</td>
+                                                            <td>${dataVitalSigns.bloodGlucose}</td>
+                                                            <td><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
+                                                        </tr>`);
+                      vitalSignsSelector.innerHTML = template;
+                  
+                });
+                
+                
+}
+
+getVitalSigns();

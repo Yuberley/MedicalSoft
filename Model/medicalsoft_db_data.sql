@@ -61,11 +61,51 @@ INSERT INTO EXAMEN_FISICO (cod_ef,torax,abdomen,extremidades,columna) VALUES (3,
 
 #SIGNOS VITALES
 INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
-cc,cod_ef) VALUES (1,'91 a 119','70 latidos por minuto','14 respiraciones por minuto','95%','133mg/dl',21190080,1);
+cc,cod_ef) VALUES (1,'91 a 119','70 latidos por minuto','14 respiraciones por minuto','95%','123mg/dl',21190080,1);
 INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
-cc,cod_ef) VALUES (2,'entre 120 y 129','100 latidos por minuto','11 respiraciones por minuto','87%','160mg/dl',4798888,2);
+cc,cod_ef) VALUES (2,'97 a 119','78 latidos por minuto','20 respiraciones por minuto','82%','133mg/dl',21190080,1);
 INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
-cc,cod_ef) VALUES (3,'menor a 90','63 latidos por minuto','19 respiraciones por minuto','70%','90mg/dl',1122546763,3);
+cc,cod_ef) VALUES (3,'82 a 119','72 latidos por minuto','22 respiraciones por minuto','86%','129mg/dl',21190080,1);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (4,'89 a 119','79 latidos por minuto','17 respiraciones por minuto','80%','126mg/dl',21190080,1);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (5,'87 a 119','72 latidos por minuto','19 respiraciones por minuto','87%','131mg/dl',21190080,1);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (6,'91 a 119','75 latidos por minuto','10 respiraciones por minuto','90%','130mg/dl',21190080,1);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (7,'entre 125 y 150','100 latidos por minuto','15 respiraciones por minuto','87%','160mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (8,'entre 132 y 141','110 latidos por minuto','11 respiraciones por minuto','89%','165mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (9,'entre 123 y 135','102 latidos por minuto','19 respiraciones por minuto','82%','163mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (10,'entre 120 y 129','108 latidos por minuto','25 respiraciones por minuto','90%','154mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (11,'entre 115 y 122','120 latidos por minuto','19 respiraciones por minuto','93%','146mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (12,'entre 120 y 129','115 latidos por minuto','15 respiraciones por minuto','85%','158mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (13,'entre 120 y 129','111 latidos por minuto','11 respiraciones por minuto','87%','160mg/dl',4798888,2);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (14,'170','63 latidos por minuto','19 respiraciones por minuto','70%','91mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (15,'175','66 latidos por minuto','20 respiraciones por minuto','70%','90mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (16,'172','65 latidos por minuto','25 respiraciones por minuto','70%','92mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (17,'180','69 latidos por minuto','22 respiraciones por minuto','70%','91mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (18,'179','67 latidos por minuto','17 respiraciones por minuto','70%','93mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (19,'177','68 latidos por minuto','20 respiraciones por minuto','70%','90mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (20,'182','70 latidos por minuto','26 respiraciones por minuto','70%','92mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (21,'183','62 latidos por minuto','24 respiraciones por minuto','70%','91mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (22,'182','60 latidos por minuto','25 respiraciones por minuto','70%','90mg/dl',1122546763,3);
+INSERT INTO SIGNOS_VITALES (cod_sv,presion_arterial,frecuencia_cardiaca,frecuencia_respiratoria,saturacion_oxigeno,glucemia,
+cc,cod_ef) VALUES (23,'176','58 latidos por minuto','28 respiraciones por minuto','70%','90mg/dl',1122546763,3);
 
 #MEDICAMENTOS
 INSERT INTO MEDICAMENTOS (cod_medicamentos,nomb_medicamento,dosis,concentracion,tiempo_administracion) VALUES (1,'paracetamol',
@@ -96,13 +136,24 @@ INSERT INTO PLAN_MANEJO (cod_pm,descripcion,cod_evolucion) VALUES (3,'El pacient
 
 #EVOLUCIÓN
 INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm) VALUES (2,
-'El paciente ha tenido una mejora continua, esperemos que así continúe','El paciente aunque ha mejorado sigue presentando unos 
-resultados preocupantes','Hay que seguir tomando el medicamento','2021/08/28',21190080,2);
+'el paciente presenta malestar muscular despues de una semana de trabajo, dice presentar dichos dolores por el
+levantamiento de objetos de tamaño y peso considerable empezo a presenciar los dolores hace tres dias',
+'no hay mayores complicaciones en el paciente, sus signos son estables y hay marcas en la piel a causa del dolor',
+'se le resetaran los medicamentos respectivos para aliviar el dolor y unos proteinicos para mejorar su rendimiento muscular y que los dolores no se sigan presentando',
+'2021/08/28',21190080,2);
 INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm ) VALUES (3,
-'El paciente ha estado empeorando, no se tienen muy buenas expectativas pero se hará el máximo esfuerzo','No hay ninguna mejora, 
-hay que estudiar todas las posibilidades','Hay que mantener en UCI','2021/08/29',4798888,3);
+'presenta un ataque al corazon por consecuencia de su avanzada edad, a falta de la toma de sus medicamentos los ataques han empeorado',
+'sus signos vitales se encuentran en estado critico, muchos de sus organos han empezado a fallar por la falta de paso de la sangre por ellos',
+'el paciente sufre de constantes ataques al corazon de primer grado, se mantendra internado en la UCI en constante observacion por un posible infarto fulminante, se le aplicara morfina y otros calmantes',
+'2021/08/29',4798888,3);
 INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm) VALUES (1,
-'El paciente muestra una mejora progresiva','El paciente ya casi está carente de sintomas','Se le dará de alta al paciente pronto',
+'presenta dolores a diario en la cabeza, los dolores empeoran los dias calurosos tambien tiene dolores 
+al orinar como una punzada en la zona de la vejiga','sus signos vitales se encontraban bastante bajos 
+pero se a notado una alza en sus niveles de globulos rojos, en la radiografia de ve un tumor benigno en 
+la zona craneosefalica no presenta gran riesgo para el paciente pero si influye en la perdida de 
+concienca del mismo, el estudio en la vejiga presenta problemas de prostata','el paciente 
+presenta un tumor cerebral benigno y problemas prostatico, se realizara la ciruega de extraccion del tumor en dos dias 
+y se prestrara tratamiento para los problemas prostaticos',
 '2021/08/18',1122546763,1);
 
 #RECETA
@@ -134,7 +185,7 @@ gastrointestinal,psicogenicos,genitourinario,musculoesqueletico,piel_faneras,end
 'bien','todo bastante bien','no aplica');
 INSERT INTO REVISION_SISTEMA (cod_rs,nepuropsiquiatrico,mamas,sintomas_generales,cabeza_sentidos,linforreticular,cardiopulmonar,
 gastrointestinal,psicogenicos,genitourinario,musculoesqueletico,piel_faneras,endocrino,venereos) VALUES (3,'Mal estado','bien',
-'dolor estomacal','sentidos sanos','no esta mal','problemas al respirar','dolor de estomago','trastorno por dolor',
+'dolor estomacal','sentidos sanos','no esta mal','problemas al respirar','parocardiaco','trastorno por dolor',
 'le duele al orinar','enclenque','no tiene','normal','nada');
 
 #ANTECEDENTES
@@ -150,9 +201,22 @@ calculos renales','2 cirugías','no','ninguno','a las nueces','no','rinitis','ni
 
 #HISTORIA CLINICA
 INSERT INTO HISTORIA_CLINICA (cod_hc,habitacion,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cc,
-cod_en,cod_rs,cod_antecedente) VALUES (1, '20','dolor','migraña','migraña que puede ser tratada facilmente','no es grave',1,1,21190080,1,1,1);
+cod_en,cod_rs,cod_antecedente) VALUES (1, '20','dolores presentados en distintas partes del cuerpo.','el paciente dice presentar 
+algunos dolores en su cuerpo talez como migraña, problemas renales, perdida de conciencia','el paciente 
+presenta un tumor cerebral benigno y problemas prostatico, se realizara la ciruega de extraccion del tumor en dos dias 
+y se prestrara tratamiento para los problemas prostaticos','presenta dolores 
+en la zona craneosefalica del paciente debido a un leve golpe en la cabeza, tiene una molestia al orinar el zona pelvica y 
+debido al golpe presenta perdida de la memoria en el lapso de 2 meses para aca. no presenta 
+gran riesgo para la integridad del paciente, teniendo en cuenta su sistema inmunologico y endocrino al realizar los debidos 
+estudios. Tratamiento de electrolitos y constante revision de sus signos vitales',1,1,21190080,1,1,1);
 INSERT INTO HISTORIA_CLINICA (cod_hc,habitacion,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cc,
-cod_en,cod_rs,cod_antecedente) VALUES (2, '27', 'malestar','infeccion','infeccion no maligna','esta bien',2,2,4798888,2,2,2);
+cod_en,cod_rs,cod_antecedente) VALUES (2, '27', 'malestar general','presenta dolor muscular en brazos, hombros y piernas; 
+el dolor aumenta con las flexiones de dichas zonas musculares','no hay mayores complicaciones en el paciente, sus signos son estables y hay marcas en la piel a causa del dolor',
+'presenta estos dolores por exceso de trabajo a la hora de levantar objetos de gran tamaño no presenta ningun tipo de contucion ni cuagulo en las zonas afectadas',
+2,2,4798888,2,2,2);
 INSERT INTO HISTORIA_CLINICA (cod_hc,habitacion,motivo_consulta,enfermedad_actual,analisis,diagnosticos,cod_ef,cod_pm,cc,
-cod_en,cod_rs,cod_antecedente) VALUES (3, '103','dolor','vejez','estomago con problemas en las tripas','se va a morir',3,3,1122546763,3,3,3);
+cod_en,cod_rs,cod_antecedente) VALUES (3, '103','dolor en las articulaciones, problemas cardiacos',
+'el paciente tuvo un ataque al corazon de primer grado con posibilidades de empeorar a causa de su vejez, tambien ha causa de la edad tiene dolores articulares',
+'el paciente sufre de constantes ataques al corazon de primer grado, se mantendra internado en la UCI en constante observacion por un posible infarto fulminante, se le aplicara morfina y otros calmantes',
+'el paciente ya a tenido otros ataques al corazon silenciosos, este ya es de primer grado por lo que el sujeto se mantiene en constante monitoreo en la UCI',3,3,1122546763,3,3,3);
 

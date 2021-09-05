@@ -75,19 +75,8 @@
     <div class="container-fluid mt-1" style="background-color: rgb(255, 255, 255);">
 
         <!-- Navegación historia clinica -->
-        <ul class="nav nav-tabs ps-1">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../historia_clinica/">Historia Clínica</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../signos_vitales/">Signos Vitales</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active border border-dark fw-bold" href="../examenes_antecedenstes/">Examenes y antecedentes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../plan_manejo/">Plan de manejo</a>
-            </li>
+        <ul class="nav nav-tabs ps-1" id="navegacionHistoria">
+              <!-- Navegación historia -->
           </ul>
 
     </div>
@@ -105,59 +94,10 @@
             </div>
           </div>          
           <table class="table">
-            <tbody>
-              <tr>
-                <th>Neuropsiquiatrico:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Mama:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Sintomas Generales:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Cabeza y Sentidos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Linforreticular:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Cardio Pulmonar:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Gastro Intestinal:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Psicogenicos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Genitourinario:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Musculo Esqueletico:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Piel Fanereas:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Endocrino:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Venereos:</th>
-                <td></td>
-              </tr>
+            <tbody id="revisionSistema">
+              
+              <!-- Impresión de la tabla revision sistema desde js -->
+
             </tbody>
           </table>
         </div>
@@ -171,35 +111,10 @@
             </div>
           </div>   
           <table class="table">
-            <tbody>
-              <tr>
-                <th>Mental:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Pares Craneales:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Motor Raquideo:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Sensitivo Raquideo:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Reflejos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Coordinacion:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Marcha:</th>
-                <td></td>
-              </tr>
+            <tbody id="examenNeurologico">
+              
+              <!-- Impresión de la tabla Examen Neurologico desde js -->
+
             </tbody>
           </table>
         </div>
@@ -213,51 +128,10 @@
             </div>
           </div>   
           <table class="table">
-            <tbody>
-              <tr>
-                <th>Psicosociales:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Familiares:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Quirurgicos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Hospitalarios:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Patologicos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Farmacologicos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Toxico Alergicos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Traumaticos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Gineco Obstetrico:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Inmunologicos:</th>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Psiquiatricos:</th>
-                <td></td>
-              </tr>
+            <tbody id="antecedentes">
+              
+              <!-- Impresión de la tabla Antecedentes desde js -->
+
             </tbody>
           </table>
         </div>
@@ -499,6 +373,6 @@
     ></script>
 
     <!-- index page -->
-    <script src="" type="module"></script>
+    <script src="/../js/examenes_antecedentes.js" type="module"></script>
   </body>
 </html>

@@ -52,14 +52,14 @@ CREATE TABLE LUGAR
 CREATE TABLE PACIENTES
 (
   cc INT NOT NULL,
-  ocupacion varchar(100),
-  religion varchar(100),
-  raza varchar(100),
-  lateralidad varchar(100),
-  informante varchar(100),
-  parentesco varchar(100),
+  ocupacion varchar(200),
+  religion varchar(200),
+  raza varchar(200),
+  lateralidad varchar(200),
+  informante varchar(200),
+  parentesco varchar(200),
   rh varchar(4),
-  confiabilidad varchar(100),
+  confiabilidad varchar(200),
   fech_ingreso TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   cod_eps INT NOT NULL,
   cod_st INT NOT NULL,
@@ -76,21 +76,21 @@ CREATE TABLE PACIENTES
 CREATE TABLE EXAMEN_FISICO
 (
   cod_ef INT NOT NULL auto_increment,
-  torax varchar(200),
-  abdomen varchar(200),
-  extremidades varchar(200),
-  columna varchar(200),
+  torax varchar(500),
+  abdomen varchar(500),
+  extremidades varchar(500),
+  columna varchar(500),
   PRIMARY KEY (cod_ef)
 );
 
 CREATE TABLE SIGNOS_VITALES
 (
   cod_sv INT NOT NULL auto_increment,
-  presion_arterial varchar(200),
-  frecuencia_cardiaca varchar(200),
-  frecuencia_respiratoria varchar(200),
-  saturacion_oxigeno varchar(200),
-  glucemia varchar(200),
+  presion_arterial varchar(500),
+  frecuencia_cardiaca varchar(500),
+  frecuencia_respiratoria varchar(500),
+  saturacion_oxigeno varchar(500),
+  glucemia varchar(500),
   fech_sv TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   cc INT NOT NULL,
   cod_ef INT NOT NULL,
@@ -102,24 +102,24 @@ CREATE TABLE SIGNOS_VITALES
 CREATE TABLE MEDICAMENTOS
 (
   cod_medicamentos INT NOT NULL auto_increment,
-  nomb_medicamento varchar(100),
-  dosis varchar(100),
-  concentracion varchar(100),
-  tiempo_administracion varchar(100),
+  nomb_medicamento varchar(500),
+  dosis varchar(500),
+  concentracion varchar(500),
+  tiempo_administracion varchar(500),
   PRIMARY KEY (cod_medicamentos)
 );
 
 CREATE TABLE PARACLINICOS
 (
   cod_paraclinico INT NOT NULL auto_increment,
-  nomb_paraclinico varchar(100),
+  nomb_paraclinico varchar(500),
   PRIMARY KEY (cod_paraclinico)
 );
 
 CREATE TABLE PLAN_MANEJO
 (
   cod_pm INT NOT NULL auto_increment,
-  descripcion varchar(200),
+  descripcion varchar(500),
   cod_evolucion INT NOT NULL,
   PRIMARY KEY (cod_pm)
 );
@@ -127,9 +127,9 @@ CREATE TABLE PLAN_MANEJO
 CREATE TABLE EVOLUCION
 (
   cod_evolucion INT NOT NULL auto_increment,
-  subjetivo varchar(200),
-  objetivo varchar(200),
-  analisis varchar(200),
+  subjetivo varchar(500),
+  objetivo varchar(500),
+  analisis varchar(500),
   fech_evolucion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   cc INT NOT NULL,
   cod_pm INT NOT NULL,
@@ -159,32 +159,32 @@ CREATE TABLE solicita
 CREATE TABLE EXAMEN_NEUROLOGICO
 (
   cod_en INT NOT NULL auto_increment,
-  mental varchar(200),
-  pares_craneales varchar(200),
-  motor_raquideo varchar(200),
-  sensitivo_raquideo varchar(200),
-  reflejos varchar(200),
-  coordinacion varchar(200),
-  marcha varchar(200),
+  mental varchar(500),
+  pares_craneales varchar(500),
+  motor_raquideo varchar(500),
+  sensitivo_raquideo varchar(500),
+  reflejos varchar(500),
+  coordinacion varchar(500),
+  marcha varchar(500),
   PRIMARY KEY (cod_en)
 );
 
 CREATE TABLE REVISION_SISTEMA
 (
   cod_rs INT NOT NULL auto_increment,
-  nepuropsiquiatrico varchar(200),
-  mamas varchar(200),
-  sintomas_generales varchar(200),
-  cabeza_sentidos varchar(200),
-  linforreticular varchar(200),
-  cardiopulmonar varchar(200),
-  gastrointestinal varchar(200),
-  psicogenicos varchar(200),
-  genitourinario varchar(200),
-  musculoesqueletico varchar(200),
-  piel_faneras varchar(200),
-  endocrino varchar(200),
-  venereos varchar(200),
+  nepuropsiquiatrico varchar(500),
+  mamas varchar(500),
+  sintomas_generales varchar(500),
+  cabeza_sentidos varchar(500),
+  linforreticular varchar(500),
+  cardiopulmonar varchar(500),
+  gastrointestinal varchar(500),
+  psicogenicos varchar(500),
+  genitourinario varchar(500),
+  musculoesqueletico varchar(500),
+  piel_faneras varchar(500),
+  endocrino varchar(500),
+  venereos varchar(500),
   PRIMARY KEY (cod_rs)
 );
 
@@ -209,9 +209,9 @@ CREATE TABLE HISTORIA_CLINICA
 (
   cod_hc INT NOT NULL auto_increment,
   habitacion varchar(5),
-  motivo_consulta varchar(200),
-  enfermedad_actual varchar(200),
-  analisis varchar(200),
+  motivo_consulta varchar(500),
+  enfermedad_actual varchar(500),
+  analisis varchar(500),
   diagnosticos varchar(500),
   fech_hc TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   cod_ef INT NOT NULL,

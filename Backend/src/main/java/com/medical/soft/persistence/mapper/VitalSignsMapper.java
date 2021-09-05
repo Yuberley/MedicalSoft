@@ -19,7 +19,7 @@ public interface VitalSignsMapper {
             @Mapping(source = "frecuenciaCardiaca", target = "heartRate"),
             @Mapping(source = "frecuenciaRespiratoria", target = "breathingFrequency"),
             @Mapping(source = "saturacionOxigeno", target = "oxygenSaturation"),
-            @Mapping(source = "glusemia", target = "bloodGlucose"),
+            @Mapping(source = "glucemia", target = "bloodGlucose"),
             @Mapping(source = "fechSV", target = "vitalSignsDate"),
             @Mapping(source = "cc", target = "patientId"),
             @Mapping(source = "codEF", target = "physicalExamId"),

@@ -10,14 +10,12 @@ async function getPeople(){
                                                               <td>${person.firstName}</td>
                                                               <td>${person.lastName}</td>
                                                               <td>${person.sex}</td>
-                                                              <td><a href="/medicalsoft/historia_clinica/?id=${person.personId}">
+                                                              <td><a href="/medicalsoft/historia_clinica/?idPatient=${person.personId}">
                                                                     <button type="button" class="btn btn-outline-info">Historia</button>
                                                                   </a></td></tr>`);
                     HTMLResponse.innerHTML = template;
                   
-                });
-                
-                
+                });     
 }
 
 getPeople();

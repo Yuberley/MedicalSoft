@@ -27,7 +27,7 @@ public class SignosVitales {
     private String frecuenciaRespiratoria;
     @Column(name = "saturacion_oxigeno")
     private String saturacionOxigeno;
-    private String glusemia;
+    private String glucemia;
     @Column(name = "fech_sv")
     private LocalDateTime fechSV;
 
@@ -109,12 +109,12 @@ public class SignosVitales {
         this.saturacionOxigeno = saturacionOxigeno;
     }
 
-    public String getGlusemia() {
-        return glusemia;
+    public String getGlucemia() {
+        return glucemia;
     }
 
-    public void setGlusemia(String glusemia) {
-        this.glusemia = glusemia;
+    public void setGlucemia(String glucemia) {
+        this.glucemia = glucemia;
     }
 
     public LocalDateTime getFechSV() {
