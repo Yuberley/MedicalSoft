@@ -13,17 +13,7 @@ public class HistoriaClinica {
     private Integer codHC;
 
     // Forening keys
-    @Column(name = "cod_ef")
-    private Integer codEF;
-    @Column(name = "cod_pm")
-    private Integer codPM;
     private Integer cc;
-    @Column(name = "cod_en")
-    private Integer codEN;
-    @Column(name = "cod_rs")
-    private Integer codRS;
-    @Column(name = "cod_antecedente")
-    private Integer codAntecedente;
 
     // Attributes
     private String habitacion;
@@ -38,7 +28,7 @@ public class HistoriaClinica {
 
     // Relationships
     @ManyToOne
-    @JoinColumn(name = "cod_pm", insertable = false, updatable = false)
+    @JoinColumn(name = "cod_hc", insertable = false, updatable = false)
     private PlanManejo planManejo;
 
     @ManyToOne
@@ -46,19 +36,19 @@ public class HistoriaClinica {
     private Paciente paciente;
 
     @ManyToOne
-    @JoinColumn(name = "cod_ef", insertable = false, updatable = false)
+    @JoinColumn(name = "cod_hc", insertable = false, updatable = false)
     private ExamenFisico examenFisico;
 
     @ManyToOne
-    @JoinColumn(name = "cod_antecedente", insertable = false, updatable = false)
+    @JoinColumn(name = "cod_hc", insertable = false, updatable = false)
     private Antecedente antecedente;
 
     @ManyToOne
-    @JoinColumn(name = "cod_rs", insertable = false, updatable = false)
+    @JoinColumn(name = "cod_hc", insertable = false, updatable = false)
     private RevisionSistema revisionSistema;
 
     @ManyToOne
-    @JoinColumn(name = "cod_en", insertable = false, updatable = false)
+    @JoinColumn(name = "cod_hc", insertable = false, updatable = false)
     private ExamenNeurologico examenNeurologico;
 
     // Methods
@@ -132,46 +122,6 @@ public class HistoriaClinica {
 
     public void setCodHC(Integer codHC) {
         this.codHC = codHC;
-    }
-
-    public Integer getCodEF() {
-        return codEF;
-    }
-
-    public void setCodEF(Integer codEF) {
-        this.codEF = codEF;
-    }
-
-    public Integer getCodPM() {
-        return codPM;
-    }
-
-    public void setCodPM(Integer codPM) {
-        this.codPM = codPM;
-    }
-
-    public Integer getCodEN() {
-        return codEN;
-    }
-
-    public void setCodEN(Integer codEN) {
-        this.codEN = codEN;
-    }
-
-    public Integer getCodRS() {
-        return codRS;
-    }
-
-    public void setCodRS(Integer codRS) {
-        this.codRS = codRS;
-    }
-
-    public Integer getCodAntecedente() {
-        return codAntecedente;
-    }
-
-    public void setCodAntecedente(Integer codAntecedente) {
-        this.codAntecedente = codAntecedente;
     }
 
     public String getMotivoConsulta() {
