@@ -82,7 +82,7 @@
 
         <!-- tabla pacientes -->
         <div class="col-lg-10 col-sm-12 order-sm-last order-lg-first mt-sm-3">
-          <table class="table table-hover text-capitalize">
+          <table class="table table-hover text-capitalize order-table">
             <thead>
               <tr class="table-success"> 
                 <th scope="col">N° Cedula</th>
@@ -122,11 +122,9 @@
         <!-- Buscar pacientes -->
         <div class="col-lg-2 col-sm-12 order-sm-first order-lg-last pt-2" style="background-color: rgb(255, 255, 255)">
           <div class="mb-3">
-            <label for="buscarPacientes" class="form-label" onclick="ciudadesColombia()"><h5>Buscar paciente</h5></label>
-            <input type="number" class="form-control" id="buscarPacientes" placeholder="N° identificación">
-          </div>
-          <div class="d-flex justify-content-center pb-sm-2">
-            <button type="button" class="btn btn-secondary" onclick="prueba()">Buscar</button>
+            <form>
+              Consultar<input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="...">
+            </form>            
           </div>
         </div>
 
@@ -201,7 +199,7 @@
                   <span class="input-group-text">Informante</span>
                   <input type="text" id="informante" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   <span class="input-group-text  ms-2">Parentesto</span>
-                  <input type="text" id="parente" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="parentesco" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text">EPS</span>
@@ -273,7 +271,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <a href="./"><button type="button" class="btn btn-primary" onclick="savePerson()">Crear</button></a>
+                <a href="#"><button type="button" class="btn btn-primary" onclick="savePerson()">Crear</button></a>
               </div>
             </div>
           </form>

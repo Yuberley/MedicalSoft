@@ -44,49 +44,102 @@ function savePerson(){
     birthDate
   }
 
-  // const occupation = document.getElementById('occupation').value;
-  // const religion = document.getElementById('religion').value;
-  // const race = document.getElementById('race').value;
-  // const laterality = document.getElementById('laterality').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-  // const informant = document.getElementById('informant').value;
-
+  const patientId = document.getElementById('identificacion').value;
+  const occupation = document.getElementById('ocupacion').value;
+  const religion = document.getElementById('religion').value;
+  const race = document.getElementById('raza').value;
+  const laterality = document.getElementById('lateralidad').value;
+  const informant = document.getElementById('informante').value;
+  const relationship = document.getElementById('parentesco').value;
+  const rh = document.getElementById('rh').value;
+  const reliability = document.getElementById('confiabilidad').value;
+  const hpeId = document.getElementById('eps').value;
+  const maritalStatusId = document.getElementById('estadoCivil').value;
+  const scholarshipId = document.getElementById('escolaridad').value;
+  const placeBirth = document.getElementById('ciudades').value;
+  const placeResidence = document.getElementById('residencia').value;
+  const placeOrigin = document.getElementById('procedencia').value;
 
   const patient = {
-    personId,
-
+    patientId,
+    occupation,
+    religion,   
+    race,
+    laterality,
+    informant,
+    relationship,
+    rh,
+    reliability,
+    hpeId,
+    maritalStatusId,
+    scholarshipId,
+    placeBirth,
+    placeResidence,
+    placeOrigin
   }
+
+  const reasonConsultation = document.getElementById('motivoConsulta').value;
+  const currentIllness = document.getElementById('enfermedad').value;
+  const analysis = document.getElementById('analisis').value;
+  const diagnostics = document.getElementById('diagnosticos').value;
+
+
+  console.log(person)
+  console.log(patient)
 
   const clinic_history = {
-
+    reasonConsultation,
+    currentIllness,
+    analysis,
+    diagnostics,
+    personId
   }
 
+  // Save person
+  // fetch(`${API}/people/save`, {
+  //   method: 'POST',
+  //   headers: { 
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(person)
+  // })
+  // .then( response => response.json())
+  // .then( data => {
+  //   console.log(data)
+  // }).catch(error => console.error(error))
 
 
-  const url_save = `http://${DNS}:8060/medicalsoft/api/people/save`;
-
-  fetch(url_save, {
+  // Save patient
+  fetch(`${API}/patient/save`, {
     method: 'POST',
     headers: { 
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(person)
+    body: JSON.stringify(patient)
   })
   .then( response => response.json())
   .then( data => {
     console.log(data)
   }).catch(error => console.error(error))
+
+
+  // Save clinic_history
+  // fetch(`${API}/clinic_history/save`, {
+  //   method: 'POST',
+  //   headers: { 
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(person)
+  // })
+  // .then( response => response.json())
+  // .then( data => {
+  //   console.log(data)
+  // }).catch(error => console.error(error))
+
 }
 
 
+// Insertar ciudades a datalist
 const nacimiento = document.querySelector("#ciudades");
 const residencia = document.querySelector("#residencia");
 const procedencia = document.querySelector("#procedencia");
@@ -94,3 +147,46 @@ const template = ciudades.map((ciudad) => `<option value="${ciudad.code}">${ciud
 nacimiento.innerHTML = template;
 residencia.innerHTML = template;
 procedencia.innerHTML = template;
+
+
+
+//funcion barra buscar
+(function(document) {
+  'use strict';
+
+  var LightTableFilter = (function(Arr) {
+
+    var _input;
+
+    function _onInputEvent(e) {
+      _input = e.target;
+      var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+      Arr.forEach.call(tables, function(table) {
+        Arr.forEach.call(table.tBodies, function(tbody) {
+          Arr.forEach.call(tbody.rows, _filter);
+        });
+      });
+    }
+
+    function _filter(row) {
+      var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+      row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+    }
+
+    return {
+      init: function() {
+        var inputs = document.getElementsByClassName('light-table-filter');
+        Arr.forEach.call(inputs, function(input) {
+          input.oninput = _onInputEvent;
+        });
+      }
+    };
+  })(Array.prototype);
+
+  document.addEventListener('readystatechange', function() {
+    if (document.readyState === 'complete') {
+      LightTableFilter.init();
+    }
+  });
+
+})(document);

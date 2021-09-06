@@ -17,7 +17,6 @@ public class Patient {
     private int hpeId;
     private int maritalStatusId;
     private int scholarshipId;
-    private int personId;
     private int placeBirth;
     private int placeResidence;
     private int placeOrigin;
@@ -154,14 +153,6 @@ public class Patient {
 
     public void setScholarshipId(int scholarshipId) {
         this.scholarshipId = scholarshipId;
-    }
-
-    public int getPersonId() {
-        return personId;
-    }
-
-    public void setPersonId(int personId) {
-        this.personId = personId;
     }
 
     public Person getPerson() {
