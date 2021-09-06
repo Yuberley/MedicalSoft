@@ -43,9 +43,7 @@ CREATE TABLE PERSONAS
 CREATE TABLE LUGAR
 (
   cod_lugar INT NOT NULL auto_increment,
-  nacimiento varchar(50),
-  recidencia varchar(50),
-  procedencia varchar(50),
+  lugar varchar(50),
   PRIMARY KEY (cod_lugar)
 );
 
@@ -64,13 +62,17 @@ CREATE TABLE PACIENTES
   cod_eps INT NOT NULL,
   cod_st INT NOT NULL,
   cod_escolaridad INT NOT NULL,
-  cod_lugar INT NOT NULL,
+  nacimiento INT,
+  recidencia INT,
+  procedencia INT,
   PRIMARY KEY (cc),
   FOREIGN KEY (cod_eps) REFERENCES EPS(cod_eps),
   FOREIGN KEY (cod_st) REFERENCES ESTADO_CIVIL(cod_st),
   FOREIGN KEY (cod_escolaridad) REFERENCES ESCOLARIDAD(cod_escolaridad),
   FOREIGN KEY (cc) REFERENCES PERSONAS(cc),
-  FOREIGN KEY (cod_lugar) REFERENCES LUGAR(cod_lugar)
+  FOREIGN KEY (nacimiento) REFERENCES LUGAR(cod_lugar),
+  FOREIGN KEY (recidencia) REFERENCES LUGAR(cod_lugar),
+  FOREIGN KEY (procedencia) REFERENCES LUGAR(cod_lugar)
 );
 
 CREATE TABLE EXAMEN_FISICO

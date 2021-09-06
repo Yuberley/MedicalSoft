@@ -18,7 +18,9 @@ public class Patient {
     private int maritalStatusId;
     private int scholarshipId;
     private int personId;
-    private int placeId;
+    private int placeBirth;
+    private int placeResidence;
+    private int placeOrigin;
 
     private Person person;
     private Place place;
@@ -26,6 +28,29 @@ public class Patient {
     private MaritalStatus maritalStatus;
     private Hpe hpe;
 
+    public int getPlaceBirth() {
+        return placeBirth;
+    }
+
+    public void setPlaceBirth(int placeBirth) {
+        this.placeBirth = placeBirth;
+    }
+
+    public int getPlaceResidence() {
+        return placeResidence;
+    }
+
+    public void setPlaceResidence(int placeResidence) {
+        this.placeResidence = placeResidence;
+    }
+
+    public int getPlaceOrigin() {
+        return placeOrigin;
+    }
+
+    public void setPlaceOrigin(int placeOrigin) {
+        this.placeOrigin = placeOrigin;
+    }
 
     public int getPatientId() {
         return patientId;
@@ -137,14 +162,6 @@ public class Patient {
 
     public void setPersonId(int personId) {
         this.personId = personId;
-    }
-
-    public int getPlaceId() {
-        return placeId;
-    }
-
-    public void setPlaceId(int placeId) {
-        this.placeId = placeId;
     }
 
     public Person getPerson() {

@@ -1,25 +1,36 @@
 package com.medical.soft.persistence.entity;
 
 import javax.persistence.*;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.util.List;
 
 @Entity
 @Table(name = "lugar")
-public class Lugar {
+public class Lugar implements Externalizable {
     @Id
     @Column(name = "cod_lugar")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codLugar;
 
     // Attributes
-    private String nacimiento;
-    private String recidencia;
-    private String procedencia;
+    private String lugar;
 
     // Relationships
     @OneToMany(mappedBy = "lugar")
     private List<Paciente> pacientes;
 
     // Methods
+    public String getLugar() {
+        return lugar;
+    }
+
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
     public Integer getCodLugar() {
         return codLugar;
     }
@@ -28,35 +39,21 @@ public class Lugar {
         this.codLugar = codLugar;
     }
 
-    public String getNacimiento() {
-        return nacimiento;
-    }
-
-    public void setNacimiento(String nacimiento) {
-        this.nacimiento = nacimiento;
-    }
-
-    public String getRecidencia() {
-        return recidencia;
-    }
-
-    public void setRecidencia(String recidencia) {
-        this.recidencia = recidencia;
-    }
-
-    public String getProcedencia() {
-        return procedencia;
-    }
-
-    public void setProcedencia(String procedencia) {
-        this.procedencia = procedencia;
-    }
-
     public List<Paciente> getPacientes() {
         return pacientes;
     }
 
     public void setPacientes(List<Paciente> pacientes) {
         this.pacientes = pacientes;
+    }
+
+    @Override
+    public void writeExternal(ObjectOutput out) throws IOException {
+
+    }
+
+    @Override
+    public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+
     }
 }

@@ -11,9 +11,7 @@ import org.mapstruct.Mappings;
 public interface PlaceMapper {
     @Mappings({
             @Mapping(source = "codLugar", target = "placeId"),
-            @Mapping(source = "nacimiento", target = "placeBirth"),
-            @Mapping(source = "recidencia", target = "placeResidence"),
-            @Mapping(source = "procedencia", target = "placeOrigin")
+            @Mapping(source = "lugar", target = "place")
     })
     Place toPlace(Lugar lugar);
 

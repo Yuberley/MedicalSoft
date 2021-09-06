@@ -93,14 +93,11 @@
               </tr>
             </thead>
             <tbody id="personas">
-              <tr>
-                <th>${person.personId}</th>
+                  <th>${person.personId}</th>
                   <td>${person.firstName}</td>
                   <td>${person.lastName}</td>
                   <td>${person.sex}</td>
                   <td><a href="./medicalsoft/historia_clinica/"><button type="button" class="btn btn-outline-info">Ver</button></a></td>
-                
-              </tr>
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
@@ -125,7 +122,7 @@
         <!-- Buscar pacientes -->
         <div class="col-lg-2 col-sm-12 order-sm-first order-lg-last pt-2" style="background-color: rgb(255, 255, 255)">
           <div class="mb-3">
-            <label for="buscarPacientes" class="form-label"><h5>Buscar paciente</h5></label>
+            <label for="buscarPacientes" class="form-label" onclick="ciudadesColombia()"><h5>Buscar paciente</h5></label>
             <input type="number" class="form-control" id="buscarPacientes" placeholder="N° identificación">
           </div>
           <div class="d-flex justify-content-center pb-sm-2">
@@ -161,7 +158,11 @@
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Sexo</span>
-                    <input type="text" id="sexo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <select id="sexo" class="form-select" aria-label="Default select example">
+                      <option selected></option>
+                      <option value="Hombre">Hombre</option>
+                      <option value="Mujer">Mujer</option>
+                    </select>
                     <span class="input-group-text ms-2">Fecha de nacimiento</span>
                     <input type="date" id="fecha_de_nacimiento" class=" ms-2form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
@@ -170,46 +171,102 @@
               <div class="modal-footer">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Ocupación</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="ocupacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   <span class="input-group-text  ms-2">Rh</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
+                  <select id="rh" class="form-select" aria-label="Default select example">
+                    <option selected>seleccionar</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                  </select>
+                </div>    
                 <div class="input-group mb-3">
                   <span class="input-group-text">Religión</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="religion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   <span class="input-group-text  ms-2">Raza</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="raza" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text">Lateralidad</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="lateralidad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   <span class="input-group-text  ms-2">Confiabilidad</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="confiabilidad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text">Informante</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="informante" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   <span class="input-group-text  ms-2">Parentesto</span>
-                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" id="parente" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">EPS</span>
+                  <select id="eps" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">Nueva Eps</option>
+                    <option value="2">Colsanitas</option>
+                    <option value="3">Medimas</option>
+                    <option value="4">Cafesalud</option>
+                    <option value="5">Coomeva</option>
+                  </select>
+                  <span class="input-group-text ms-2">Escolaridad</span>
+                  <select id="escolaridad" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">Primaria</option>
+                    <option value="2">Bachillerato</option>
+                    <option value="3">Pregrado</option>
+                    <option value="4">Posgrado</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Estado civil</span>
+                  <select id="estadoCivil" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">Soltero(a)</option>
+                    <option value="2">Casado(a)</option>
+                    <option value="3">Viudo(a)</option>
+                    <option value="4">Divorciado(a)</option>
+                  </select>
+                  <span class="input-group-text ms-2">Nacimiento</span>
+                  <input list="ciudades" class="form-select">
+                  <datalist id="ciudades">
+                      
+                  </datalist>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text ms-2">Residencia</span>
+                  <input list="ciudades" class="form-select">
+                  <datalist id="residencia">
+                      
+                  </datalist>
+                  <span class="input-group-text ms-2">Procedencia</span>
+                  <input list="ciudades" class="form-select">
+                  <datalist id="procedencia">
+                      
+                  </datalist>
                 </div>
               </div>
               <div class="fw-bold text-center">Datos de ingreso</div>
               <div class="modal-footer">
                   <div class="input-group mb-3">
                     <span class="input-group-text">Motivo de consulta</span>
-                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                    <textarea type="text"  id="motivoConsulta" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Enfermedad</span>
-                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                    <textarea type="text"  id="enfermedad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Análisis</span>
-                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                    <textarea type="text"  id="analisis" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Diagnósticos</span>
-                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                    <textarea type="text"  id="diagnosticos" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
                   </div>
               </div>
 
@@ -277,6 +334,7 @@
     ></script>
 
     <!-- index page -->
+    <script src="./js/ciudades.js"></script>
     <script src="index.js" ></script>
   </body>
 </html>

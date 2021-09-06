@@ -23,13 +23,13 @@ async function getPeople(){
                     HTMLResponse.innerHTML = template;
                   
                 });     
-                
 }
 
 getPeople();
 
 
 function savePerson(){
+
   const personId = document.getElementById('identificacion').value;
   const firstName = document.getElementById('nombres').value;
   const lastName = document.getElementById('apellidos').value;
@@ -44,7 +44,34 @@ function savePerson(){
     birthDate
   }
 
-  const url_save = `http://192.168.128.3:8060/medicalsoft/api/people/save`;
+  // const occupation = document.getElementById('occupation').value;
+  // const religion = document.getElementById('religion').value;
+  // const race = document.getElementById('race').value;
+  // const laterality = document.getElementById('laterality').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+  // const informant = document.getElementById('informant').value;
+
+
+  const patient = {
+    personId,
+
+  }
+
+  const clinic_history = {
+
+  }
+
+
+
+  const url_save = `http://${DNS}:8060/medicalsoft/api/people/save`;
 
   fetch(url_save, {
     method: 'POST',
@@ -57,5 +84,13 @@ function savePerson(){
   .then( data => {
     console.log(data)
   }).catch(error => console.error(error))
-
 }
+
+
+const nacimiento = document.querySelector("#ciudades");
+const residencia = document.querySelector("#residencia");
+const procedencia = document.querySelector("#procedencia");
+const template = ciudades.map((ciudad) => `<option value="${ciudad.code}">${ciudad.name}</option>`); 
+nacimiento.innerHTML = template;
+residencia.innerHTML = template;
+procedencia.innerHTML = template;

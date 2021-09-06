@@ -19,8 +19,9 @@ public class Paciente {
     private Integer codST;
     @Column(name = "cod_escolaridad")
     private Integer codEscolaridad;
-    @Column(name = "cod_lugar")
-    private Integer codLugar;
+    private Integer nacimiento;
+    private Integer recidencia;
+    private Integer procedencia;
 
     // Attributes
     private String ocupacion;
@@ -54,7 +55,11 @@ public class Paciente {
     private EstadoCivil estadoCivil;
 
     @ManyToOne
-    @JoinColumn(name = "cod_lugar", insertable = false, updatable = false)
+    @JoinColumns({
+            @JoinColumn(name = "nacimiento", referencedColumnName="cod_lugar", insertable = false, updatable = false),
+            @JoinColumn(name = "recidencia", referencedColumnName="cod_lugar", insertable = false, updatable = false),
+            @JoinColumn(name = "procedencia", referencedColumnName="cod_lugar", insertable = false, updatable = false)
+    })
     private Lugar lugar;
 
     @OneToMany(mappedBy = "paciente")
@@ -67,12 +72,28 @@ public class Paciente {
     private List<Evolucion> evoluciones;
 
     // Methods
-    public Integer getCodLugar() {
-        return codLugar;
+    public Integer getNacimiento() {
+        return nacimiento;
     }
 
-    public void setCodLugar(Integer codLugar) {
-        this.codLugar = codLugar;
+    public void setNacimiento(Integer nacimiento) {
+        this.nacimiento = nacimiento;
+    }
+
+    public Integer getRecidencia() {
+        return recidencia;
+    }
+
+    public void setRecidencia(Integer recidencia) {
+        this.recidencia = recidencia;
+    }
+
+    public Integer getProcedencia() {
+        return procedencia;
+    }
+
+    public void setProcedencia(Integer procedencia) {
+        this.procedencia = procedencia;
     }
 
     public Lugar getLugar() {
