@@ -119,7 +119,14 @@
 
             <!-- historia content -->
             <div class="col-lg-6 h-50 d-inline-block pb-4 bg-info p-2 text-dark bg-opacity-50 border-start border-end border-3 border-light rounded-3">
-              <h5 class="text-center text-uppercase">Historia</h5>
+              <div class="row ">
+                <div class="col-8 p-2" >
+                  <h5 class="text-center text-uppercase">Historia</h5>
+                </div>
+                <div class="col-4 p-2">
+                  <button type="button" class="btn btn-primary btn-sm col-5 offset-7" data-bs-toggle="modal" data-bs-target="#btnHistoria">Agregar</button>
+                </div>
+              </div> 
               <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -475,6 +482,41 @@
           <span class="input-group-text" id="inputGroup-sizing-sm">Columna</span>
           <input id="columna" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div>
+      </div>
+      <div class="modal-footer" >
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-warning" onclick="">Actualizar</button>
+        <button type="button" class="btn btn-success"  onclick="">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Historia -->
+<div class="modal fade" id="btnHistoria" tabindex="-1" aria-labelledby="ModalLabelHistoria" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabelHistoria">HISTORIA</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label for="formControlMotivoConsulta" class="form-label">Motivo de consulta</label>
+          <textarea class="form-control" id="formControlMotivoConsulta" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="formControlEnfermedad" class="form-label">Enfermedad</label>
+          <textarea class="form-control" id="formControlEnfermedad" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="formControlDiagnostico" class="form-label">Diagnostico</label>
+          <textarea class="form-control" id="formControlDiagnostico" rows="3"></textarea>
+        </div>
+
       </div>
       <div class="modal-footer" >
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
