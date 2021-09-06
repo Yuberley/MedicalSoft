@@ -1,4 +1,11 @@
-const API = "http://localhost:8060/medicalsoft/api";
+// get Id in url
+const locationAll = location.href;
+const locationHTTP = locationAll.split(':')[1];
+const DNS = locationHTTP.split("//")[1];
+
+console.log(DNS);
+
+const API = `http://${DNS}:8060/medicalsoft/api`;
 
 const HTMLResponse = document.querySelector("#personas");
 
@@ -26,7 +33,6 @@ function savePerson(){
   const personId = document.getElementById('identificacion').value;
   const firstName = document.getElementById('nombres').value;
   const lastName = document.getElementById('apellidos').value;
-  const age = document.getElementById('edad').value;
   const sex = document.getElementById('sexo').value;
   const birthDate = document.getElementById('fecha_de_nacimiento').value;
 
@@ -34,11 +40,11 @@ function savePerson(){
     personId,
     firstName,
     lastName,
-    age,
-    sex
+    sex,
+    birthDate
   }
 
-  const url_save = `http://localhost:8060/medicalsoft/api/people/save`;
+  const url_save = `http://192.168.128.3:8060/medicalsoft/api/people/save`;
 
   fetch(url_save, {
     method: 'POST',
@@ -46,8 +52,8 @@ function savePerson(){
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(person)
-    
-  }).then( response => response.json())
+  })
+  .then( response => response.json())
   .then( data => {
     console.log(data)
   }).catch(error => console.error(error))

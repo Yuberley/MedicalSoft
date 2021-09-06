@@ -5,12 +5,13 @@ const systemReviewId = locationIds.split('&')[1].split('=')[1];
 const backgroundId = locationIds.split('&')[2].split('=')[1];
 const neurologicalExamId = locationIds.split('&')[3].split('=')[1];
 
-console.log(patientId)
-console.log(systemReviewId)
-console.log(backgroundId)
-console.log(neurologicalExamId)
+const locationAll = location.href;
+const locationHTTP = locationAll.split(':')[1];
+const DNS = locationHTTP.split("//")[1];
 
-const URL_NAV = `http://localhost:8060/medicalsoft/api/`;
+console.log(DNS);
+
+const URL_NAV = `http://${DNS}:8060/medicalsoft/api/`;
 
 
 const navClinicHistory = document.querySelector("#navegacionHistoria");
@@ -34,9 +35,9 @@ function NavigatorClinicHistory() {
 NavigatorClinicHistory();
 
 
-const URLSystemReview = `http://localhost:8060/medicalsoft/api/system_review`;
-const URLNeurologicalExam = `http://localhost:8060/medicalsoft/api/neurological_exam`;
-const URLBackground = `http://localhost:8060/medicalsoft/api/background`;
+const URLSystemReview = `http://${DNS}:8060/medicalsoft/api/system_review`;
+const URLNeurologicalExam = `http://${DNS}:8060/medicalsoft/api/neurological_exam`;
+const URLBackground = `http://${DNS}:8060/medicalsoft/api/background`;
 
 const systemReviewSelector = document.querySelector("#revisionSistema");
 const neurologicalExamSelector = document.querySelector("#examenNeurologico");

@@ -138,44 +138,85 @@
 
       <!-- Modal -->
       <div class="modal fade" id="añadirPaciente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
           <form id="formularioPersona">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Historia clínica</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
 
                   <div class="input-group mb-3">
                     <span class="input-group-text">Identificación</span>
-                    <input type="number"  id="identificacion" name="personId" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="number"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Nombres</span>
-                    <input type="text" id="nombres" name="firstName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Apellidos</span>
-                    <input type="text" id="apellidos" name="lastName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" id="apellidos" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="input-group mb-3">
                     <span class="input-group-text">Sexo</span>
-                    <input type="text" id="sexo" name="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" id="sexo" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <span class="input-group-text ms-2">Fecha de nacimiento</span>
+                    <input type="date" id="fecha_de_nacimiento" class=" ms-2form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text">Edad</span>
-                    <input type="number" id="edad" name="sex" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text">Fecha de nacimiento</span>
-                    <input type="date" id="fecha_de_nacimiento" name="birthDate" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                
               </div>
+              <div class="fw-bold text-center">Datos paciente</div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="./"><button type="button" class="btn btn-primary" onclick="savePerson()">Save changes</button></a>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Ocupación</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text  ms-2">Rh</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Religión</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text  ms-2">Raza</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Lateralidad</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text  ms-2">Confiabilidad</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Informante</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  <span class="input-group-text  ms-2">Parentesto</span>
+                  <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+              </div>
+              <div class="fw-bold text-center">Datos de ingreso</div>
+              <div class="modal-footer">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Motivo de consulta</span>
+                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Enfermedad</span>
+                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Análisis</span>
+                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                  </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Diagnósticos</span>
+                    <textarea type="text"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
+                  </div>
+              </div>
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="./"><button type="button" class="btn btn-primary" onclick="savePerson()">Crear</button></a>
               </div>
             </div>
           </form>

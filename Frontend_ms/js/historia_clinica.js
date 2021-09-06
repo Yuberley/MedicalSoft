@@ -3,11 +3,13 @@ const locationId = location.href;
 const splitURL = locationId.split('?')[1];
 const patientId = splitURL.split("=")[1];
 
-console.log(patientId)
+const locationHTTP = locationId.split(':')[1];
+const DNS = locationHTTP.split("//")[1];
 
-const URL = `http://localhost:8060/medicalsoft/api/clinic_history/${patientId}`;
+console.log(DNS);
 
-console.log(URL)
+const URL = `http://${DNS}:8060/medicalsoft/api/clinic_history/${patientId}`;
+
 
 const basicDataPatientSelector = document.querySelector("#datosPrincipalesPaciente");
 const dataPatientSelector = document.querySelector("#datosDelPaciente");
