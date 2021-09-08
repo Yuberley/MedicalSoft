@@ -34,22 +34,23 @@ NavigatorClinicHistory();
 
 const URLVitalSigns = `http://${DNS}:8060/medicalsoft/api/vital_signs`;
 
-const vitalSignsSelector = document.querySelector("#signosVitales");
+const vitalSignsSelector = document.getElementById('signosVitales');
 
 async function getVitalSigns(){
    await fetch(`${URLVitalSigns}/${patientId}`)
                 .then(response => response.json())
                 .then(vitalSigns => {
-                  var template = vitalSigns.map((dataVitalSigns) => `<tr>
-                                                            <th>${dataVitalSigns.vitalSignsDate}</th>
-                                                            <td>${dataVitalSigns.bloodPressure}</td>
-                                                            <td>${dataVitalSigns.heartRate}</td>
-                                                            <td>${dataVitalSigns.breathingFrequency}</td>
-                                                            <td>${dataVitalSigns.oxygenSaturation}</td>
-                                                            <td>${dataVitalSigns.bloodGlucose}</td>
-                                                            <td><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
-                                                        </tr>`);
-                      vitalSignsSelector.innerHTML = template;
+                  for (let rows of vitalSigns) {
+                    vitalSignsSelector.innerHTML += `<tr>
+                                                    <th>${rows.vitalSignsDate}</th>
+                                                    <td>${rows.bloodPressure}</td>
+                                                    <td>${rows.heartRate}</td>
+                                                    <td>${rows.breathingFrequency}</td>
+                                                    <td>${rows.oxygenSaturation}</td>
+                                                    <td>${rows.bloodGlucose}</td>
+                                                    <td><button type="button" class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
+                                                </tr>`
+                  }
                   
                 });
                 

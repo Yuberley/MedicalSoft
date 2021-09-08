@@ -7,20 +7,21 @@ console.log(DNS);
 
 const API = `http://${DNS}:8060/medicalsoft/api`;
 
-const HTMLResponse = document.querySelector("#personas");
+const peopleSelector = document.getElementById('personas');
 
 async function getPeople(){
   const result = await fetch(`${API}/people`)
                 .then(response => response.json())
                 .then(people => {
-                  var template = people.map((person) => `<tr><th>${person.personId}</th>
-                                                              <td>${person.firstName}</td>
-                                                              <td>${person.lastName}</td>
-                                                              <td>${person.sex}</td>
-                                                              <td><a href="/medicalsoft/historia_clinica/?idPatient=${person.personId}">
-                                                                    <button type="button" class="btn btn-outline-info">Historia</button>
-                                                                  </a></td></tr>`);
-                    HTMLResponse.innerHTML = template;
+                    for (let personRow of people) {
+                      peopleSelector.innerHTML += `<tr><th>${personRow.personId}</th>
+                                                        <td>${personRow.firstName}</td>
+                                                        <td>${personRow.lastName}</td>
+                                                        <td>${personRow.sex}</td>
+                                                        <td><a href="/medicalsoft/historia_clinica/?idPatient=${personRow.personId}">
+                                                              <button type="button" class="btn btn-outline-info">Historia</button>
+                                                            </a></td></tr>`
+                    }
                 });     
 }
 
@@ -91,7 +92,6 @@ async function saveHistory(){
     patientId
   }
 
-  console.log(clinic_history);
 
   // Save person
   // await fetch(`${API}/people/save`, {
@@ -131,19 +131,46 @@ async function saveHistory(){
         })
         .then( response => response.json())
         .then( data => {
-                        console.log(data)
+                        var clinicalHistoryIdResponse = data.clinicalHistoryId;
         }).catch(error => console.error(error))
+
+        
+
+        await fetch(`${API}/background/save`, {
+                method: 'POST',
+                headers: { 
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                      historia_clinicaId
+
+                })
+              })
+              .then( response => response.json())
+              .then( data => {
+                              var clinicalHistoryIdResponse = data.clinicalHistoryId;
+              }).catch(error => console.error(error))
+
+
+
+        
+
 }
 
 
+
+
 // Insertar ciudades a datalist
-const nacimiento = document.querySelector("#ciudades");
-const residencia = document.querySelector("#residencia");
-const procedencia = document.querySelector("#procedencia");
-const template = ciudades.map((ciudad) => `<option value="${ciudad.code}">${ciudad.name}</option>`); 
-nacimiento.innerHTML = template;
-residencia.innerHTML = template;
-procedencia.innerHTML = template;
+function insertCountries() {
+  const nacimiento = document.querySelector("#ciudades");
+  const residencia = document.querySelector("#residencia");
+  const procedencia = document.querySelector("#procedencia");
+  const template = ciudades.map((ciudad) => `<option value="${ciudad.code}">${ciudad.name}</option>`); 
+  nacimiento.innerHTML = template;
+  residencia.innerHTML = template;
+  procedencia.innerHTML = template;
+}
+
 
 
 

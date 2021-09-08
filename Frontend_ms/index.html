@@ -74,7 +74,7 @@
       <!-- Add paciente -->
       <div class="row mb-lg-3 ">
         <div class="col offset-lg-10 offset-sm-9">
-          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#añadirPaciente">Añadir paciente</button>
+          <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#añadirPaciente" onclick="insertCountries()">Añadir paciente</button>
         </div>
       </div>
       <hr class="dropdown-divider">
@@ -93,11 +93,9 @@
               </tr>
             </thead>
             <tbody id="personas">
-                  <th>${person.personId}</th>
-                  <td>${person.firstName}</td>
-                  <td>${person.lastName}</td>
-                  <td>${person.sex}</td>
-                  <td><a href="./medicalsoft/historia_clinica/"><button type="button" class="btn btn-outline-info">Ver</button></a></td>
+                 
+                <!-- Lista de las personas -->
+
             </tbody>
           </table>
           <nav aria-label="Page navigation example">
@@ -135,7 +133,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="añadirPaciente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-xl">
           <form id="formularioPersona">
             <div class="modal-content">
               <div class="modal-header">
@@ -145,34 +143,31 @@
               <div class="modal-body">
 
                   <div class="input-group mb-3">
-                    <span class="input-group-text">Identificación</span>
+                    <span class="input-group-text">Identificación *</span>
                     <input type="number"  id="identificacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text">Nombres</span>
-                    <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text">Apellidos</span>
-                    <input type="text" id="apellidos" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text">Sexo</span>
+                    <span class="input-group-text ms-2">Fecha de nacimiento</span>
+                    <input type="date" id="fecha_de_nacimiento" class=" ms-2form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <span class="input-group-text ms-2">Sexo *</span>
                     <select id="sexo" class="form-select" aria-label="Default select example">
                       <option selected></option>
                       <option value="Hombre">Hombre</option>
                       <option value="Mujer">Mujer</option>
                     </select>
-                    <span class="input-group-text ms-2">Fecha de nacimiento</span>
-                    <input type="date" id="fecha_de_nacimiento" class=" ms-2form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                   </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Nombres *</span>
+                    <input type="text" id="nombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <span class="input-group-text ms-2">Apellidos *</span>
+                    <input type="text" id="apellidos" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                  
               </div>
               <div class="fw-bold text-center">Datos paciente</div>
               <div class="modal-footer">
                 <div class="input-group mb-3">
                   <span class="input-group-text">Ocupación</span>
                   <input type="text" id="ocupacion" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                  <span class="input-group-text  ms-2">Rh</span>
+                  <span class="input-group-text  ms-2">Rh *</span>
                   <select id="rh" class="form-select" aria-label="Default select example">
                     <option selected>seleccionar</option>
                     <option value="O+">O+</option>
@@ -253,7 +248,7 @@
               <div class="fw-bold text-center">Datos de ingreso</div>
               <div class="modal-footer">
                   <div class="input-group mb-3">
-                    <span class="input-group-text">Motivo de consulta</span>
+                    <span class="input-group-text">Motivo de consulta *</span>
                     <textarea type="text"  id="motivoConsulta" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"></textarea>
                   </div>
                   <div class="input-group mb-3">
@@ -282,7 +277,7 @@
 
     <!-- Modal Calculadora -->
     <div class="modal fade" id="calculator" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="ModalLabel">Calculadora</h5>
