@@ -21,14 +21,13 @@ async function getPeople(){
                                                                     <button type="button" class="btn btn-outline-info">Historia</button>
                                                                   </a></td></tr>`);
                     HTMLResponse.innerHTML = template;
-                  
                 });     
 }
 
 getPeople();
 
 
-function savePerson(){
+async function saveHistory(){
 
   const personId = document.getElementById('identificacion').value;
   const firstName = document.getElementById('nombres').value;
@@ -44,7 +43,7 @@ function savePerson(){
     birthDate
   }
 
-  const patientId = document.getElementById('identificacion').value;
+  const patientId = personId;
   const occupation = document.getElementById('ocupacion').value;
   const religion = document.getElementById('religion').value;
   const race = document.getElementById('raza').value;
@@ -84,58 +83,56 @@ function savePerson(){
   const diagnostics = document.getElementById('diagnosticos').value;
 
 
-  console.log(person)
-  console.log(patient)
-
   const clinic_history = {
     reasonConsultation,
     currentIllness,
     analysis,
     diagnostics,
-    personId
+    patientId
   }
 
+  console.log(clinic_history);
+
   // Save person
-  // fetch(`${API}/people/save`, {
-  //   method: 'POST',
-  //   headers: { 
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(person)
-  // })
-  // .then( response => response.json())
-  // .then( data => {
-  //   console.log(data)
-  // }).catch(error => console.error(error))
+  // await fetch(`${API}/people/save`, {
+  //         method: 'POST',
+  //         headers: { 
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(person)
+  //       })
+  //       .then( response => response.json())
+  //       .then( data => {
+  //                       console.log(data)
+  //       }).catch(error => console.error(error))
 
 
-  // Save patient
-  fetch(`${API}/patient/save`, {
-    method: 'POST',
-    headers: { 
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(patient)
-  })
-  .then( response => response.json())
-  .then( data => {
-    console.log(data)
-  }).catch(error => console.error(error))
+  // // Save patient
+  // await fetch(`${API}/patient/save`, {
+  //         method: 'POST',
+  //         headers: { 
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify(patient)
+  //       })
+  //       .then( response => response.json())
+  //       .then( data => {
+  //                       console.log(data)
+  //       }).catch(error => console.error(error))
 
 
   // Save clinic_history
-  // fetch(`${API}/clinic_history/save`, {
-  //   method: 'POST',
-  //   headers: { 
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(person)
-  // })
-  // .then( response => response.json())
-  // .then( data => {
-  //   console.log(data)
-  // }).catch(error => console.error(error))
-
+  await fetch(`${API}/clinic_history/save`, {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(clinic_history)
+        })
+        .then( response => response.json())
+        .then( data => {
+                        console.log(data)
+        }).catch(error => console.error(error))
 }
 
 

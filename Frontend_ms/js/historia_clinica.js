@@ -8,7 +8,7 @@ const DNS = locationHTTP.split("//")[1];
 
 console.log(DNS);
 
-const URL = `http://${DNS}:8060/medicalsoft/api/clinic_history/${patientId}`;
+const API = `http://${DNS}:8060/medicalsoft/api`;
 
 
 const basicDataPatientSelector = document.querySelector("#datosPrincipalesPaciente");
@@ -22,7 +22,7 @@ const textDisease = document.querySelector("#enfermedad");
 
 
 async function getClinicHistory() {
-    await fetch(URL)
+    await fetch(`${API}/clinic_history/${patientId}`)
                 .then(response => response.json())
                 .then((patient) => {
                     const basicDataPatient = `<div class="row col">
@@ -46,7 +46,10 @@ async function getClinicHistory() {
                                             <div class="col">${patient.patient.hpe.hpsName}</div>
                                         </div>`;
                     basicDataPatientSelector.innerHTML = basicDataPatient;
-
+                    var backgroundId = patient.clinicalHistoryId;
+                    var neurologicalExamId = patient.clinicalHistoryId;
+                    var srId = patient.clinicalHistoryId;
+                    var mpId = patient.clinicalHistoryId;
 
                     const dataPatient = `<div class="row col">
                                             <div class="col-5 fw-bold">• Ingreso</div>
@@ -201,3 +204,69 @@ async function getClinicHistory() {
 }
 
 getClinicHistory();
+
+
+
+async function initTables() {
+    await fetch(`${API}/background/save`, {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            historia_clinicaId
+        })
+      })
+      .then( response => response.json())
+      .then( data => {
+                      console.log(data)
+      }).catch(error => console.error(error))
+
+
+
+    await fetch(`${API}/neurological_exam/save`, {
+    method: 'POST',
+    headers: { 
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        historia_clinicaId
+    })
+    })
+    .then( response => response.json())
+    .then( data => {
+                    console.log(data)
+    }).catch(error => console.error(error))
+
+    
+
+    await fetch(`${API}/physical_exam/save`, {
+    method: 'POST',
+    headers: { 
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        historia_clinicaId
+    })
+    })
+    .then( response => response.json())
+    .then( data => {
+                    console.log(data)
+    }).catch(error => console.error(error))
+
+
+
+    await fetch(`${API}/system_review/save`, {
+    method: 'POST',
+    headers: { 
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        historia_clinicaId
+    })
+    })
+    .then( response => response.json())
+    .then( data => {
+                    console.log(data)
+    }).catch(error => console.error(error))
+}

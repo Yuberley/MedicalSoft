@@ -123,7 +123,9 @@
         <div class="col-lg-2 col-sm-12 order-sm-first order-lg-last pt-2" style="background-color: rgb(255, 255, 255)">
           <div class="mb-3">
             <form>
-              Consultar<input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="...">
+              <h6>Consultar</h6>
+              <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Buscar paciente">
+              <small class="text-muted">ID, Nombre, Apellido, Sexo</small>
             </form>            
           </div>
         </div>
@@ -232,19 +234,19 @@
                   <span class="input-group-text ms-2">Nacimiento</span>
                   <input list="ciudades" class="form-select">
                   <datalist id="ciudades">
-                      
+                      <!-- Inner country - js -->
                   </datalist>
                 </div>
                 <div class="input-group mb-3">
                   <span class="input-group-text ms-2">Residencia</span>
                   <input list="ciudades" class="form-select">
                   <datalist id="residencia">
-                      
+                      <!-- Inner country - js -->
                   </datalist>
                   <span class="input-group-text ms-2">Procedencia</span>
                   <input list="ciudades" class="form-select">
                   <datalist id="procedencia">
-                      
+                      <!-- Inner country - js -->
                   </datalist>
                 </div>
               </div>
@@ -271,7 +273,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <a href="#"><button type="button" class="btn btn-primary" onclick="savePerson()">Crear</button></a>
+                <a href="#"><button type="button" class="btn btn-primary" onclick="saveHistory()">Crear</button></a>
               </div>
             </div>
           </form>
