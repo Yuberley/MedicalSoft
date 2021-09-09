@@ -166,6 +166,7 @@ async function getClinicHistory() {
                     
 
                 }).catch(error => console.log(error));
+                
 
                 await fetch(`${API}/evolution/${patientId}`)
                     .then(response => response.json())
