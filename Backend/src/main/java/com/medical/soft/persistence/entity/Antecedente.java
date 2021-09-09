@@ -9,7 +9,6 @@ public class Antecedente {
 
     @Id
     @Column(name ="cod_antecedente")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codAntecedente;
 
     // Attributes

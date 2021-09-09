@@ -94,31 +94,31 @@ async function saveHistory(){
 
 
   // Save person
-  // await fetch(`${API}/people/save`, {
-  //         method: 'POST',
-  //         headers: { 
-  //           'Content-Type': 'application/json',
-  //         },
-  //         body: JSON.stringify(person)
-  //       })
-  //       .then( response => response.json())
-  //       .then( data => {
-  //                       console.log(data)
-  //       }).catch(error => console.error(error))
+  await fetch(`${API}/people/save`, {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(person)
+        })
+        .then( response => response.json())
+        .then( data => {
+                        console.log(data)
+        }).catch(error => console.error(error))
 
 
-  // // Save patient
-  // await fetch(`${API}/patient/save`, {
-  //         method: 'POST',
-  //         headers: { 
-  //           'Content-Type': 'application/json',
-  //         },
-  //         body: JSON.stringify(patient)
-  //       })
-  //       .then( response => response.json())
-  //       .then( data => {
-  //                       console.log(data)
-  //       }).catch(error => console.error(error))
+  // Save patient
+  await fetch(`${API}/patient/save`, {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(patient)
+        })
+        .then( response => response.json())
+        .then( data => {
+                        console.log(data)
+        }).catch(error => console.error(error))
 
 
   // Save clinic_history
@@ -132,31 +132,104 @@ async function saveHistory(){
         .then( response => response.json())
         .then( data => {
                         var clinicalHistoryIdResponse = data.clinicalHistoryId;
+                        console.log(clinicalHistoryIdResponse);
+
+                        // Init background
+                        // Init physical_exam
+                        // Init system_review
+                        // Init management_plan
+                        // Init neurological_exam
+
+                        console.log('Fuera de scope' + clinicalHistoryIdResponse);
+                        const backgroundId = clinicalHistoryIdResponse;
+                        const physicalExamId = clinicalHistoryIdResponse;
+                        const srId = clinicalHistoryIdResponse;
+                        const mpId = clinicalHistoryIdResponse;
+                        const neurologicalExamId = clinicalHistoryIdResponse;
+
+                        console.log('backgroundId: ' + backgroundId);
+                        console.log('physicalExamId: ' + physicalExamId);
+                        console.log('srId: ' + srId);
+                        console.log('mpId: ' + mpId);
+                        console.log('neurologicalExamId: ' + neurologicalExamId);
+
+                        fetch(`${API}/background/save`, {
+                                method: 'POST',
+                                headers: { 
+                                  'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                      backgroundId
+                                })
+                              })
+                              .then( response => response.json())
+                              .then( data => {
+                                          console.log("Init background")
+                              }).catch(error => console.error(error))
+
+
+                        fetch(`${API}/physical_exam/save`, {
+                                method: 'POST',
+                                headers: { 
+                                  'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                      physicalExamId
+                                })
+                              })
+                              .then( response => response.json())
+                              .then( data => {
+                                              console.log("Init physical_exam")
+                              }).catch(error => console.error(error))
+
+
+                        fetch(`${API}/system_review/save`, {
+                                method: 'POST',
+                                headers: { 
+                                  'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                      srId
+                                })
+                              })
+                              .then( response => response.json())
+                              .then( data => {
+                                              console.log("Init system_review")
+                              }).catch(error => console.error(error))
+
+
+                        fetch(`${API}/management_plan/save`, {
+                                method: 'POST',
+                                headers: { 
+                                  'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                      mpId
+                                })
+                              })
+                              .then( response => response.json())
+                              .then( data => {
+                                               console.log("Init management_plan")
+                              }).catch(error => console.error(error))
+
+                              
+                        fetch(`${API}/neurological_exam/save`, {
+                                method: 'POST',
+                                headers: { 
+                                  'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({
+                                      neurologicalExamId
+                                })
+                              })
+                              .then( response => response.json())
+                              .then( data => {
+                                               console.log("Init neurological_exam")
+                              }).catch(error => console.error(error))
+
         }).catch(error => console.error(error))
 
-        
-
-        await fetch(`${API}/background/save`, {
-                method: 'POST',
-                headers: { 
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                      historia_clinicaId
-
-                })
-              })
-              .then( response => response.json())
-              .then( data => {
-                              var clinicalHistoryIdResponse = data.clinicalHistoryId;
-              }).catch(error => console.error(error))
-
-
-
-        
-
 }
-
 
 
 

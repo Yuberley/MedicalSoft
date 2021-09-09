@@ -865,26 +865,23 @@ INSERT INTO PLAN_MANEJO (cod_pm,descripcion,cod_evolucion) VALUES (3,'El pacient
   respiratorios, por otro lado, la frecuencia respiratoria es muy elevada, hay que revisar ',3);
 
 #EVOLUCIÓN
-INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm) VALUES (2,
+INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,cc,cod_pm) VALUES (2,
 'el paciente presenta malestar muscular despues de una semana de trabajo, dice presentar dichos dolores por el
 levantamiento de objetos de tamaño y peso considerable empezo a presenciar los dolores hace tres dias',
 'no hay mayores complicaciones en el paciente, sus signos son estables y hay marcas en la piel a causa del dolor',
-'se le resetaran los medicamentos respectivos para aliviar el dolor y unos proteinicos para mejorar su rendimiento muscular y que los dolores no se sigan presentando',
-'2021/08/28',21190080,2);
-INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm ) VALUES (3,
+'se le resetaran los medicamentos respectivos para aliviar el dolor y unos proteinicos para mejorar su rendimiento muscular y que los dolores no se sigan presentando',21190080,2);
+INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,cc,cod_pm ) VALUES (3,
 'presenta un ataque al corazon por consecuencia de su avanzada edad, a falta de la toma de sus medicamentos los ataques han empeorado',
 'sus signos vitales se encuentran en estado critico, muchos de sus organos han empezado a fallar por la falta de paso de la sangre por ellos',
-'el paciente sufre de constantes ataques al corazon de primer grado, se mantendra internado en la UCI en constante observacion por un posible infarto fulminante, se le aplicara morfina y otros calmantes',
-'2021/08/29',4798888,3);
-INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,fech_evolucion,cc,cod_pm) VALUES (1,
+'el paciente sufre de constantes ataques al corazon de primer grado, se mantendra internado en la UCI en constante observacion por un posible infarto fulminante, se le aplicara morfina y otros calmantes',4798888,3);
+INSERT INTO EVOLUCION (cod_evolucion,subjetivo,objetivo,analisis,cc,cod_pm) VALUES (1,
 'presenta dolores a diario en la cabeza, los dolores empeoran los dias calurosos tambien tiene dolores 
 al orinar como una punzada en la zona de la vejiga','sus signos vitales se encontraban bastante bajos 
 pero se a notado una alza en sus niveles de globulos rojos, en la radiografia de ve un tumor benigno en 
 la zona craneosefalica no presenta gran riesgo para el paciente pero si influye en la perdida de 
 concienca del mismo, el estudio en la vejiga presenta problemas de prostata','el paciente 
 presenta un tumor cerebral benigno y problemas prostatico, se realizara la ciruega de extraccion del tumor en dos dias 
-y se prestrara tratamiento para los problemas prostaticos',
-'2021/08/18',1122546763,1);
+y se prestrara tratamiento para los problemas prostaticos',1122546763,1);
 
 #RECETA
 INSERT INTO receta (cod_medicamentos,cod_pm) VALUES (1,1);

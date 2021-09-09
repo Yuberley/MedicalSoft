@@ -9,7 +9,6 @@ public class PlanManejo {
 
     @Id
     @Column(name = "cod_pm")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codPM;
 
     // Attributes

@@ -9,7 +9,6 @@ public class ExamenFisico {
 
     @Id
     @Column(name = "cod_ef")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codEF;
 
     // Attributes

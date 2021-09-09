@@ -1,11 +1,15 @@
 package com.medical.soft.persistence.mapper;
 
 import com.medical.soft.domain.Patient;
+import com.medical.soft.domain.Place;
+import com.medical.soft.persistence.entity.Lugar;
 import com.medical.soft.persistence.entity.Paciente;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+
+import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {PersonMapper.class,
         PlaceMapper.class,

@@ -9,7 +9,6 @@ public class ExamenNeurologico {
 
     @Id
     @Column(name = "cod_en")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codEN;
 
     // Attributes

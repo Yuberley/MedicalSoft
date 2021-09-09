@@ -77,7 +77,7 @@ CREATE TABLE PACIENTES
 
 CREATE TABLE EXAMEN_FISICO
 (
-  cod_ef INT NOT NULL auto_increment,
+  cod_ef INT NOT NULL,
   torax varchar(500),
   abdomen varchar(500),
   extremidades varchar(500),
@@ -120,9 +120,9 @@ CREATE TABLE PARACLINICOS
 
 CREATE TABLE PLAN_MANEJO
 (
-  cod_pm INT NOT NULL auto_increment,
+  cod_pm INT NOT NULL,
   descripcion varchar(500),
-  cod_evolucion INT NOT NULL,
+  cod_evolucion INT,
   PRIMARY KEY (cod_pm)
 );
 
@@ -133,8 +133,8 @@ CREATE TABLE EVOLUCION
   objetivo varchar(500),
   analisis varchar(500),
   fech_evolucion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  cc INT NOT NULL,
-  cod_pm INT NOT NULL,
+  cc INT,
+  cod_pm INT,
   PRIMARY KEY (cod_evolucion),
   FOREIGN KEY (cc) REFERENCES PACIENTES(cc),
   FOREIGN KEY (cod_pm) REFERENCES PLAN_MANEJO(cod_pm)
@@ -160,7 +160,7 @@ CREATE TABLE solicita
 
 CREATE TABLE EXAMEN_NEUROLOGICO
 (
-  cod_en INT NOT NULL auto_increment,
+  cod_en INT NOT NULL,
   mental varchar(500),
   pares_craneales varchar(500),
   motor_raquideo varchar(500),
@@ -173,7 +173,7 @@ CREATE TABLE EXAMEN_NEUROLOGICO
 
 CREATE TABLE REVISION_SISTEMA
 (
-  cod_rs INT NOT NULL auto_increment,
+  cod_rs INT NOT NULL,
   nepuropsiquiatrico varchar(500),
   mamas varchar(500),
   sintomas_generales varchar(500),
@@ -192,7 +192,7 @@ CREATE TABLE REVISION_SISTEMA
 
 CREATE TABLE ANTECEDENTES
 (
-  cod_antecedente INT NOT NULL auto_increment,
+  cod_antecedente INT NOT NULL,
   psicososiales varchar(200),
   familiares varchar(200),
   quirurgicos varchar(200),
@@ -220,9 +220,9 @@ CREATE TABLE HISTORIA_CLINICA
   cc INT NOT NULL,
   PRIMARY KEY (cod_hc),
   FOREIGN KEY (cc) REFERENCES PACIENTES(cc),
-  FOREIGN KEY (cod_hc) REFERENCES EXAMEN_FISICO(cod_ef) ON UPDATE CASCADE,
-  FOREIGN KEY (cod_hc) REFERENCES PLAN_MANEJO(cod_pm) ON UPDATE CASCADE,
-  FOREIGN KEY (cod_hc) REFERENCES EXAMEN_NEUROLOGICO(cod_en) ON UPDATE CASCADE,
-  FOREIGN KEY (cod_hc) REFERENCES REVISION_SISTEMA(cod_rs) ON UPDATE CASCADE,
-  FOREIGN KEY (cod_hc) REFERENCES ANTECEDENTES(cod_antecedente) ON UPDATE CASCADE
+  FOREIGN KEY (cod_hc) REFERENCES EXAMEN_FISICO(cod_ef),
+  FOREIGN KEY (cod_hc) REFERENCES PLAN_MANEJO(cod_pm),
+  FOREIGN KEY (cod_hc) REFERENCES EXAMEN_NEUROLOGICO(cod_en),
+  FOREIGN KEY (cod_hc) REFERENCES REVISION_SISTEMA(cod_rs),
+  FOREIGN KEY (cod_hc) REFERENCES ANTECEDENTES(cod_antecedente)
 );

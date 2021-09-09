@@ -17,7 +17,7 @@ public class PlanManejoRepository implements ManagementPlanRepository {
 
     @Autowired
     private ManagementPlanMapper mapper;
-    
+
 
     @Override
     public Optional<ManagementPlan> getManagementPlan(int managementPlanId) {

@@ -14,8 +14,8 @@ const API = `http://${DNS}:8060/medicalsoft/api`;
 const basicDataPatientSelector = document.querySelector("#datosPrincipalesPaciente");
 const dataPatientSelector = document.querySelector("#datosDelPaciente");
 const tablePhysicalExam = document.querySelector("#tablaExamenFisico");
-const tableEvolutions = document.querySelector("#tablaEvolicion");
-const fieldDiagnostic = document.querySelector("#campoEvolución");
+const tableEvolutions = document.querySelector("#tablaEvolucion");
+const fieldDiagnostic = document.querySelector("#diagnosticos");
 const navClinicHistory = document.querySelector("#navegacionHistoria");
 const textConsult = document.querySelector("#motivoConsulta");
 const textDisease = document.querySelector("#enfermedad");
@@ -46,10 +46,7 @@ async function getClinicHistory() {
                                             <div class="col">${patient.patient.hpe.hpsName}</div>
                                         </div>`;
                     basicDataPatientSelector.innerHTML = basicDataPatient;
-                    var backgroundId = patient.clinicalHistoryId;
-                    var neurologicalExamId = patient.clinicalHistoryId;
-                    var srId = patient.clinicalHistoryId;
-                    var mpId = patient.clinicalHistoryId;
+                   
 
                     const dataPatient = `<div class="row col">
                                             <div class="col-5 fw-bold">• Ingreso</div>
@@ -68,17 +65,17 @@ async function getClinicHistory() {
                                         <hr class="dropdown-divider">
                                         <div class="row col">
                                             <div class="col-5  fw-bold">• Nacimiento</div>
-                                            <div class="col">${patient.patient.place.placeBirth}</div>
+                                            <div class="col"> Cumaral - Meta</div>
                                         </div>
                                         <hr class="dropdown-divider">
                                         <div class="row col">
                                             <div class="col-5  fw-bold">• Residencia</div>
-                                            <div class="col">${patient.patient.place.placeResidence}</div>
+                                            <div class="col"> Cumaral - Meta</div>
                                         </div>
                                         <hr class="dropdown-divider">
                                         <div class="row col">
                                             <div class="col-5  fw-bold">• Precedencia</div>
-                                            <div class="col">${patient.patient.place.placeOrigin}</div>
+                                            <div class="col">Cumaral - Meta</div>
                                         </div>
                                         <hr class="dropdown-divider">
                                         <div class="row col">
@@ -140,38 +137,6 @@ async function getClinicHistory() {
                                                     <div class="col">${patient.physicalExam.column}</div>
                                                 </div>`;
                     tablePhysicalExam.innerHTML = contentPhysicalExam;
-
-
-                    const contentEvolution = `<div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-                                                <i class="fab fa-creative-commons-sampling" ></i>
-                                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                                <div>
-                                                    <h6 class="mb-0">Subjetivo</h6>
-                                                    <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                            
-                                            <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-                                                <i class="fab fa-creative-commons-sampling" ></i>
-                                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                                <div>
-                                                    <h6 class="mb-0">Objetivo</h6>
-                                                    <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
-                                                </div>
-                                                </div>
-                                            </div>
-                            
-                                            <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
-                                                <i class="fab fa-creative-commons-sampling" ></i>
-                                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                                <div>
-                                                    <h6 class="mb-0">Análisis</h6>
-                                                    <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
-                                                </div>
-                                                </div>
-                                            </div>`;
-
                         
 
                     const diagnostics = `<p>${patient.diagnostics}</p>`;
@@ -201,72 +166,43 @@ async function getClinicHistory() {
                     
 
                 }).catch(error => console.log(error));
+
+                await fetch(`${API}/evolution/${patientId}`)
+                    .then(response => response.json())
+                    .then(evolution => {
+                        const contentEvolution = `<div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                                        <i class="fab fa-creative-commons-sampling" ></i>
+                                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                                        <div>
+                                                            <h6 class="mb-0">SUBJETIVO</h6>
+                                                            <p class="mb-0 opacity-75">${evolution.subjective}</p>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                                        <i class="fab fa-creative-commons-sampling" ></i>
+                                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                                        <div>
+                                                            <h6 class="mb-0">OBJETIVO</h6>
+                                                            <p class="mb-0 opacity-75">${evolution.objetive}</p>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                    
+                                                    <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                                        <i class="fab fa-creative-commons-sampling" ></i>
+                                                        <div class="d-flex gap-2 w-100 justify-content-between">
+                                                        <div>
+                                                            <h6 class="mb-0">ANÁLISIS</h6>
+                                                            <p class="mb-0 opacity-75">${evolution.analysis}</p>
+                                                        </div>
+                                                        </div>
+                                                    </div>`;
+
+                            tableEvolutions.innerHTML = contentEvolution;
+                        });
+
 }
 
 getClinicHistory();
-
-
-
-async function initTables() {
-    await fetch(`${API}/background/save`, {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            historia_clinicaId
-        })
-      })
-      .then( response => response.json())
-      .then( data => {
-                      console.log(data)
-      }).catch(error => console.error(error))
-
-
-
-    await fetch(`${API}/neurological_exam/save`, {
-    method: 'POST',
-    headers: { 
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        historia_clinicaId
-    })
-    })
-    .then( response => response.json())
-    .then( data => {
-                    console.log(data)
-    }).catch(error => console.error(error))
-
-    
-
-    await fetch(`${API}/physical_exam/save`, {
-    method: 'POST',
-    headers: { 
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        historia_clinicaId
-    })
-    })
-    .then( response => response.json())
-    .then( data => {
-                    console.log(data)
-    }).catch(error => console.error(error))
-
-
-
-    await fetch(`${API}/system_review/save`, {
-    method: 'POST',
-    headers: { 
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-        historia_clinicaId
-    })
-    })
-    .then( response => response.json())
-    .then( data => {
-                    console.log(data)
-    }).catch(error => console.error(error))
-}

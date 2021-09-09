@@ -9,7 +9,6 @@ public class RevisionSistema {
 
     @Id
     @Column(name = "cod_rs")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codRS;
 
     // Attributes
