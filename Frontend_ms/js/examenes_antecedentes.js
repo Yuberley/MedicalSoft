@@ -144,7 +144,7 @@ async function getNeurologicalExam() {
 async function getBackground() {
     await fetch(`${URLBackground}/${backgroundId}`)
         .then(response => response.json())
-        .then((background) => {const dataBackground = `<tr>
+        .then((background) => {var dataBackground = `<tr>
                                                             <th>Psicosociales:</th>
                                                             <td>${background.psychosocial}</td>
                                                         </tr>
@@ -196,3 +196,93 @@ async function getBackground() {
 getSystemReview();
 getNeurologicalExam();
 getBackground();
+
+
+
+
+
+
+
+async function showBackgroundForm() {
+    const psychosocial = document.getElementById('psicosociales');
+    const relatives = document.getElementById('familiares');
+    const surgical = document.getElementById('quirurgicos');
+    const hospitable = document.getElementById('hospitalarios');
+    const pathological = document.getElementById('patologicos');
+    const pharmacological = document.getElementById('farmacologicos');
+    const toxicAllergies = document.getElementById('toxicoAlergicos');
+    const traumatic = document.getElementById('traumaticos');
+    const obstetricGynecology = document.getElementById('ginecoObstetrico');
+    const immunological = document.getElementById('inmunologicos');
+    const psychiatric = document.getElementById('psiquiatricos');
+    await fetch(`${URLBackground}/${backgroundId}`)
+                .then(response => response.json())
+                .then((background) => {
+                    psychosocial.innerHTML = background.psychosocial;
+                    relatives.value = background.relatives;
+                    surgical.value = background.surgical;
+                    hospitable.value = background.hospitable;
+                    pathological.value = background.pathological;
+                    pharmacological.value = background.pharmacological;
+                    toxicAllergies.value = background.toxicAllergies;
+                    traumatic.value = background.traumatic;
+                    obstetricGynecology.value = background.obstetricGynecology;
+                    immunological.value = background.immunological;
+                    psychiatric.value = background.psychiatric;
+                })
+}
+
+document.getElementById("botonAntecedentes").onclick = function(){
+    showBackgroundForm();
+}
+
+
+async function updateBackground() {
+    const psychosocial = document.getElementById('psicosociales').value;
+    const relatives = document.getElementById('familiares').value;
+    const surgical = document.getElementById('quirurgicos').value;
+    const hospitable = document.getElementById('hospitalarios').value;
+    const pathological = document.getElementById('patologicos').value;
+    const pharmacological = document.getElementById('farmacologicos').value;
+    const toxicAllergies = document.getElementById('toxicoAlergicos').value;
+    const traumatic = document.getElementById('traumaticos').value;
+    const obstetricGynecology = document.getElementById('ginecoObstetrico').value;
+    const immunological = document.getElementById('inmunologicos').value;
+    const psychiatric = document.getElementById('psiquiatricos').value;
+
+    const updateBackground = {
+        backgroundId,
+        psychosocial,
+        relatives,
+        surgical,
+        hospitable,
+        pathological,
+        pharmacological,
+        toxicAllergies,
+        traumatic,
+        obstetricGynecology,
+        immunological,
+        psychiatric
+    }
+
+      // Save person
+    await fetch(`${URLBackground}/update`, {
+        method: 'PUT',
+        headers: { 
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updateBackground)
+    })
+    .then( response => response.json())
+    .then( data => {
+                    console.log(data)
+    }).catch(error => console.error(error))
+
+}
+
+document.getElementById("guardarAntecedentes").onclick = function(){
+    updateBackground();
+}
+
+    
+

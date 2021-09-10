@@ -34,8 +34,8 @@ async function getClinicHistory() {
                                             <div class="col">${patient.patient.person.firstName + ' ' + patient.patient.person.lastName}</div>
                                         </div>
                                         <div class="row col">
-                                            <div class="col-4">• Edad</div>
-                                            <div class="col">${patient.patient.person.age}</div>
+                                            <div class="col-4">• Fecha de nacimiento</div>
+                                            <div class="col">${patient.patient.person.birthDate}</div>
                                         </div>
                                         <div class="row col">
                                             <div class="col-4">• Sexo</div>

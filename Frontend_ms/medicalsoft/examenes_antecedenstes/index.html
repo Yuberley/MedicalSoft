@@ -124,7 +124,7 @@
               <p class="text-start text-primary fs-4">Antecedentes</p>
             </div>
             <div class="col-3 pt-2 pb-3 d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#AbrirAntecedentes">Abrir</button>
+              <button class="btn btn-success me-md-2" type="button" id="botonAntecedentes" data-bs-toggle="modal" data-bs-target="#AbrirAntecedentes">Abrir</button>
             </div>
           </div>   
           <table class="table">
@@ -151,55 +151,55 @@
               <tbody>
                 <tr>
                   <th>Neuropsiquiatrico:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="neuropsiquiatrico" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Mama:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="mama" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Sintomas Generales:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="sintomasGenerales" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Cabeza y Sentidos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="cabezaSentidos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Linforreticular:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="linforreticular" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Cardio Pulmonar:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="cardioPulmonar" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Gastro Intestinal:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="gastroIntestinal" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Psicogenicos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="psicogenicos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Genitourinario:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="genitourinario" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Musculo Esqueletico:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="musculoEsqueletico" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Piel Fanereas:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="pielFanereas" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Endocrino:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="endocrino" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Venereos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="venereos" rows="1"></textarea></td>
                 </tr>
               </tbody>
             </table>
@@ -225,31 +225,31 @@
               <tbody>
                 <tr>
                   <th>Mental:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="mental" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Pares Craneales:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="pares Craneales" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Motor Raquideo:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="motorRaquideo" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Sensitivo Raquideo:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="sensitivoRaquideo" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Reflejos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="reflejos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Coordinacion:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="coordinacion" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Marcha:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="marcha" rows="1"></textarea></td>
                 </tr>
               </tbody>
             </table>
@@ -275,54 +275,53 @@
               <tbody>
                 <tr>
                   <th>Psicosociales:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="psicosociales" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Familiares:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="familiares" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Quirurgicos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="quirurgicos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Hospitalarios:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="hospitalarios" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Patologicos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="patologicos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Farmacologicos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="farmacologicos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Toxico Alergicos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="toxicoAlergicos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Traumaticos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="traumaticos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Gineco Obstetrico:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="ginecoObstetrico" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Inmunologicos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="inmunologicos" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Psiquiatricos:</th>
-                  <td><textarea class="form-control" rows="3"></textarea></td>
+                  <td><textarea class="form-control" id="psiquiatricos" rows="1"></textarea></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+            <a href=""><button type="button" class="btn btn-success" id="guardarAntecedentes" data-bs-dismiss="modal">Guardar</button></a>
           </div>
         </div>
       </div>
