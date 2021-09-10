@@ -18,8 +18,8 @@ async function getPeople(){
                                                         <td>${personRow.firstName}</td>
                                                         <td>${personRow.lastName}</td>
                                                         <td>${personRow.sex}</td>
-                                                        <td><a href="/medicalsoft/historia_clinica/?idPatient=${personRow.personId}">
-                                                              <button type="button" class="btn btn-outline-info">Historia</button>
+                                                        <td><a href="/medicalsoft/historia_clinica/?idPatient=${personRow.personId}">            
+                                                        <button type="button" title="Ver historia de ${personRow.firstName} ${personRow.lastName}" class="btn btn-outline-info">Historia</button>
                                                             </a></td></tr>`
                     }
                 });     

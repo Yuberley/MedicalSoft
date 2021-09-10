@@ -90,7 +90,7 @@
               <p class="text-start text-primary fs-4">Revision de Sistema</p>
             </div>
             <div class="col-3 pt-2 pb-3 d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn btn-success me-md-2" type="button"  data-bs-toggle="modal" data-bs-target="#AbrirRevision">Abrir</button>
+              <button class="btn btn-success me-md-2" id="botonRevisionSistema" type="button"  data-bs-toggle="modal" data-bs-target="#AbrirRevision">Abrir</button>
             </div>
           </div>          
           <table class="table">
@@ -107,7 +107,7 @@
               <p class="text-start text-primary fs-4">Examen Neurologico</p>
             </div>
             <div class="col-3 pt-2 pb-3 d-grid gap-2 d-md-flex justify-content-md-end">
-              <button class="btn btn-success me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#AbrirNeurologico">Abrir</button>
+              <button class="btn btn-success me-md-2" id="botonExamenNeurologico" type="button" data-bs-toggle="modal" data-bs-target="#AbrirNeurologico">Abrir</button>
             </div>
           </div>   
           <table class="table">
@@ -205,8 +205,7 @@
             </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+            <a href=""><button type="button" id="guardarRevisionSistema" class="btn btn-success" data-bs-dismiss="modal">Guardar</button></a>
           </div>
         </div>
       </div>
@@ -229,7 +228,7 @@
                 </tr>
                 <tr>
                   <th>Pares Craneales:</th>
-                  <td><textarea class="form-control" id="pares Craneales" rows="1"></textarea></td>
+                  <td><textarea class="form-control" id="paresCraneales" rows="1"></textarea></td>
                 </tr>
                 <tr>
                   <th>Motor Raquideo:</th>
@@ -255,8 +254,7 @@
             </table>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
-            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Actualizar</button>
+            <a href=""><button type="button" id="guardarExamenNeurologico" class="btn btn-success" data-bs-dismiss="modal">Guardar</button></a>
           </div>
         </div>
       </div>

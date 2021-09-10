@@ -199,10 +199,6 @@ getBackground();
 
 
 
-
-
-
-
 async function showBackgroundForm() {
     const psychosocial = document.getElementById('psicosociales');
     const relatives = document.getElementById('familiares');
@@ -265,7 +261,7 @@ async function updateBackground() {
         psychiatric
     }
 
-      // Save person
+    // Save background
     await fetch(`${URLBackground}/update`, {
         method: 'PUT',
         headers: { 
@@ -284,5 +280,175 @@ document.getElementById("guardarAntecedentes").onclick = function(){
     updateBackground();
 }
 
-    
 
+
+
+
+
+
+
+async function showNeurologicalExamForm() {
+
+    const mental = document.getElementById('mental');
+    const cranialNerves = document.getElementById('paresCraneales');
+    const spinalMotor = document.getElementById('motorRaquideo');
+    const spinalSesitive = document.getElementById('sensitivoRaquideo');
+    const reflexes = document.getElementById('reflejos');
+    const coordination = document.getElementById('coordinacion');
+    const march = document.getElementById('marcha');
+
+    await fetch(`${URLNeurologicalExam}/${neurologicalExamId}`)
+                .then(response => response.json())
+                .then((neurologicalExam) => {
+                    mental.value = neurologicalExam.mental;
+                    cranialNerves.value = neurologicalExam.cranialNerves;
+                    spinalMotor.value = neurologicalExam.spinalMotor;
+                    spinalSesitive.value = neurologicalExam.spinalSesitive;
+                    reflexes.value = neurologicalExam.reflexes;
+                    coordination.value = neurologicalExam.coordination;
+                    march.value = neurologicalExam.march;
+                })
+}
+
+document.getElementById("botonExamenNeurologico").onclick = function(){
+    showNeurologicalExamForm();
+}
+
+async function updateNeurologicalExam() {
+
+    const mental = document.getElementById('mental').value;
+    const cranialNerves = document.getElementById('paresCraneales').value;
+    const spinalMotor = document.getElementById('motorRaquideo').value;
+    const spinalSesitive = document.getElementById('sensitivoRaquideo').value;
+    const reflexes = document.getElementById('reflejos').value;
+    const coordination = document.getElementById('coordinacion').value;
+    const march = document.getElementById('marcha').value;
+
+    const updateNeurologicalExam = {
+        neurologicalExamId,
+        mental,
+        cranialNerves,
+        spinalMotor,
+        spinalSesitive,
+        reflexes,
+        coordination,
+        march
+    }
+
+    // Save neurologicalExam
+    await fetch(`${URLNeurologicalExam}/update`, {
+        method: 'PUT',
+        headers: { 
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updateNeurologicalExam)
+    })
+    .then( response => response.json())
+    .then( data => {
+                    console.log(data)
+    }).catch(error => console.error(error))
+}
+
+document.getElementById("guardarExamenNeurologico").onclick = function(){
+    updateNeurologicalExam();
+}
+
+
+
+
+
+
+
+
+
+
+async function showSystemReview() {
+
+    const neuropsychiatric = document.getElementById('neuropsiquiatrico');
+    const mammary = document.getElementById('mama');
+    const generalSymptoms = document.getElementById('sintomasGenerales');
+    const headSenses = document.getElementById('cabezaSentidos');
+    const lymphoreticular = document.getElementById('linforreticular');
+    const cardiopulmonary = document.getElementById('cardioPulmonar');
+    const gastrointestinal = document.getElementById('gastroIntestinal');
+    const psychogenic = document.getElementById('psicogenicos');
+    const gynecologicalUrinary = document.getElementById('genitourinario');
+    const skeletalMuscle = document.getElementById('musculoEsqueletico');
+    const pierlAppendages = document.getElementById('pielFanereas');
+    const endocrine = document.getElementById('endocrino');
+    const venereal = document.getElementById('venereos');
+
+    await fetch(`${URLSystemReview}/${systemReviewId}`)
+                .then(response => response.json())
+                .then((systemReview) => {
+                    neuropsychiatric.value = systemReview.neuropsychiatric;
+                    mammary.value = systemReview.mammary;
+                    generalSymptoms.value = systemReview.generalSymptoms;
+                    headSenses.value = systemReview.headSenses;
+                    lymphoreticular.value = systemReview.lymphoreticular;
+                    cardiopulmonary.value = systemReview.cardiopulmonary;
+                    gastrointestinal.value = systemReview.gastrointestinal;
+                    psychogenic.value = systemReview.psychogenic;
+                    gynecologicalUrinary.value = systemReview.gynecologicalUrinary;
+                    skeletalMuscle.value = systemReview.skeletalMuscle;
+                    pierlAppendages.value = systemReview.pierlAppendages;
+                    endocrine.value = systemReview.endocrine;
+                    venereal.value = systemReview.venereal;
+                })
+}
+
+document.getElementById("botonRevisionSistema").onclick = function(){
+    showSystemReview();
+}
+
+
+async function updateSystemReview() {
+    const srId = systemReviewId;
+    const neuropsychiatric = document.getElementById('neuropsiquiatrico').value;
+    const mammary = document.getElementById('mama').value;
+    const generalSymptoms = document.getElementById('sintomasGenerales').value;
+    const headSenses = document.getElementById('cabezaSentidos').value;
+    const lymphoreticular = document.getElementById('linforreticular').value;
+    const cardiopulmonary = document.getElementById('cardioPulmonar').value;
+    const gastrointestinal = document.getElementById('gastroIntestinal').value;
+    const psychogenic = document.getElementById('psicogenicos').value;
+    const gynecologicalUrinary = document.getElementById('genitourinario').value;
+    const skeletalMuscle = document.getElementById('musculoEsqueletico').value;
+    const pierlAppendages = document.getElementById('pielFanereas').value;
+    const endocrine = document.getElementById('endocrino').value;
+    const venereal = document.getElementById('venereos').value;
+
+    const updateSystemReview = {
+        srId,
+        neuropsychiatric,
+        mammary,
+        generalSymptoms,
+        headSenses,
+        lymphoreticular,
+        cardiopulmonary,
+        gastrointestinal,
+        psychogenic,
+        gynecologicalUrinary,
+        skeletalMuscle,
+        pierlAppendages,
+        endocrine,
+        venereal
+    }
+
+    // Save neurologicalExam
+    await fetch(`${URLSystemReview}/update`, {
+        method: 'PUT',
+        headers: { 
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updateSystemReview)
+    })
+    .then( response => response.json())
+    .then( data => {
+                    console.log(data)
+    }).catch(error => console.error(error))
+}
+
+document.getElementById("guardarRevisionSistema").onclick = function(){
+    updateSystemReview();
+}
