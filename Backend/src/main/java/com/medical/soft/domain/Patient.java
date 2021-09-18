@@ -1,6 +1,7 @@
 package com.medical.soft.domain;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Patient {
     private int patientId;
@@ -22,7 +23,7 @@ public class Patient {
     private int placeOrigin;
 
     private Person person;
-    private Place place;
+    private List<Place> place;
     private Scholarship scholarship;
     private MaritalStatus maritalStatus;
     private Hpe hpe;
@@ -163,11 +164,11 @@ public class Patient {
         this.person = person;
     }
 
-    public Place getPlace() {
+    public List<Place> getPlace() {
         return place;
     }
 
-    public void setPlace(Place place) {
+    public void setPlace(List<Place> place) {
         this.place = place;
     }
 

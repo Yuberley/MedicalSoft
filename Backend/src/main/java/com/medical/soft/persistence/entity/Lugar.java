@@ -19,7 +19,7 @@ public class Lugar implements Externalizable {
     private String lugar;
 
     // Relationships
-    @OneToMany(mappedBy = "lugar")
+    @ManyToMany(mappedBy = "lugar")
     private List<Paciente> pacientes;
 
     // Methods
