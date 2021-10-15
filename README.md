@@ -13,6 +13,10 @@ Por otra parte, el sistema web tendrá un enfoque funcional en la implementació
 Este sistema web está diseñado para ser gestionado por un administrador y 3 tipos de usuario (médico general, médico de laboratorio, enfermero o enfermera). El administrador es al que se le da el control general del sistema, es el que crea los demás usuarios y notifica a la directiva del centro médico el trabajo realizado por el personal, esto mediante reportes. Los usuarios son los que hacen uso de la mayoría de funcionalidades del software, son estos tres tipos de usuarios los que gestionan toda la información relacionada a los pacientes.
 
 
+
+### Screens ✔
+![()](https://github.com/Yuberley/MedicalSoft/blob/master/Documents/view.webp)
+
 ### Diagrama de casos de uso ⌨️
 
 ![()](https://github.com/Yuberley/MedicalSoft/blob/master/Documents/Use_case_diagram%20.png)

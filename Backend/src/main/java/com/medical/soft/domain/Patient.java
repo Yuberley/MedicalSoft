@@ -23,7 +23,7 @@ public class Patient {
     private int placeOrigin;
 
     private Person person;
-    private List<Place> place;
+    private Place place;
     private Scholarship scholarship;
     private MaritalStatus maritalStatus;
     private Hpe hpe;
@@ -164,11 +164,11 @@ public class Patient {
         this.person = person;
     }
 
-    public List<Place> getPlace() {
+    public Place getPlace() {
         return place;
     }
 
-    public void setPlace(List<Place> place) {
+    public void setPlace(Place place) {
         this.place = place;
     }
 

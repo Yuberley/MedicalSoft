@@ -54,13 +54,13 @@ public class Paciente {
     @JoinColumn(name = "cod_st", insertable = false, updatable = false)
     private EstadoCivil estadoCivil;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumns({
             @JoinColumn(name = "nacimiento", referencedColumnName="cod_lugar", insertable = false, updatable = false),
             @JoinColumn(name = "recidencia", referencedColumnName="cod_lugar", insertable = false, updatable = false),
             @JoinColumn(name = "procedencia", referencedColumnName="cod_lugar", insertable = false, updatable = false)
     })
-    private List<Lugar> lugar;
+    private Lugar lugar;
 
     @OneToMany(mappedBy = "paciente")
     private List<HistoriaClinica> historiasClinicas;
@@ -96,11 +96,11 @@ public class Paciente {
         this.procedencia = procedencia;
     }
 
-    public List<Lugar> getLugar() {
+    public Lugar getLugar() {
         return lugar;
     }
 
-    public void setLugar(List<Lugar> lugar) {
+    public void setLugar(Lugar lugar) {
         this.lugar = lugar;
     }
 
