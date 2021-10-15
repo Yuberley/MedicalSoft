@@ -28,18 +28,6 @@ Este sistema web está diseñado para ser gestionado por un administrador y 3 ti
 
 
 
-### Involucrados en el desarrollo 📋
-
-* JULIAN LEONARDO MORENO LESMES
-
-* MARTIN SEBASTIAN PEREZ
-
-* YEFERSON YUBERLEY GUERRERO CASTRO
-
-* HERNAN DAVID QUIJANO GONZÁLEZ
-
-* JULIAN MANUEL ESPITIA ANGEL
-
 
 ## Desarrollado con el siguente stack de tecnologías: 🛠️
 
